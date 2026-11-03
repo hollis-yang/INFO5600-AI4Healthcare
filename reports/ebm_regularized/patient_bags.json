@@ -1,0 +1,31 @@
+{
+  "bags": [
+    {
+      "bag": 0,
+      "training_patients": 11272,
+      "holdout_patients": 2819,
+      "training_hours": 375974,
+      "holdout_hours": 93370,
+      "holdout_event_patients": 222
+    },
+    {
+      "bag": 1,
+      "training_patients": 11272,
+      "holdout_patients": 2819,
+      "training_hours": 376933,
+      "holdout_hours": 92411,
+      "holdout_event_patients": 222
+    },
+    {
+      "bag": 2,
+      "training_patients": 11272,
+      "holdout_patients": 2819,
+      "training_hours": 375376,
+      "holdout_hours": 93968,
+      "holdout_event_patients": 222
+    }
+  ],
+  "outer_split_unchanged": true,
+  "description": "All hours of a patient have the same sign within each bag; held-out labels only guide stopping/selection.",
+  "preprocessing": "Frozen LR preprocessing and unweighted quantile bins are fitted within A training only; inner OOB is a development estimate, not independent testing."
+}

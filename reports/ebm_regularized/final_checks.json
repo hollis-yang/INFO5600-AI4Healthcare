@@ -1,0 +1,20 @@
+{
+  "original_data_unchanged": true,
+  "outer_splits_and_inputs_unchanged": true,
+  "patient_bags_verified_against_each_training_row": true,
+  "saved_selected_model_predictions_reproduced": true,
+  "class_weight_prior_correction_reproduced": true,
+  "ranking_metrics_invariant_to_prior_correction": true,
+  "outer_validation_not_used_for_internal_selection": true,
+  "unit_tests_passed": 10,
+  "test_sets_evaluated": [],
+  "push_performed": false,
+  "base_git_commit": "83765eed2443d51ea6ca281907f2f00d8708a486",
+  "source_sha256": {
+    "configs/ebm_regularized.toml": "537930da4111c51cbf96900f4bc2756c1a92a367682426c818d4822302d78dbe",
+    "src/sepsis_warning/regularized.py": "a0d2221f82ca017f41ef2b1df40cd8e9e132d69e2258dcde91f9ad230321b666",
+    "scripts/tune_ebm.py": "c5fb98058166ec258008b533dc3d11619782b7630199744acd2cd70d85e0cd78",
+    "scripts/report_regularized.py": "1e9a12e6b4b6dde8c50a26712a91079151184f7f42f8174e8d54de85b2d173fb",
+    "tests/test_regularized.py": "c0c5ebd1dd475715c3eccf5c9f998727eb7986a33d904bb24cb014d67d4e52c2"
+  }
+}

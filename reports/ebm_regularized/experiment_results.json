@@ -1,0 +1,607 @@
+{
+  "selection": {
+    "criterion": "Training-internal patient OOB average precision; lower weight breaks ties.",
+    "selected_regularization": "regularized_16bins",
+    "selected_case": "regularized_16bins",
+    "selected_positive_weight": 1.0,
+    "cases": [
+      {
+        "name": "regularized_32bins",
+        "signature": "90218bf3f2e5e1e879a4f0a2e4f150c32eb9f58b3512166b6b0295c451ca0c9f",
+        "positive_weight": 1.0,
+        "settings": {
+          "interactions": 0,
+          "learning_rate": 0.03,
+          "max_rounds": 150,
+          "early_stopping_rounds": 15,
+          "early_stopping_tolerance": 0.0001,
+          "smoothing_rounds": 25,
+          "greedy_ratio": 0.0,
+          "cyclic_progress": true,
+          "max_leaves": 2,
+          "outer_bags": 3,
+          "inner_bags": 0,
+          "n_jobs": 3,
+          "validation_size": 0.2,
+          "random_state": 42,
+          "max_bins": 32,
+          "min_samples_leaf": 200,
+          "reg_lambda": 10.0
+        },
+        "oob": {
+          "auroc": 0.8136736749633579,
+          "auprc_average_precision": 0.06867011348047748,
+          "brier_score": 0.013891130215777791,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_raw": {
+          "auroc": 0.8136736749633579,
+          "auprc_average_precision": 0.06867011348047748,
+          "brier_score": 0.013891130215777791,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_hours": 229153,
+        "oob_patients": 6864,
+        "fit_seconds": 120.11,
+        "executed_boosting_steps": [
+          [
+            21320,
+            23001,
+            27212
+          ]
+        ],
+        "executed_cycles_including_patience": [
+          68.33333333333333,
+          73.72115384615384,
+          87.21794871794872
+        ],
+        "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+        "warnings": [],
+        "binning_source": "unweighted A training quantiles"
+      },
+      {
+        "name": "regularized_16bins",
+        "signature": "8f3baa2ad126511647bc3d150845375897f49f47dc396c56e196b85407195b87",
+        "positive_weight": 1.0,
+        "settings": {
+          "interactions": 0,
+          "learning_rate": 0.03,
+          "max_rounds": 150,
+          "early_stopping_rounds": 15,
+          "early_stopping_tolerance": 0.0001,
+          "smoothing_rounds": 25,
+          "greedy_ratio": 0.0,
+          "cyclic_progress": true,
+          "max_leaves": 2,
+          "outer_bags": 3,
+          "inner_bags": 0,
+          "n_jobs": 3,
+          "validation_size": 0.2,
+          "random_state": 42,
+          "max_bins": 16,
+          "min_samples_leaf": 400,
+          "reg_lambda": 50.0
+        },
+        "oob": {
+          "auroc": 0.8140814596359397,
+          "auprc_average_precision": 0.06953539527804978,
+          "brier_score": 0.01384830248278424,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_raw": {
+          "auroc": 0.8140814596359397,
+          "auprc_average_precision": 0.06953539527804978,
+          "brier_score": 0.01384830248278424,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_hours": 229153,
+        "oob_patients": 6864,
+        "fit_seconds": 200.27,
+        "executed_boosting_steps": [
+          [
+            23108,
+            27692,
+            28159
+          ]
+        ],
+        "executed_cycles_including_patience": [
+          74.06410256410257,
+          88.75641025641026,
+          90.25320512820512
+        ],
+        "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+        "warnings": [],
+        "binning_source": "unweighted A training quantiles"
+      },
+      {
+        "name": "regularized_16bins_weight2",
+        "signature": "62361d52c8f4f564936fde5181d75b015f44e851f3a7098b8fb88067f5aa9dce",
+        "positive_weight": 2.0,
+        "settings": {
+          "interactions": 0,
+          "learning_rate": 0.03,
+          "max_rounds": 150,
+          "early_stopping_rounds": 15,
+          "early_stopping_tolerance": 0.0001,
+          "smoothing_rounds": 25,
+          "greedy_ratio": 0.0,
+          "cyclic_progress": true,
+          "max_leaves": 2,
+          "outer_bags": 3,
+          "inner_bags": 0,
+          "n_jobs": 3,
+          "validation_size": 0.2,
+          "random_state": 42,
+          "max_bins": 16,
+          "min_samples_leaf": 400,
+          "reg_lambda": 50.0
+        },
+        "oob": {
+          "auroc": 0.8141263802705401,
+          "auprc_average_precision": 0.0693136891069524,
+          "brier_score": 0.013857093344596373,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_raw": {
+          "auroc": 0.8141263802705401,
+          "auprc_average_precision": 0.0693136891069524,
+          "brier_score": 0.014547939334782062,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_hours": 229153,
+        "oob_patients": 6864,
+        "fit_seconds": 171.28,
+        "executed_boosting_steps": [
+          [
+            23420,
+            27059,
+            27223
+          ]
+        ],
+        "executed_cycles_including_patience": [
+          75.06410256410257,
+          86.7275641025641,
+          87.25320512820512
+        ],
+        "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+        "warnings": [],
+        "binning_source": "unweighted frozen cuts"
+      },
+      {
+        "name": "regularized_16bins_weight5",
+        "signature": "75900d4c289de0ba3751f006dcaa8307e5d47f380ef7b515be7fd23104f5caa9",
+        "positive_weight": 5.0,
+        "settings": {
+          "interactions": 0,
+          "learning_rate": 0.03,
+          "max_rounds": 150,
+          "early_stopping_rounds": 15,
+          "early_stopping_tolerance": 0.0001,
+          "smoothing_rounds": 25,
+          "greedy_ratio": 0.0,
+          "cyclic_progress": true,
+          "max_leaves": 2,
+          "outer_bags": 3,
+          "inner_bags": 0,
+          "n_jobs": 3,
+          "validation_size": 0.2,
+          "random_state": 42,
+          "max_bins": 16,
+          "min_samples_leaf": 400,
+          "reg_lambda": 50.0
+        },
+        "oob": {
+          "auroc": 0.8144951634124158,
+          "auprc_average_precision": 0.06915075778200151,
+          "brier_score": 0.013868272660861563,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_raw": {
+          "auroc": 0.8144951634124158,
+          "auprc_average_precision": 0.06915075778200151,
+          "brier_score": 0.01975572350388331,
+          "positive_hour_prevalence": 0.014427042194516328
+        },
+        "oob_hours": 229153,
+        "oob_patients": 6864,
+        "fit_seconds": 163.81,
+        "executed_boosting_steps": [
+          [
+            23420,
+            26121,
+            27222
+          ]
+        ],
+        "executed_cycles_including_patience": [
+          75.06410256410257,
+          83.72115384615384,
+          87.25
+        ],
+        "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+        "warnings": [],
+        "binning_source": "unweighted frozen cuts"
+      }
+    ],
+    "outer_validation_used_for_selection": false,
+    "class_weight_correction": "Analytic prior shift, not fitted calibration; raw and corrected Brier are both reported."
+  },
+  "validation_cases": [
+    {
+      "name": "regularized_32bins",
+      "signature": "90218bf3f2e5e1e879a4f0a2e4f150c32eb9f58b3512166b6b0295c451ca0c9f",
+      "positive_weight": 1.0,
+      "settings": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 32,
+        "min_samples_leaf": 200,
+        "reg_lambda": 10.0
+      },
+      "oob": {
+        "auroc": 0.8136736749633579,
+        "auprc_average_precision": 0.06867011348047748,
+        "brier_score": 0.013891130215777791,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_raw": {
+        "auroc": 0.8136736749633579,
+        "auprc_average_precision": 0.06867011348047748,
+        "brier_score": 0.013891130215777791,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_hours": 229153,
+      "oob_patients": 6864,
+      "fit_seconds": 120.11,
+      "executed_boosting_steps": [
+        [
+          21320,
+          23001,
+          27212
+        ]
+      ],
+      "executed_cycles_including_patience": [
+        68.33333333333333,
+        73.72115384615384,
+        87.21794871794872
+      ],
+      "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+      "warnings": [],
+      "binning_source": "unweighted A training quantiles",
+      "validation": {
+        "auroc": 0.8046075796434441,
+        "auprc_average_precision": 0.07224428591365867,
+        "brier_score": 0.01340068442729435,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "validation_raw": {
+        "auroc": 0.8046075796434441,
+        "auprc_average_precision": 0.07224428591365867,
+        "brier_score": 0.01340068442729435,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "training": {
+        "auroc": 0.8448504689221392,
+        "auprc_average_precision": 0.09615383643426208,
+        "brier_score": 0.013331625780803455,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "alerts": {
+        "threshold": 0.060779049052064674,
+        "suppression_hours": 6,
+        "eligible_patient_hours": 101888,
+        "event_patients": 238,
+        "detected_event_patients": 83,
+        "event_sensitivity": 0.3487394957983193,
+        "false_alert_episodes": 880,
+        "false_alerts_per_100_patient_hours": 0.8636934673366834,
+        "total_alert_episodes": 963,
+        "true_alert_episodes": 83,
+        "alert_ppv": 0.08618899273104881,
+        "median_true_alert_lead_hours": 3.0
+      },
+      "selected_internally": false,
+      "test_sets_evaluated": []
+    },
+    {
+      "name": "regularized_16bins",
+      "signature": "8f3baa2ad126511647bc3d150845375897f49f47dc396c56e196b85407195b87",
+      "positive_weight": 1.0,
+      "settings": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "oob": {
+        "auroc": 0.8140814596359397,
+        "auprc_average_precision": 0.06953539527804978,
+        "brier_score": 0.01384830248278424,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_raw": {
+        "auroc": 0.8140814596359397,
+        "auprc_average_precision": 0.06953539527804978,
+        "brier_score": 0.01384830248278424,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_hours": 229153,
+      "oob_patients": 6864,
+      "fit_seconds": 200.27,
+      "executed_boosting_steps": [
+        [
+          23108,
+          27692,
+          28159
+        ]
+      ],
+      "executed_cycles_including_patience": [
+        74.06410256410257,
+        88.75641025641026,
+        90.25320512820512
+      ],
+      "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+      "warnings": [],
+      "binning_source": "unweighted A training quantiles",
+      "validation": {
+        "auroc": 0.8060986966954808,
+        "auprc_average_precision": 0.07116442262760742,
+        "brier_score": 0.013405986130817296,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "validation_raw": {
+        "auroc": 0.8060986966954808,
+        "auprc_average_precision": 0.07116442262760742,
+        "brier_score": 0.013405986130817296,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "training": {
+        "auroc": 0.8408381140402256,
+        "auprc_average_precision": 0.09051161450480337,
+        "brier_score": 0.013370603469159276,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "alerts": {
+        "threshold": 0.06149262568924752,
+        "suppression_hours": 6,
+        "eligible_patient_hours": 101888,
+        "event_patients": 238,
+        "detected_event_patients": 82,
+        "event_sensitivity": 0.3445378151260504,
+        "false_alert_episodes": 880,
+        "false_alerts_per_100_patient_hours": 0.8636934673366834,
+        "total_alert_episodes": 962,
+        "true_alert_episodes": 82,
+        "alert_ppv": 0.08523908523908524,
+        "median_true_alert_lead_hours": 3.0
+      },
+      "selected_internally": true,
+      "test_sets_evaluated": []
+    },
+    {
+      "name": "regularized_16bins_weight2",
+      "signature": "62361d52c8f4f564936fde5181d75b015f44e851f3a7098b8fb88067f5aa9dce",
+      "positive_weight": 2.0,
+      "settings": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "oob": {
+        "auroc": 0.8141263802705401,
+        "auprc_average_precision": 0.0693136891069524,
+        "brier_score": 0.013857093344596373,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_raw": {
+        "auroc": 0.8141263802705401,
+        "auprc_average_precision": 0.0693136891069524,
+        "brier_score": 0.014547939334782062,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_hours": 229153,
+      "oob_patients": 6864,
+      "fit_seconds": 171.28,
+      "executed_boosting_steps": [
+        [
+          23420,
+          27059,
+          27223
+        ]
+      ],
+      "executed_cycles_including_patience": [
+        75.06410256410257,
+        86.7275641025641,
+        87.25320512820512
+      ],
+      "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+      "warnings": [],
+      "binning_source": "unweighted frozen cuts",
+      "validation": {
+        "auroc": 0.8064155863420424,
+        "auprc_average_precision": 0.07111976162661039,
+        "brier_score": 0.013409305447506252,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "validation_raw": {
+        "auroc": 0.8064155863420424,
+        "auprc_average_precision": 0.07111976162661039,
+        "brier_score": 0.013973653599207471,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "training": {
+        "auroc": 0.8419447861914751,
+        "auprc_average_precision": 0.08963320508054104,
+        "brier_score": 0.013380354071429531,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "alerts": {
+        "threshold": 0.061559528572260644,
+        "suppression_hours": 6,
+        "eligible_patient_hours": 101888,
+        "event_patients": 238,
+        "detected_event_patients": 83,
+        "event_sensitivity": 0.3487394957983193,
+        "false_alert_episodes": 879,
+        "false_alerts_per_100_patient_hours": 0.8627119974874372,
+        "total_alert_episodes": 962,
+        "true_alert_episodes": 83,
+        "alert_ppv": 0.08627858627858628,
+        "median_true_alert_lead_hours": 3.0
+      },
+      "selected_internally": false,
+      "test_sets_evaluated": []
+    },
+    {
+      "name": "regularized_16bins_weight5",
+      "signature": "75900d4c289de0ba3751f006dcaa8307e5d47f380ef7b515be7fd23104f5caa9",
+      "positive_weight": 5.0,
+      "settings": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "oob": {
+        "auroc": 0.8144951634124158,
+        "auprc_average_precision": 0.06915075778200151,
+        "brier_score": 0.013868272660861563,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_raw": {
+        "auroc": 0.8144951634124158,
+        "auprc_average_precision": 0.06915075778200151,
+        "brier_score": 0.01975572350388331,
+        "positive_hour_prevalence": 0.014427042194516328
+      },
+      "oob_hours": 229153,
+      "oob_patients": 6864,
+      "fit_seconds": 163.81,
+      "executed_boosting_steps": [
+        [
+          23420,
+          26121,
+          27222
+        ]
+      ],
+      "executed_cycles_including_patience": [
+        75.06410256410257,
+        83.72115384615384,
+        87.25
+      ],
+      "saved_model": "Native best-loss checkpoint, not necessarily the final executed step.",
+      "warnings": [],
+      "binning_source": "unweighted frozen cuts",
+      "validation": {
+        "auroc": 0.8072495233410903,
+        "auprc_average_precision": 0.0711404368376723,
+        "brier_score": 0.013415091565415318,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "validation_raw": {
+        "auroc": 0.8072495233410903,
+        "auprc_average_precision": 0.0711404368376723,
+        "brier_score": 0.018734092480002226,
+        "positive_hour_prevalence": 0.014015389447236182
+      },
+      "training": {
+        "auroc": 0.8436073066479816,
+        "auprc_average_precision": 0.08729866494114925,
+        "brier_score": 0.01340928241174481,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "alerts": {
+        "threshold": 0.061449540747303084,
+        "suppression_hours": 6,
+        "eligible_patient_hours": 101888,
+        "event_patients": 238,
+        "detected_event_patients": 81,
+        "event_sensitivity": 0.3403361344537815,
+        "false_alert_episodes": 871,
+        "false_alerts_per_100_patient_hours": 0.8548602386934674,
+        "total_alert_episodes": 952,
+        "true_alert_episodes": 81,
+        "alert_ppv": 0.08508403361344538,
+        "median_true_alert_lead_hours": 3.0
+      },
+      "selected_internally": false,
+      "test_sets_evaluated": []
+    }
+  ],
+  "input_fingerprints_unchanged": true,
+  "test_sets_evaluated": [],
+  "base_git_commit": "83765eed2443d51ea6ca281907f2f00d8708a486",
+  "execution_elapsed_seconds": 12.73,
+  "total_recorded_case_fit_seconds": 655.47,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-15.3-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scipy": "1.16.1",
+      "scikit-learn": "1.7.1",
+      "matplotlib": "3.10.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "interpret-core": "0.7.8"
+    }
+  },
+  "caveats": [
+    "OOB predictions are used for early stopping and selection, not independent performance estimates.",
+    "Outer A validation has been viewed in prior development; final test sets remain reserved.",
+    "Unsupervised preprocessing and bin definitions are fitted within all A training, shared across internal bags.",
+    "Analytic class-weight prior correction is approximate; it is not learned probability calibration."
+  ]
+}

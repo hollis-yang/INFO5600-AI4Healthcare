@@ -42,6 +42,21 @@ python scripts/compare_models.py
 
 EBM settings are in `configs/ebm.toml`. The first EBM run uses one fixed configuration (`interactions=0`, 64 bins, 1,000 rounds) and all A-training rows, with internal random-hour validation/early stopping disabled. It reuses LR's training-fitted preprocessor and exact matrices. Comparison intervals use paired patient resamples. Both test sets remain reserved.
 
+To investigate overfitting and class imbalance while preserving the outer split:
+
+```bash
+python scripts/tune_ebm.py
+python scripts/report_regularized.py
+```
+
+`configs/ebm_regularized.toml` prespecifies two stronger complexity controls and positive-class weights 1, 2 and 5. Each model has three patient-grouped bags, each with an internal 80/20 training/early-stopping split. Internal patient OOB average precision selects complexity first and then weight; the outer A validation set is read for reporting after those choices are recorded. Native EBM returns the best-loss checkpoint; reported iteration counts include patience steps, not the exact best iteration.
+
+All preprocessing and initial binning remain fitted within A training; this unsupervised transformation is shared across internal bags. OOB results are development estimates used for stopping and selection. Weighted models reuse the selected unweighted model's cuts, preventing held-out class weights from altering bin boundaries. The final outer validation and both test sets retain natural class proportions, with no over/undersampling.
+
+For weights greater than 1, probabilities are reported both raw and after subtracting `log(weight)` from the model's log-odds. This analytic prior correction is not fitted calibration and does not guarantee calibration. It preserves ranking metrics. To reproduce corrected risk from a weighted saved bundle, apply `sepsis_warning.regularized.prior_correct` to the raw positive-class probabilities using the bundle's `positive_weight`.
+
+Experiments are cached under `outputs/ebm_regularized/`; matching completed configurations are reused on rerun. Curated metrics, reports and figures are copied into `reports/ebm_regularized/`. Large models, predictions and processed matrices remain local.
+
 Run commands from the repository root. Settings are recorded in `configs/baseline.toml`. A complete preparation run writes approximately 3.6 GB of processed arrays. The raw files in `data/` remain unchanged.
 
 ## Local outputs
@@ -57,6 +72,8 @@ Run commands from the repository root. Settings are recorded in `configs/baselin
 - `outputs/lr_ebm_comparison.json`, `lr_ebm_comparison.csv`, `ebm_vs_lr_report.txt`: paired validation comparison, including operating points under the same false-alert ceiling.
 - `outputs/lr_ebm_validation_comparison.png`, `ebm_feature_importance.png`, `ebm_shape_functions.png`: model comparison and EBM explanations.
 - `outputs/ebm_input_fingerprint.json`: fingerprints of reused data, split list, preprocessor and LR reference predictions; checked unchanged after EBM training.
+- `outputs/ebm_regularized/selected_model.joblib`: internally selected regularized model, preprocessing, class weight and validation alarm threshold.
+- `reports/baseline_comparison/`, `reports/ebm_regularized/`: small, versioned result snapshots for comparing experiments.
 
 ## Analysis protocol
 

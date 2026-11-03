@@ -1,0 +1,222 @@
+{
+  "selected_vs_lr": {
+    "reference_model": "LR",
+    "candidate_model": "regularized_16bins",
+    "reference": {
+      "auroc": {
+        "lower": 0.768804580330058,
+        "upper": 0.8212810219898998
+      },
+      "auprc_average_precision": {
+        "lower": 0.0626331188752244,
+        "upper": 0.08944674795161278
+      },
+      "brier_score": {
+        "lower": 0.01205211163092328,
+        "upper": 0.015052914208977303
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate": {
+      "auroc": {
+        "lower": 0.780458466786224,
+        "upper": 0.8323247672796311
+      },
+      "auprc_average_precision": {
+        "lower": 0.060849979558444095,
+        "upper": 0.0889972577223246
+      },
+      "brier_score": {
+        "lower": 0.012078165627482502,
+        "upper": 0.015052846095516492
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate_minus_reference": {
+      "auroc": {
+        "lower": -0.002487381521631982,
+        "upper": 0.023718592609544484
+      },
+      "auprc_average_precision": {
+        "lower": -0.015448154672671136,
+        "upper": 0.011228051002410009
+      },
+      "brier_score": {
+        "lower": -0.0001896582524959042,
+        "upper": 9.22952312863052e-05
+      }
+    },
+    "valid_resamples": 300
+  },
+  "regularized_vs_initial": {
+    "reference_model": "initial",
+    "candidate_model": "regularized_16bins",
+    "reference": {
+      "auroc": {
+        "lower": 0.6887123507089893,
+        "upper": 0.7487822662425536
+      },
+      "auprc_average_precision": {
+        "lower": 0.04283440132409342,
+        "upper": 0.06315455636700427
+      },
+      "brier_score": {
+        "lower": 0.013459922547366028,
+        "upper": 0.016511105327968446
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate": {
+      "auroc": {
+        "lower": 0.780458466786224,
+        "upper": 0.8323247672796311
+      },
+      "auprc_average_precision": {
+        "lower": 0.060849979558444095,
+        "upper": 0.0889972577223246
+      },
+      "brier_score": {
+        "lower": 0.012078165627482502,
+        "upper": 0.015052846095516492
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate_minus_reference": {
+      "auroc": {
+        "lower": 0.06562907284272855,
+        "upper": 0.11273725801269698
+      },
+      "auprc_average_precision": {
+        "lower": 0.010370773434198387,
+        "upper": 0.033611649108827135
+      },
+      "brier_score": {
+        "lower": -0.0018475784131942387,
+        "upper": -0.000989568966572365
+      }
+    },
+    "valid_resamples": 300
+  },
+  "weight2_vs_weight1": {
+    "reference_model": "regularized_16bins",
+    "candidate_model": "regularized_16bins_weight2",
+    "reference": {
+      "auroc": {
+        "lower": 0.780458466786224,
+        "upper": 0.8323247672796311
+      },
+      "auprc_average_precision": {
+        "lower": 0.060849979558444095,
+        "upper": 0.0889972577223246
+      },
+      "brier_score": {
+        "lower": 0.012078165627482502,
+        "upper": 0.015052846095516492
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate": {
+      "auroc": {
+        "lower": 0.7807879281216024,
+        "upper": 0.8325177089455974
+      },
+      "auprc_average_precision": {
+        "lower": 0.060677778551070795,
+        "upper": 0.0888975336211568
+      },
+      "brier_score": {
+        "lower": 0.012079042296420482,
+        "upper": 0.01505638782619395
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate_minus_reference": {
+      "auroc": {
+        "lower": -0.00047029729233145635,
+        "upper": 0.0010973690117302174
+      },
+      "auprc_average_precision": {
+        "lower": -0.0005079206130305914,
+        "upper": 0.0005315999564079084
+      },
+      "brier_score": {
+        "lower": -3.94201109245821e-06,
+        "upper": 1.1729047461454718e-05
+      }
+    },
+    "valid_resamples": 300
+  },
+  "weight5_vs_weight1": {
+    "reference_model": "regularized_16bins",
+    "candidate_model": "regularized_16bins_weight5",
+    "reference": {
+      "auroc": {
+        "lower": 0.780458466786224,
+        "upper": 0.8323247672796311
+      },
+      "auprc_average_precision": {
+        "lower": 0.060849979558444095,
+        "upper": 0.0889972577223246
+      },
+      "brier_score": {
+        "lower": 0.012078165627482502,
+        "upper": 0.015052846095516492
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate": {
+      "auroc": {
+        "lower": 0.7818030371025426,
+        "upper": 0.8331373978473127
+      },
+      "auprc_average_precision": {
+        "lower": 0.06044695997706328,
+        "upper": 0.08952323859931215
+      },
+      "brier_score": {
+        "lower": 0.01208216127152487,
+        "upper": 0.015062905865454336
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "candidate_minus_reference": {
+      "auroc": {
+        "lower": -0.0006663384213688061,
+        "upper": 0.003030846489303487
+      },
+      "auprc_average_precision": {
+        "lower": -0.0012439135384999655,
+        "upper": 0.0018279877431263273
+      },
+      "brier_score": {
+        "lower": -1.1388453032749185e-05,
+        "upper": 3.296231168031623e-05
+      }
+    },
+    "valid_resamples": 300
+  }
+}

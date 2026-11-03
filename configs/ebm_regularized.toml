@@ -1,0 +1,33 @@
+[experiment]
+random_seed = 2026
+holdout_patient_fraction = 0.20
+positive_weights = [1.0, 2.0, 5.0]
+bootstrap_samples = 300
+
+[common]
+interactions = 0
+learning_rate = 0.03
+max_rounds = 150
+early_stopping_rounds = 15
+early_stopping_tolerance = 0.0001
+smoothing_rounds = 25
+greedy_ratio = 0.0
+cyclic_progress = true
+max_leaves = 2
+outer_bags = 3
+inner_bags = 0
+n_jobs = 3
+validation_size = 0.20
+random_state = 42
+
+[[regularization]]
+name = "regularized_32bins"
+max_bins = 32
+min_samples_leaf = 200
+reg_lambda = 10.0
+
+[[regularization]]
+name = "regularized_16bins"
+max_bins = 16
+min_samples_leaf = 400
+reg_lambda = 50.0
