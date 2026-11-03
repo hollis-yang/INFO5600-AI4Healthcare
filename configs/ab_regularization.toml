@@ -1,0 +1,58 @@
+[study]
+folds = 3
+fold_seed = 2026
+models = ["lr", "ebm", "lightgbm"]
+selection_metric = "Mean of hospital-specific AUPRC, then mean across three folds"
+minimum_mean_ap_gain = 0.001
+minimum_improved_folds = 2
+bootstrap_samples = 300
+maximum_workers = 3
+maximum_ebm_workers = 2
+cpu_budget = 8
+lr_threads = 2
+
+[lr]
+C_values = [1.0, 0.001, 0.01, 0.1, 10.0]
+
+[ebm.baseline]
+min_samples_leaf = 400
+reg_lambda = 50.0
+
+[ebm.stronger]
+min_samples_leaf = 800
+reg_lambda = 100.0
+
+[ebm.weaker]
+min_samples_leaf = 200
+reg_lambda = 10.0
+
+[lightgbm.baseline]
+min_child_samples = 200
+reg_lambda = 10.0
+
+[lightgbm.stronger]
+min_child_samples = 400
+reg_lambda = 50.0
+
+[lightgbm.weaker]
+min_child_samples = 100
+reg_lambda = 1.0
+
+[protocol]
+feature_count = 312
+prediction_horizon_hours = 6
+latest_value_expiry_hours = 6
+outer_stratification = "hospital x event status, grouped by patient"
+inner_early_stopping = "Existing event-stratified patient bags; preprocessing fitted within the outer training partition"
+outer_validation_used_for_selection = false
+test_sets_evaluated = []
+class_weighting = false
+oversampling = false
+
+[missingness]
+variables = 40
+raw_hour_missingness = true
+latest_missingness_after_six_hour_expiry = true
+patient_weighted_and_event_standardized = true
+first_24_hour_control = true
+hospital_classifier_patient_missing_fractions = true

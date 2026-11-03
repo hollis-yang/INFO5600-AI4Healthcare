@@ -1,0 +1,8 @@
+{
+  "models": 9,
+  "metric_rows": 54,
+  "paired_contrasts": 36,
+  "test_sets_evaluated": [],
+  "regularization_selection_sha256": "cd241c9e5d93b942c56b048ad4e9179bc5d734d89edfece8b60ccd96ffb31764",
+  "utility_used_for_model_or_threshold_selection": false
+}

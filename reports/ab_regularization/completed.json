@@ -1,0 +1,12 @@
+{
+  "cv_models": 33,
+  "selected_validation_models": 3,
+  "selected_candidates": {
+    "lr": "baseline",
+    "ebm": "baseline",
+    "lightgbm": "baseline"
+  },
+  "canonical_inputs_and_sources_unchanged": true,
+  "test_sets_evaluated": [],
+  "elapsed_seconds": 2516.56
+}

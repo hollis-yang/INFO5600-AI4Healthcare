@@ -1,0 +1,7 @@
+{
+  "pooled_oof_hospital_auroc": 0.999537559820234,
+  "features": "40 whole-eligible-episode raw missing fractions per training patient",
+  "folds": "Same hospital/event-stratified training-patient folds; scaler fitted within each fold",
+  "sepsis_model_input": false,
+  "interpretation": "Describes separability of data sources; does not identify causal effects or documentation errors."
+}

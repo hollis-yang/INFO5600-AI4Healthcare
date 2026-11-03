@@ -1,0 +1,10 @@
+{
+  "cv_models": 33,
+  "validation_models": 3,
+  "test_sets_evaluated": [],
+  "selection_sha256": "cd241c9e5d93b942c56b048ad4e9179bc5d734d89edfece8b60ccd96ffb31764",
+  "analysis_source_fingerprints": {
+    "scripts/report_ab_regularization.py": "9fde55687b2bb2fb7c40bee0bdcf7d0c66b473aa17a370aa28cdc32294af410a",
+    "scripts/verify_ab_regularization.py": "4ebe28a0de00f1fe761d1da58be9a204fd6341df4b8b79f329c7998f9b907214"
+  }
+}

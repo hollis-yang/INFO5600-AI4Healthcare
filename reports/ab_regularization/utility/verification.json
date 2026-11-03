@@ -1,0 +1,15 @@
+{
+  "models_verified": 9,
+  "full_validation_patients": 5981,
+  "full_validation_hours": 233738,
+  "all_original_labels_and_hours_reproduced": true,
+  "full_features_and_prefix_causality_checked": true,
+  "serialized_model_predictions_and_per_patient_utilities_reproduced": true,
+  "official_upstream_blobs_and_license_verified": true,
+  "real_patient_upstream_directory_evaluator_matches_wrapper": [
+    "A_validation",
+    "B_validation"
+  ],
+  "utility_used_for_selection": false,
+  "test_sets_evaluated": []
+}

@@ -1,0 +1,3694 @@
+{
+  "available_model_results": 36,
+  "results": {
+    "outputs/ab_regularization/cv/fold0/ebm_baseline/results.json": {
+      "signature": "807b1ddee1314868ee503cfba167ff7b2b3c3fe3fe580f7b581c38361db4e4e1",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "baseline",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8306306304509649,
+          "auprc_average_precision": 0.0625474630288383,
+          "brier_score": 0.011050309066142986,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8089677109247082,
+          "auprc_average_precision": 0.06473320246994348,
+          "brier_score": 0.013748539403246732,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.847696645698261,
+          "auprc_average_precision": 0.06033018801499365,
+          "brier_score": 0.008246887507167447,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.06253169524246857
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8507593340983257,
+          "auprc_average_precision": 0.09267603085109563,
+          "brier_score": 0.01075338864337774,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8322206852613657,
+          "auprc_average_precision": 0.08944220395466644,
+          "brier_score": 0.0133798223872631,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8660456860916169,
+          "auprc_average_precision": 0.09790615966036834,
+          "brier_score": 0.007996474228489316,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.09367418180751738
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 381.99,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          136.06410256410257,
+          98.72115384615384,
+          66.24358974358974
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/ebm_baseline/results.json": {
+      "signature": "54b772291cffa8b09764a068698d76a8df24a3e29c7d1d5ebc80c523797caf0c",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "baseline",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8264852766171863,
+          "auprc_average_precision": 0.07075125313400081,
+          "brier_score": 0.010841616939626412,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.8067533972519192,
+          "auprc_average_precision": 0.07072434819890866,
+          "brier_score": 0.013584292343262565,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8424226526668527,
+          "auprc_average_precision": 0.07112927719962035,
+          "brier_score": 0.008008239937630255,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.07092681269926451
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8567410110278602,
+          "auprc_average_precision": 0.09598753602776029,
+          "brier_score": 0.010765053507807274,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8420014974887766,
+          "auprc_average_precision": 0.09423002935832202,
+          "brier_score": 0.01336024432976558,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8664770227335858,
+          "auprc_average_precision": 0.10139888492655012,
+          "brier_score": 0.008032927234023867,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.09781445714243607
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 390.4,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          103.07051282051282,
+          140.8301282051282,
+          71.21794871794872
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/ebm_baseline/results.json": {
+      "signature": "1a18b25fbc5efb603f717555df71bdd918148d473fd57f912549e3cf0bc5cd1e",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "baseline",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.822159163016,
+          "auprc_average_precision": 0.0695769479658375,
+          "brier_score": 0.011032746881738132,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.8016924337503941,
+          "auprc_average_precision": 0.06808967034742856,
+          "brier_score": 0.01363070725092065,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8380079862934758,
+          "auprc_average_precision": 0.07355459208973988,
+          "brier_score": 0.008261087577988347,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07082213121858422
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8575570419406905,
+          "auprc_average_precision": 0.09534372204391806,
+          "brier_score": 0.010677882838201548,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8372304298206612,
+          "auprc_average_precision": 0.09141009112562244,
+          "brier_score": 0.013375565555024034,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8744223505061334,
+          "auprc_average_precision": 0.1033354927858145,
+          "brier_score": 0.007883052984043494,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.09737279195571846
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 472.72,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          119.0673076923077,
+          118.63782051282051,
+          132.51602564102564
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/ebm_stronger/results.json": {
+      "signature": "8e6c6d6551baaa327530009d23642ae2a0af1b6f2a444a4577635bc222a42029",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "stronger",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 800,
+        "reg_lambda": 100.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8314864183520887,
+          "auprc_average_precision": 0.06289537526926563,
+          "brier_score": 0.011045896809778124,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8095618025112126,
+          "auprc_average_precision": 0.06496204161262217,
+          "brier_score": 0.013745844494323128,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8488161518985547,
+          "auprc_average_precision": 0.060915175657507356,
+          "brier_score": 0.00824069095211805,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.06293860863506476
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8509246199134677,
+          "auprc_average_precision": 0.09268822557195748,
+          "brier_score": 0.010752596697551143,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8324487682306574,
+          "auprc_average_precision": 0.08938784432506369,
+          "brier_score": 0.013377716654078279,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.866157828134451,
+          "auprc_average_precision": 0.09782925773324296,
+          "brier_score": 0.007997061338698076,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.09360855102915333
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 494.98,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          145.06730769230768,
+          107.94871794871794,
+          68.21794871794872
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/ebm_stronger/results.json": {
+      "signature": "9047388e1612fd2dff73cd7561f77db59dbeb11e001e57a6b6c13e35e6f3f853",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "stronger",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 800,
+        "reg_lambda": 100.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8270257136370959,
+          "auprc_average_precision": 0.07098613535707729,
+          "brier_score": 0.01083594003343304,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.8070176763566673,
+          "auprc_average_precision": 0.07102436701474713,
+          "brier_score": 0.0135768502976186,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8433292169941681,
+          "auprc_average_precision": 0.07178686471167116,
+          "brier_score": 0.008004386544900413,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.07140561586320915
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8558730752451454,
+          "auprc_average_precision": 0.09431407502804094,
+          "brier_score": 0.010776052979740918,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8408198991593464,
+          "auprc_average_precision": 0.0928097610779216,
+          "brier_score": 0.01337244165667722,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8659157477339714,
+          "auprc_average_precision": 0.09931172411876507,
+          "brier_score": 0.008042665646065551,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.09606074259834334
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 453.31,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          105.07051282051282,
+          146.56089743589743,
+          78.21794871794872
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/ebm_stronger/results.json": {
+      "signature": "566879ae6d7026f471afeaf346bf93c936a1b156a576baedd0f9ac4ad55a3509",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "stronger",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 800,
+        "reg_lambda": 100.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8226892328601865,
+          "auprc_average_precision": 0.07005519228754913,
+          "brier_score": 0.011028026581693424,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.8022032781289521,
+          "auprc_average_precision": 0.06854511973751609,
+          "brier_score": 0.01362376384373684,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8385895137297883,
+          "auprc_average_precision": 0.07386656155870948,
+          "brier_score": 0.008258739021430733,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07120584064811278
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8574684761404456,
+          "auprc_average_precision": 0.09477962063282412,
+          "brier_score": 0.010680721341335984,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8370765064014795,
+          "auprc_average_precision": 0.09110704333706629,
+          "brier_score": 0.013379104993301218,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8744074708030252,
+          "auprc_average_precision": 0.10267905378755288,
+          "brier_score": 0.007885165310429806,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.09689304856230958
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 444.98,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          125.5,
+          125.17628205128206,
+          143.21794871794873
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/ebm_weaker/results.json": {
+      "signature": "c75d6fd6d804f27ec864da6a9d4a2f4f1ce60cf6a00b5a7e3c0636ff8fa96859",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "weaker",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 200,
+        "reg_lambda": 10.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8290339846419144,
+          "auprc_average_precision": 0.0620310820906706,
+          "brier_score": 0.011057033502586517,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8078335798773022,
+          "auprc_average_precision": 0.06426429173959311,
+          "brier_score": 0.013754717503381196,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8454610190990401,
+          "auprc_average_precision": 0.05952712432058661,
+          "brier_score": 0.00825417957898526,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.061895708030089855
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8507845730315724,
+          "auprc_average_precision": 0.09315899211186131,
+          "brier_score": 0.01075179799130746,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8320209355122641,
+          "auprc_average_precision": 0.08979339467992824,
+          "brier_score": 0.013379571570430826,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8663325313295406,
+          "auprc_average_precision": 0.09866519027229148,
+          "brier_score": 0.007993477178450751,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.09422929247610987
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 393.62,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          128.74679487179486,
+          90.72115384615384,
+          61.217948717948715
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/ebm_weaker/results.json": {
+      "signature": "f9fe74fa9fc3b2d5f6dd8a969826222911ed98ea1f2523ae20170e3d5886b13f",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "weaker",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 200,
+        "reg_lambda": 10.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8255224742227194,
+          "auprc_average_precision": 0.07015343910382738,
+          "brier_score": 0.010845683166067795,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.8058264040996564,
+          "auprc_average_precision": 0.07018284545115597,
+          "brier_score": 0.013588792195428493,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8412334291321727,
+          "auprc_average_precision": 0.07032381599796057,
+          "brier_score": 0.00801185819813525,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.07025333072455828
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8569697052484858,
+          "auprc_average_precision": 0.09689929101867087,
+          "brier_score": 0.010759542031843459,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8422123241463472,
+          "auprc_average_precision": 0.09497904132319483,
+          "brier_score": 0.013354342317866334,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8668339612037845,
+          "auprc_average_precision": 0.10281815174916904,
+          "brier_score": 0.00802782690065543,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.09889859653618194
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 415.31,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          99.06410256410257,
+          139.62820512820514,
+          68.21794871794872
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/ebm_weaker/results.json": {
+      "signature": "3153a4323bdeceb934babea3b5959dfdc467725b347ca110f99b377e98649de6",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "ebm",
+      "candidate": "weaker",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 200,
+        "reg_lambda": 10.0
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8213291242547839,
+          "auprc_average_precision": 0.06887591852534705,
+          "brier_score": 0.011040135131104986,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.8007659557553627,
+          "auprc_average_precision": 0.06760125250329077,
+          "brier_score": 0.013640710348780564,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8373277125004711,
+          "auprc_average_precision": 0.07275348901894961,
+          "brier_score": 0.008265686150792137,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07017737076112018
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8578998624298848,
+          "auprc_average_precision": 0.09704628202112538,
+          "brier_score": 0.010668960807769022,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8375796775480825,
+          "auprc_average_precision": 0.0923028735293766,
+          "brier_score": 0.013367066366336559,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8748339585288809,
+          "auprc_average_precision": 0.10603393308735526,
+          "brier_score": 0.007873692884773121,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.09916840330836593
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 403.03,
+      "reused_full_baseline": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          111.29166666666667,
+          109.72115384615384,
+          125.23076923076923
+        ]
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lightgbm_baseline/results.json": {
+      "signature": "5e80a1c1516b545b1bd8c467f17e9339d8c6c29491940f9561f9ad081f6abde9",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8388426615591567,
+          "auprc_average_precision": 0.07341384450419756,
+          "brier_score": 0.010868878137998524,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8190487584427399,
+          "auprc_average_precision": 0.07915508356807828,
+          "brier_score": 0.013498449658707879,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8513764094512639,
+          "auprc_average_precision": 0.06565167205569211,
+          "brier_score": 0.00813679207749655,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.07240337781188519
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8869030457293765,
+          "auprc_average_precision": 0.19775221345730062,
+          "brier_score": 0.010335642059656683,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.87413259995164,
+          "auprc_average_precision": 0.19428001751089097,
+          "brier_score": 0.012867052203022743,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8973151538157673,
+          "auprc_average_precision": 0.20266088798198806,
+          "brier_score": 0.007678471997595034,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.1984704527464395
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 96.43,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 220,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lightgbm_baseline/results.json": {
+      "signature": "8bde7138e967b20fb910d6bda0a4df4263885e528ba508cfc0940bf7a1598e46",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.836584248389995,
+          "auprc_average_precision": 0.07355016671290485,
+          "brier_score": 0.01078008850971717,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.8169864169362866,
+          "auprc_average_precision": 0.07454176020871887,
+          "brier_score": 0.013473944678108488,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8520294922692992,
+          "auprc_average_precision": 0.07247341424464648,
+          "brier_score": 0.00799714521862037,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.07350758722668269
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8906172436883558,
+          "auprc_average_precision": 0.2013392200712131,
+          "brier_score": 0.010356547250037276,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8803666090864746,
+          "auprc_average_precision": 0.20224825815902817,
+          "brier_score": 0.01284194450669375,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8973012783004302,
+          "auprc_average_precision": 0.2012295888293963,
+          "brier_score": 0.007740007807833034,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.20173892349421224
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 99.67,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 221,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lightgbm_baseline/results.json": {
+      "signature": "957b48b25741e2ab64434bba8f5ded1f39348e7ee0855a55699d62ec0ee9889c",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8344652539907894,
+          "auprc_average_precision": 0.07764303815381372,
+          "brier_score": 0.010935375676372537,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.8150764391478497,
+          "auprc_average_precision": 0.07881269194886235,
+          "brier_score": 0.013475812157675215,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.849570118909442,
+          "auprc_average_precision": 0.07658043802679475,
+          "brier_score": 0.008225086292241734,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07769656498782855
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8777646355607344,
+          "auprc_average_precision": 0.14168689979430152,
+          "brier_score": 0.010487138992959806,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8630972837100725,
+          "auprc_average_precision": 0.13572341634342078,
+          "brier_score": 0.013131383865816991,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8891976100772045,
+          "auprc_average_precision": 0.1533777847384122,
+          "brier_score": 0.007747671350497273,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.1445506005409165
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 74.83,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 150,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lightgbm_stronger/results.json": {
+      "signature": "32725ba2de2645cd55e743c11e262920f4a5a651b8103771ccd0ef01068f417f",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 400,
+        "reg_lambda": 50.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8412113398302369,
+          "auprc_average_precision": 0.07078621169335965,
+          "brier_score": 0.010876340954145957,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8212791467398846,
+          "auprc_average_precision": 0.07546176232069454,
+          "brier_score": 0.013525689898062293,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8557715245741357,
+          "auprc_average_precision": 0.06397472682797646,
+          "brier_score": 0.008123706442373153,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.06971824457433551
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8811116355555946,
+          "auprc_average_precision": 0.1595806201003171,
+          "brier_score": 0.01047578061895031,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8664484935810403,
+          "auprc_average_precision": 0.15862008002167918,
+          "brier_score": 0.013015128773996423,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.893749947966882,
+          "auprc_average_precision": 0.16050848851017507,
+          "brier_score": 0.007810278186472986,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.15956428426592711
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 103.37,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 235,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lightgbm_stronger/results.json": {
+      "signature": "d566e65bca4617771aa8bc7459bc675c09d3d22a105fc418598c7abd1493758b",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 400,
+        "reg_lambda": 50.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.838086994703185,
+          "auprc_average_precision": 0.0706132386678144,
+          "brier_score": 0.010814542219620684,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.8180466553929493,
+          "auprc_average_precision": 0.07085806290234013,
+          "brier_score": 0.013527658899002811,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8544528461925144,
+          "auprc_average_precision": 0.07154112506529144,
+          "brier_score": 0.008011701463145475,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.07119959398381578
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8930209648016748,
+          "auprc_average_precision": 0.19406457425803478,
+          "brier_score": 0.010364628406060228,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8820791175267111,
+          "auprc_average_precision": 0.19170978877406752,
+          "brier_score": 0.012849407570895425,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.9008204326148952,
+          "auprc_average_precision": 0.19926163555865337,
+          "brier_score": 0.007748739669341773,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.19548571216636046
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 133.63,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 314,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lightgbm_stronger/results.json": {
+      "signature": "150631e88e8cafd1bb81a87c5690c37628b64c291cdf7efae135cd0351b047d3",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 400,
+        "reg_lambda": 50.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8373458720447805,
+          "auprc_average_precision": 0.07900733709012736,
+          "brier_score": 0.01091752132818335,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.8168801364679807,
+          "auprc_average_precision": 0.07987745460629708,
+          "brier_score": 0.013449690786988367,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8541646069625172,
+          "auprc_average_precision": 0.0779037555001382,
+          "brier_score": 0.008216051697460541,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07889060505321764
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8786562662566892,
+          "auprc_average_precision": 0.13295169341961463,
+          "brier_score": 0.010516834121253706,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8630694229736258,
+          "auprc_average_precision": 0.12921129042115695,
+          "brier_score": 0.013154052364113695,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8915933788189195,
+          "auprc_average_precision": 0.1420776786715713,
+          "brier_score": 0.0077846461470664,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.13564448454636413
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 94.01,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 189,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lightgbm_weaker/results.json": {
+      "signature": "84f0ab3c9062fc5b50f13b9f2ff06e1bad72559ef8d96b9f62106163be15f1ef",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8373046526295989,
+          "auprc_average_precision": 0.07255640804878224,
+          "brier_score": 0.010895057209564683,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.8188083779261166,
+          "auprc_average_precision": 0.0816584382760752,
+          "brier_score": 0.013505101165400513,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.847782487438093,
+          "auprc_average_precision": 0.061821109444400626,
+          "brier_score": 0.008183260001206994,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.07173977386023792
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8991350647473414,
+          "auprc_average_precision": 0.25396534399448817,
+          "brier_score": 0.010104277093487544,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8875701798518312,
+          "auprc_average_precision": 0.24717080770824612,
+          "brier_score": 0.01262693153973465,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.9086747966679165,
+          "auprc_average_precision": 0.26844085700171505,
+          "brier_score": 0.0074562977097195485,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.25780583235498056
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 95.32,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 205,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lightgbm_weaker/results.json": {
+      "signature": "ee1fc9f13c96151c5515bba88a4d5cab10f95d9ffcff6ddf1def764fb90fad06",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8354797445088666,
+          "auprc_average_precision": 0.06849025471468395,
+          "brier_score": 0.010856342456990367,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.81681878405505,
+          "auprc_average_precision": 0.07361541479152033,
+          "brier_score": 0.013500536474683068,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8504925528347921,
+          "auprc_average_precision": 0.061621132124833396,
+          "brier_score": 0.008124703667867286,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.06761827345817686
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.909171002408953,
+          "auprc_average_precision": 0.30418757462124824,
+          "brier_score": 0.009936875114773897,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.898058003316782,
+          "auprc_average_precision": 0.29708813444239557,
+          "brier_score": 0.012378077788728865,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.9176735669484062,
+          "auprc_average_precision": 0.31789462072812785,
+          "brier_score": 0.007366862185971303,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.3074913775852617
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 112.36,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 259,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lightgbm_weaker/results.json": {
+      "signature": "0374ffdad9af6a81e3466bee1563be781c7414bd677f2bcd8495a2bb60ab21a1",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 100,
+        "reg_lambda": 1.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8323521998298447,
+          "auprc_average_precision": 0.07836383164712327,
+          "brier_score": 0.01093513163463839,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.813581553720332,
+          "auprc_average_precision": 0.07957478317808349,
+          "brier_score": 0.013475057996651937,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8469828400353432,
+          "auprc_average_precision": 0.07679593814727236,
+          "brier_score": 0.00822538647623578,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.07818536066267792
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8853187003318018,
+          "auprc_average_precision": 0.18884829647238557,
+          "brier_score": 0.010338734548495229,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8720796097163942,
+          "auprc_average_precision": 0.17656269498033034,
+          "brier_score": 0.012961067307218474,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.895868922129399,
+          "auprc_average_precision": 0.21152425663168664,
+          "brier_score": 0.00762196810449735,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.1940434758060085
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 56.31,
+      "reused_full_baseline": false,
+      "details": {
+        "inner_selected_trees": 138,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lr_C_0p001/results.json": {
+      "signature": "664898da929a7e75ecf167b5570743a67ae7f75dd2cff125f1c5d38d9879dc10",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p001",
+      "parameters": {
+        "C": 0.001,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8105938052180965,
+          "auprc_average_precision": 0.05569286815976168,
+          "brier_score": 0.01107560650622019,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.7892152240069442,
+          "auprc_average_precision": 0.06268471421006692,
+          "brier_score": 0.013738862233336402,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8272781778436428,
+          "auprc_average_precision": 0.04579653632861676,
+          "brier_score": 0.008308523051633867,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.05424062526934184
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.818006458200442,
+          "auprc_average_precision": 0.07224498168299505,
+          "brier_score": 0.010915413478847608,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.7981086895715437,
+          "auprc_average_precision": 0.07178566955177852,
+          "brier_score": 0.013586273689773684,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8338346897700115,
+          "auprc_average_precision": 0.07596537122523064,
+          "brier_score": 0.008111865499464263,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.07387552038850459
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 2.68,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 23
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lr_C_0p001/results.json": {
+      "signature": "83c03d1853bdac01f1d9ea3b711ae945c13a487aa679e647bf5f3a8e61826f3e",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p001",
+      "parameters": {
+        "C": 0.001,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8089325252633648,
+          "auprc_average_precision": 0.05785216032872655,
+          "brier_score": 0.01107308493525669,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.7868614223776356,
+          "auprc_average_precision": 0.06179916168406104,
+          "brier_score": 0.013742883230149704,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8260374073567878,
+          "auprc_average_precision": 0.0541465218948543,
+          "brier_score": 0.008314995123137625,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.05797284178945767
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8191157718033996,
+          "auprc_average_precision": 0.07516402104257457,
+          "brier_score": 0.010933285387615307,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.7999933162253708,
+          "auprc_average_precision": 0.0766963392958162,
+          "brier_score": 0.013567102479279745,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8338202906000614,
+          "auprc_average_precision": 0.07516561259232787,
+          "brier_score": 0.008160494725907338,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.07593097594407203
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 2.55,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 24
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lr_C_0p001/results.json": {
+      "signature": "5d185c3c7a6454cfd4b3718c05a272ee1bc6c798ee45f0e37eba78ca005063ba",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p001",
+      "parameters": {
+        "C": 0.001,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.7984566828068344,
+          "auprc_average_precision": 0.06094406583026112,
+          "brier_score": 0.011114759544154721,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.779282752207396,
+          "auprc_average_precision": 0.06215085720535687,
+          "brier_score": 0.013714564944404166,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8112003646861268,
+          "auprc_average_precision": 0.061606605975955436,
+          "brier_score": 0.008341131851054966,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.061878731590656155
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8235202062883888,
+          "auprc_average_precision": 0.07152798977750957,
+          "brier_score": 0.010858530080152843,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8003358804838465,
+          "auprc_average_precision": 0.07045501259745936,
+          "brier_score": 0.013590290399178782,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8413814176526254,
+          "auprc_average_precision": 0.07521353357086981,
+          "brier_score": 0.008028395444078656,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.07283427308416458
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 2.73,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 25
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lr_C_0p01/results.json": {
+      "signature": "7224a9374f1517054757f966eea87be61ad4e2802383f9e6b36a9ec3c31a22e7",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p01",
+      "parameters": {
+        "C": 0.01,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.810018937779514,
+          "auprc_average_precision": 0.05601429255945284,
+          "brier_score": 0.011097300810337302,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.7899472588271947,
+          "auprc_average_precision": 0.06261376889989421,
+          "brier_score": 0.013764365711636549,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8252786074052508,
+          "auprc_average_precision": 0.04646725434412375,
+          "brier_score": 0.008326259679907012,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.054540511622008986
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8196293564841285,
+          "auprc_average_precision": 0.07401337183068753,
+          "brier_score": 0.010909321750983688,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8007368204634537,
+          "auprc_average_precision": 0.07278054218418581,
+          "brier_score": 0.01358584372481565,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8342945504621448,
+          "auprc_average_precision": 0.07878135173520388,
+          "brier_score": 0.008099830733514857,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.07578094695969484
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 3.83,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 33
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lr_C_0p01/results.json": {
+      "signature": "df9889287f7ce05f1588c91ef28bfb949e018edc9b5c1229f09f6dad3f23bf9d",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p01",
+      "parameters": {
+        "C": 0.01,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8054653272831312,
+          "auprc_average_precision": 0.05640418234122083,
+          "brier_score": 0.011198024113913156,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.7849227287663997,
+          "auprc_average_precision": 0.06033996956913809,
+          "brier_score": 0.01383821601307229,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.820727379158873,
+          "auprc_average_precision": 0.05233542749347647,
+          "brier_score": 0.008470519795313726,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.05633769853130728
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8214087512042315,
+          "auprc_average_precision": 0.07838949735446439,
+          "brier_score": 0.010921092442664163,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8042085734672951,
+          "auprc_average_precision": 0.07942812968678445,
+          "brier_score": 0.013558681758275843,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8338815723705935,
+          "auprc_average_precision": 0.07892121987346945,
+          "brier_score": 0.00814433051530989,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.07917467478012695
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 3.93,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 35
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lr_C_0p01/results.json": {
+      "signature": "1896e990553e8fc2b62c636da20c3cb7964c9bb9fa20d1702ced1fbb4f27f32c",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p01",
+      "parameters": {
+        "C": 0.01,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.7966012489198819,
+          "auprc_average_precision": 0.06051525130605852,
+          "brier_score": 0.011144050210009634,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.7777202643371082,
+          "auprc_average_precision": 0.06136710079941761,
+          "brier_score": 0.013762201958849625,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8087842821773457,
+          "auprc_average_precision": 0.061065120423326166,
+          "brier_score": 0.008350849536365597,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.06121611061137189
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8259073464542566,
+          "auprc_average_precision": 0.0730321229612232,
+          "brier_score": 0.010859096337181132,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8039943467756343,
+          "auprc_average_precision": 0.07167366202398189,
+          "brier_score": 0.013598387575343198,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8420724129122336,
+          "auprc_average_precision": 0.07717260576000995,
+          "brier_score": 0.008021159583571169,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.07442313389199592
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 5.23,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 35
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lr_C_0p1/results.json": {
+      "signature": "c447325c5124bb0aecc9d27a0697dafc017467e3cd28f0f1801e7b8030f13d74",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p1",
+      "parameters": {
+        "C": 0.1,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8090116892374731,
+          "auprc_average_precision": 0.05615140483161322,
+          "brier_score": 0.011100887694595697,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.7894651611062398,
+          "auprc_average_precision": 0.06276393568557057,
+          "brier_score": 0.013769056011217865,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8234210548828214,
+          "auprc_average_precision": 0.0464500146221454,
+          "brier_score": 0.008328700131904879,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.054606975153857984
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8197310180338067,
+          "auprc_average_precision": 0.0742759891266612,
+          "brier_score": 0.010909200185283057,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8012144442690917,
+          "auprc_average_precision": 0.0727446620340999,
+          "brier_score": 0.013588219847108042,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8338658922964621,
+          "auprc_average_precision": 0.07942584261878684,
+          "brier_score": 0.00809708739521178,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.07608525232644336
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 6.09,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 34
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lr_C_0p1/results.json": {
+      "signature": "6165020461a4f90894e8575db48982df639fa6d9623c9c5e5fe0648451b17d58",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p1",
+      "parameters": {
+        "C": 0.1,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8032087035268162,
+          "auprc_average_precision": 0.05595968892544232,
+          "brier_score": 0.01121430308553318,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.7824300082277275,
+          "auprc_average_precision": 0.06068305879003609,
+          "brier_score": 0.0138557830167367,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8191272930686875,
+          "auprc_average_precision": 0.051776048838080825,
+          "brier_score": 0.008485468139048448,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.05622955381405846
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8215615600217919,
+          "auprc_average_precision": 0.07885870438062936,
+          "brier_score": 0.010918325273890127,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.805095290300966,
+          "auprc_average_precision": 0.07958872223687063,
+          "brier_score": 0.013558598075717325,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8330277631298199,
+          "auprc_average_precision": 0.07994443012740961,
+          "brier_score": 0.008138738265954988,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.07976657618214011
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 6.01,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 43
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lr_C_0p1/results.json": {
+      "signature": "5c93ac616fc5c463412cf097f5caf43632aab2f945e5f4765c965598e00f2897",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_0p1",
+      "parameters": {
+        "C": 0.1,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.7958710888171363,
+          "auprc_average_precision": 0.06048929782144956,
+          "brier_score": 0.011150835339260787,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.7770022875214424,
+          "auprc_average_precision": 0.06129092396962108,
+          "brier_score": 0.013773576137729508,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8080872321449426,
+          "auprc_average_precision": 0.0611252987926445,
+          "brier_score": 0.008352738793358757,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.06120811138113279
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8259258837843562,
+          "auprc_average_precision": 0.07315552536930543,
+          "brier_score": 0.010861392697877838,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8042796145025516,
+          "auprc_average_precision": 0.0717974076594307,
+          "brier_score": 0.01360182240299649,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8417288961206435,
+          "auprc_average_precision": 0.07708627413134349,
+          "brier_score": 0.008022276479604223,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.07444184089538709
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 6.11,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 34
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lr_C_10p0/results.json": {
+      "signature": "e8d698c19504ee0f1b75cb2aeb2dbb1246cc6309b673cf895464c46346475c19",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_10p0",
+      "parameters": {
+        "C": 10.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8088780879399158,
+          "auprc_average_precision": 0.056027220528499753,
+          "brier_score": 0.011101894539595411,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.7890870518134588,
+          "auprc_average_precision": 0.06209549742033307,
+          "brier_score": 0.013776175154504447,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8231775796776178,
+          "auprc_average_precision": 0.046974719459591405,
+          "brier_score": 0.008323356389055712,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.05453510843996224
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8202554120961753,
+          "auprc_average_precision": 0.07475117326191369,
+          "brier_score": 0.010905018991002555,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8018171162481297,
+          "auprc_average_precision": 0.07331392680086521,
+          "brier_score": 0.01358399936671966,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8343541964256077,
+          "auprc_average_precision": 0.08020488795444244,
+          "brier_score": 0.008092947438764661,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.07675940737765383
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 6.92,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 43
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lr_C_10p0/results.json": {
+      "signature": "2ba4fbd3754dcfca7af6d10a51fc54534b1b49a8328af4971ff1843d0919dfc3",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_10p0",
+      "parameters": {
+        "C": 10.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8032172606421596,
+          "auprc_average_precision": 0.05594235716379872,
+          "brier_score": 0.011219680328977102,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.7825607958197852,
+          "auprc_average_precision": 0.060498691651682285,
+          "brier_score": 0.013866731974675351,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.8188306339213738,
+          "auprc_average_precision": 0.051798554834124794,
+          "brier_score": 0.008485089408712126,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.05614862324290354
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8215124208085449,
+          "auprc_average_precision": 0.07894537505013757,
+          "brier_score": 0.010918818955277469,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8049740174099145,
+          "auprc_average_precision": 0.07960087205816516,
+          "brier_score": 0.01356047563751652,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8331005176206949,
+          "auprc_average_precision": 0.08030084213196505,
+          "brier_score": 0.008137775046369571,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.07995085709506511
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 7.34,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 42
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lr_C_10p0/results.json": {
+      "signature": "7f56166f5282843713e882e93c1ae92c50aa185238b1ddf7314af54f7f66b3e8",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "C_10p0",
+      "parameters": {
+        "C": 10.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.7957550519661782,
+          "auprc_average_precision": 0.06043306862312957,
+          "brier_score": 0.011151850779213567,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.7768808692849977,
+          "auprc_average_precision": 0.061220652458721,
+          "brier_score": 0.013775320975791653,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8079659274469233,
+          "auprc_average_precision": 0.06113357946932456,
+          "brier_score": 0.008352976067839912,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.06117711596402278
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8259126068276748,
+          "auprc_average_precision": 0.07313377071137545,
+          "brier_score": 0.010861761523028902,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8042768226506437,
+          "auprc_average_precision": 0.07178389602391597,
+          "brier_score": 0.013602567121991104,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8416882793727676,
+          "auprc_average_precision": 0.07703817782378908,
+          "brier_score": 0.008022255874475217,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.07441103692385252
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 5.3,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 34
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold0/lr_baseline/results.json": {
+      "signature": "b5538c9feb5371bddbf2d5833fd6f458fddc2311ec95ca459f6df76359fe3fd3",
+      "case": {
+        "signature": "50308c582ee7b4226d0263942ee8c16ca8b74314ef8d1ca5ca12b82bd8dde214",
+        "stage": "cv",
+        "fold": 0,
+        "training_patients": 18607,
+        "training_event_patients": 1162,
+        "training_hours": 611936,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 306068,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "baseline",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8088853727970311,
+          "auprc_average_precision": 0.0560283834216214,
+          "brier_score": 0.011101896796345708,
+          "positive_hour_prevalence": 0.01137002234797496
+        },
+        "A": {
+          "auroc": 0.7890976894973986,
+          "auprc_average_precision": 0.06210284263528643,
+          "brier_score": 0.013776071279705763,
+          "positive_hour_prevalence": 0.014195947678892023
+        },
+        "B": {
+          "auroc": 0.8231823399657467,
+          "auprc_average_precision": 0.046971928876705406,
+          "brier_score": 0.008323468914921438,
+          "positive_hour_prevalence": 0.008433927572148054
+        },
+        "macro_hospital_auprc": 0.05453738575599592
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8202581343626358,
+          "auprc_average_precision": 0.0747520502352223,
+          "brier_score": 0.010905019002695795,
+          "positive_hour_prevalence": 0.01139334832400774
+        },
+        "A": {
+          "auroc": 0.8018191713452019,
+          "auprc_average_precision": 0.07331019181355197,
+          "brier_score": 0.013583988382257052,
+          "positive_hour_prevalence": 0.014167921782860644
+        },
+        "B": {
+          "auroc": 0.8343586432559263,
+          "auprc_average_precision": 0.08020574518892656,
+          "brier_score": 0.008092958992900433,
+          "positive_hour_prevalence": 0.008480934644551033
+        },
+        "macro_hospital_auprc": 0.07675796850123927
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 7.97,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 43
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold1/lr_baseline/results.json": {
+      "signature": "daed6981c735dbbefba07f366ef982a60cd28f9cf49157b644802e27a1db7a33",
+      "case": {
+        "signature": "7f6c0c3729362a431198a453f923b87c3e0dbdee8424be33b968ec57be2ea8bd",
+        "stage": "cv",
+        "fold": 1,
+        "training_patients": 18607,
+        "training_event_patients": 1161,
+        "training_hours": 609390,
+        "evaluation_patients": 9304,
+        "evaluation_hours": 308614,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "baseline",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.8031992589233508,
+          "auprc_average_precision": 0.05596916533351646,
+          "brier_score": 0.011215721892762083,
+          "positive_hour_prevalence": 0.011295663838970365
+        },
+        "A": {
+          "auroc": 0.7824407219304921,
+          "auprc_average_precision": 0.0605454690461336,
+          "brier_score": 0.013861849419967822,
+          "positive_hour_prevalence": 0.014156628426764956
+        },
+        "B": {
+          "auroc": 0.818974322210591,
+          "auprc_average_precision": 0.051819485862061095,
+          "brier_score": 0.008482085652033861,
+          "positive_hour_prevalence": 0.008340085772446095
+        },
+        "macro_hospital_auprc": 0.05618247745409735
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.821516115328564,
+          "auprc_average_precision": 0.0788833984982236,
+          "brier_score": 0.010918658222239993,
+          "positive_hour_prevalence": 0.011431103234381923
+        },
+        "A": {
+          "auroc": 0.8049638262384268,
+          "auprc_average_precision": 0.07949430041234325,
+          "brier_score": 0.013560172997837416,
+          "positive_hour_prevalence": 0.014187574193589673
+        },
+        "B": {
+          "auroc": 0.8331031623846474,
+          "auprc_average_precision": 0.08022006468343837,
+          "brier_score": 0.008137763707689056,
+          "positive_hour_prevalence": 0.00852918686397429
+        },
+        "macro_hospital_auprc": 0.07985718254789081
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 8.19,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 42
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/cv/fold2/lr_baseline/results.json": {
+      "signature": "e80e0da2f70a9af3efed58eb784dbbdd82c2a94d32d8dba38c0f7358f4ee582c",
+      "case": {
+        "signature": "9e75884b790ade21a49e064ddaa7300f697066461a6fe2106c1a7d1491cc3095",
+        "stage": "cv",
+        "fold": 2,
+        "training_patients": 18608,
+        "training_event_patients": 1161,
+        "training_hours": 614682,
+        "evaluation_patients": 9303,
+        "evaluation_hours": 303322,
+        "features": 312,
+        "preprocessing_fitted_on": "outer CV training patients only"
+      },
+      "model": "lr",
+      "candidate": "baseline",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "pooled": {
+          "auroc": 0.7957653329737259,
+          "auprc_average_precision": 0.06043715392685412,
+          "brier_score": 0.011151760382251321,
+          "positive_hour_prevalence": 0.011492737091275938
+        },
+        "A": {
+          "auroc": 0.7768908473868725,
+          "auprc_average_precision": 0.06122411843159675,
+          "brier_score": 0.01377516778405704,
+          "positive_hour_prevalence": 0.014179233171741171
+        },
+        "B": {
+          "auroc": 0.8079776382392801,
+          "auprc_average_precision": 0.061130668903611636,
+          "brier_score": 0.0083529526640917,
+          "positive_hour_prevalence": 0.008626622602296343
+        },
+        "macro_hospital_auprc": 0.06117739366760419
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.825913928003683,
+          "auprc_average_precision": 0.07313056131426247,
+          "brier_score": 0.01086172783307202,
+          "positive_hour_prevalence": 0.011332689097777387
+        },
+        "A": {
+          "auroc": 0.8042765110632943,
+          "auprc_average_precision": 0.0717848586164224,
+          "brier_score": 0.01360250282539645,
+          "positive_hour_prevalence": 0.014176234186017513
+        },
+        "B": {
+          "auroc": 0.8416927938105753,
+          "auprc_average_precision": 0.07703659481922331,
+          "brier_score": 0.00802225389334178,
+          "positive_hour_prevalence": 0.008386744174491976
+        },
+        "macro_hospital_auprc": 0.07441072671782287
+      },
+      "alerts": null,
+      "threshold": null,
+      "fit_seconds": 5.79,
+      "reused_full_baseline": false,
+      "details": {
+        "iterations": 34
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/validation/full/lr_baseline/results.json": {
+      "signature": "1eaa114ef0228c8aa957d2bee25d45e29694fe5b61d4d19bc8ca2829467a9f6c",
+      "case": {
+        "signature": "11dbd3482750b816d43b88ca4f9df560d21af303bf47e7d2848f554a1f02a21d",
+        "stage": "validation",
+        "fold": -1,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "features": 312,
+        "preprocessing_fitted_on": "same full A+B training pool; original A+B preprocessor reused"
+      },
+      "model": "lr",
+      "candidate": "baseline",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.7859060088299704,
+          "auprc_average_precision": 0.06948159906549041,
+          "brier_score": 0.01347386037031889,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8153182853563482,
+          "auprc_average_precision": 0.051221737475289575,
+          "brier_score": 0.008291434574392633,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "pooled_validation": {
+          "auroc": 0.804743682273981,
+          "auprc_average_precision": 0.06110813553600088,
+          "brier_score": 0.010948708991861983,
+          "positive_hour_prevalence": 0.011292838810326607
+        },
+        "macro_hospital_auprc": 0.06035166827038999
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8194973400551482,
+          "auprc_average_precision": 0.07074246473443743,
+          "brier_score": 0.010927994823352723,
+          "positive_hour_prevalence": 0.011385571304700198
+        },
+        "A": {
+          "auroc": 0.8001908229149617,
+          "auprc_average_precision": 0.0712222127465772,
+          "brier_score": 0.01360870013385283,
+          "positive_hour_prevalence": 0.014177234608304357
+        },
+        "B": {
+          "auroc": 0.833703338793772,
+          "auprc_average_precision": 0.0710035470178954,
+          "brier_score": 0.008123704373454449,
+          "positive_hour_prevalence": 0.00846520750679802
+        },
+        "macro_hospital_auprc": 0.0711128798822363
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 99,
+          "event_sensitivity": 0.41596638655462187,
+          "false_alert_episodes": 1219,
+          "false_alerts_per_100_patient_hours": 1.1964117462311559,
+          "total_alert_episodes": 1318,
+          "true_alert_episodes": 99,
+          "alert_ppv": 0.07511380880121396,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 620,
+          "false_alerts_per_100_patient_hours": 0.6403503336018673,
+          "total_alert_episodes": 674,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.08011869436201781,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 153,
+          "event_sensitivity": 0.4090909090909091,
+          "false_alert_episodes": 1839,
+          "false_alerts_per_100_patient_hours": 0.9254692768355895,
+          "total_alert_episodes": 1992,
+          "true_alert_episodes": 153,
+          "alert_ppv": 0.07680722891566265,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04598757356107251,
+      "fit_seconds": 0.0,
+      "reused_full_baseline": true,
+      "details": {
+        "reused_source": "outputs/ab_expansion/models/A_B_full__common/lr_model.joblib"
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/validation/full/ebm_baseline/results.json": {
+      "signature": "dde8210419ab4071800e18af1b078bed502865348a66d2f73c8998c9e49823c8",
+      "case": {
+        "signature": "11dbd3482750b816d43b88ca4f9df560d21af303bf47e7d2848f554a1f02a21d",
+        "stage": "validation",
+        "fold": -1,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "features": 312,
+        "preprocessing_fitted_on": "same full A+B training pool; original A+B preprocessor reused"
+      },
+      "model": "ebm",
+      "candidate": "baseline",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8071172048353484,
+          "auprc_average_precision": 0.07251567269387958,
+          "brier_score": 0.013404551227608662,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8359690958857555,
+          "auprc_average_precision": 0.06557192663517424,
+          "brier_score": 0.00812778253277157,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "pooled_validation": {
+          "auroc": 0.8252876092388514,
+          "auprc_average_precision": 0.06980750388507491,
+          "brier_score": 0.010833431009343267,
+          "positive_hour_prevalence": 0.011292838810326607
+        },
+        "macro_hospital_auprc": 0.06904379966452691
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8526014707338757,
+          "auprc_average_precision": 0.0899895791305362,
+          "brier_score": 0.010763290070837506,
+          "positive_hour_prevalence": 0.011385571304700198
+        },
+        "A": {
+          "auroc": 0.8351059137758876,
+          "auprc_average_precision": 0.08814173433675719,
+          "brier_score": 0.013399742295557756,
+          "positive_hour_prevalence": 0.014177234608304357
+        },
+        "B": {
+          "auroc": 0.8658284386605515,
+          "auprc_average_precision": 0.09366879528901807,
+          "brier_score": 0.008005292850316169,
+          "positive_hour_prevalence": 0.00846520750679802
+        },
+        "macro_hospital_auprc": 0.09090526481288763
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 106,
+          "event_sensitivity": 0.44537815126050423,
+          "false_alert_episodes": 1139,
+          "false_alerts_per_100_patient_hours": 1.1178941582914572,
+          "total_alert_episodes": 1245,
+          "true_alert_episodes": 106,
+          "alert_ppv": 0.08514056224899598,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 63,
+          "event_sensitivity": 0.4632352941176471,
+          "false_alert_episodes": 637,
+          "false_alerts_per_100_patient_hours": 0.6579083266199831,
+          "total_alert_episodes": 700,
+          "true_alert_episodes": 63,
+          "alert_ppv": 0.09,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 169,
+          "event_sensitivity": 0.45187165775401067,
+          "false_alert_episodes": 1776,
+          "false_alerts_per_100_patient_hours": 0.8937647828493784,
+          "total_alert_episodes": 1945,
+          "true_alert_episodes": 169,
+          "alert_ppv": 0.08688946015424165,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.05106413005999721,
+      "fit_seconds": 0.0,
+      "reused_full_baseline": true,
+      "details": {
+        "reused_source": "outputs/ab_expansion/models/A_B_full__common/ebm_model.joblib"
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_regularization/validation/full/lightgbm_baseline/results.json": {
+      "signature": "2cdaf79a93cf5c9239a59a36b05a971c5df64a5a1999437cfe1d4123258bf9ef",
+      "case": {
+        "signature": "11dbd3482750b816d43b88ca4f9df560d21af303bf47e7d2848f554a1f02a21d",
+        "stage": "validation",
+        "fold": -1,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "features": 312,
+        "preprocessing_fitted_on": "same full A+B training pool; original A+B preprocessor reused"
+      },
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8167788606583386,
+          "auprc_average_precision": 0.0814660486930731,
+          "brier_score": 0.0133048444928494,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.848485661945965,
+          "auprc_average_precision": 0.07987702623442647,
+          "brier_score": 0.008013159505481073,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "pooled_validation": {
+          "auroc": 0.8371543851876926,
+          "auprc_average_precision": 0.08025124897592313,
+          "brier_score": 0.010726456269574396,
+          "positive_hour_prevalence": 0.011292838810326607
+        },
+        "macro_hospital_auprc": 0.08067153746374978
+      },
+      "training": {
+        "pooled": {
+          "auroc": 0.8740072158367058,
+          "auprc_average_precision": 0.13539692429343717,
+          "brier_score": 0.010554242838659514,
+          "positive_hour_prevalence": 0.011385571304700198
+        },
+        "A": {
+          "auroc": 0.858507286193505,
+          "auprc_average_precision": 0.130712321469451,
+          "brier_score": 0.013141880900468762,
+          "positive_hour_prevalence": 0.014177234608304357
+        },
+        "B": {
+          "auroc": 0.8864486545340888,
+          "auprc_average_precision": 0.14338310850541602,
+          "brier_score": 0.007847310198170499,
+          "positive_hour_prevalence": 0.00846520750679802
+        },
+        "macro_hospital_auprc": 0.1370477149874335
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 107,
+          "event_sensitivity": 0.4495798319327731,
+          "false_alert_episodes": 1173,
+          "false_alerts_per_100_patient_hours": 1.151264133165829,
+          "total_alert_episodes": 1280,
+          "true_alert_episodes": 107,
+          "alert_ppv": 0.08359375,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 68,
+          "event_sensitivity": 0.5,
+          "false_alert_episodes": 692,
+          "false_alerts_per_100_patient_hours": 0.714713598149181,
+          "total_alert_episodes": 760,
+          "true_alert_episodes": 68,
+          "alert_ppv": 0.08947368421052632,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 175,
+          "event_sensitivity": 0.4679144385026738,
+          "false_alert_episodes": 1865,
+          "false_alerts_per_100_patient_hours": 0.9385536711791053,
+          "total_alert_episodes": 2040,
+          "true_alert_episodes": 175,
+          "alert_ppv": 0.0857843137254902,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.05175862501544144,
+      "fit_seconds": 0.0,
+      "reused_full_baseline": true,
+      "details": {
+        "reused_source": "outputs/ab_expansion/models/A_B_full__common/lightgbm_model.joblib"
+      },
+      "warnings": [],
+      "test_sets_evaluated": [],
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    }
+  }
+}

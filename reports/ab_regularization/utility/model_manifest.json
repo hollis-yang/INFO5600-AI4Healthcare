@@ -1,0 +1,269 @@
+[
+  {
+    "stage": "A_only",
+    "model": "lr",
+    "source_model": "outputs/ab_expansion/models/A_only__common/lr_model.joblib",
+    "source_model_sha256": "29f389f159fd8579cf19f8e6f9cf3bc3f4f73ecff46657b50ef763430a93560b",
+    "thresholds": {
+      "existing_validation_budget": 0.044704648190330556,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    }
+  },
+  {
+    "stage": "A_only",
+    "model": "ebm",
+    "source_model": "outputs/ab_expansion/models/A_only__common/ebm_model.joblib",
+    "source_model_sha256": "aaa4191af92e06434ccfc2ec0b416abe080b55e6436112f06dfaf3ee3fb5703f",
+    "thresholds": {
+      "existing_validation_budget": 0.04883624914598487,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    }
+  },
+  {
+    "stage": "A_only",
+    "model": "lightgbm",
+    "source_model": "outputs/ab_expansion/models/A_only__common/lightgbm_model.joblib",
+    "source_model_sha256": "96d7cf8b678a834a1e61779da97bae2dff528ce0e5c683a34e12a2c09a09764a",
+    "thresholds": {
+      "existing_validation_budget": 0.06718892132359253,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    }
+  },
+  {
+    "stage": "A_B_baseline",
+    "model": "lr",
+    "source_model": "outputs/ab_expansion/models/A_B_full__common/lr_model.joblib",
+    "source_model_sha256": "c5ad9ba95ad9ad46bcc6baf545d9ec3915e31f0923705ed7f8bee742f58f0616",
+    "thresholds": {
+      "existing_validation_budget": 0.04598757356107251,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    }
+  },
+  {
+    "stage": "A_B_baseline",
+    "model": "ebm",
+    "source_model": "outputs/ab_expansion/models/A_B_full__common/ebm_model.joblib",
+    "source_model_sha256": "61a87993abd947b5a38e00d273cd2c596d76187593d76800c98c94bbdbe9d4e1",
+    "thresholds": {
+      "existing_validation_budget": 0.05106413005999721,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    }
+  },
+  {
+    "stage": "A_B_baseline",
+    "model": "lightgbm",
+    "source_model": "outputs/ab_expansion/models/A_B_full__common/lightgbm_model.joblib",
+    "source_model_sha256": "a9125fdb35028d4733a52ab6a10ab115d050fd3331726d4546255846761eb79b",
+    "thresholds": {
+      "existing_validation_budget": 0.05175862501544144,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    }
+  },
+  {
+    "stage": "A_B_cv",
+    "model": "lr",
+    "source_model": "outputs/ab_regularization/validation/full/lr_baseline/model.joblib",
+    "source_model_sha256": "61d11e646f421498c88ddde31501d66f0813ed54172e5ae8303e67ad2f2e7db6",
+    "thresholds": {
+      "existing_validation_budget": 0.04598757356107251,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    }
+  },
+  {
+    "stage": "A_B_cv",
+    "model": "ebm",
+    "source_model": "outputs/ab_regularization/validation/full/ebm_baseline/model.joblib",
+    "source_model_sha256": "b14f04b06ddb1bc965b2754b0f85550f273dcee7c46c463fe5702b2cccd190d7",
+    "thresholds": {
+      "existing_validation_budget": 0.05106413005999721,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    }
+  },
+  {
+    "stage": "A_B_cv",
+    "model": "lightgbm",
+    "source_model": "outputs/ab_regularization/validation/full/lightgbm_baseline/model.joblib",
+    "source_model_sha256": "9078d8005758a0ba5c885d2d8385a3345a2881d391b2143385f7afb44e802e64",
+    "thresholds": {
+      "existing_validation_budget": 0.05175862501544144,
+      "fixed_0p5": 0.5
+    },
+    "eligible_pipeline_probes_verified": [
+      "A_validation",
+      "B_validation"
+    ],
+    "parameters": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    }
+  }
+]

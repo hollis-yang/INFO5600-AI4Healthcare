@@ -1,0 +1,24 @@
+[study]
+stages = ["A_only", "A_B_baseline", "A_B_cv"]
+models = ["lr", "ebm", "lightgbm"]
+evaluation_splits = ["A_validation", "B_validation"]
+threshold_policies = ["existing_validation_budget", "fixed_0p5"]
+bootstrap_samples = 300
+bootstrap_seed = 42
+prediction_threads = 2
+
+[protocol]
+score = "Official PhysioNet/CinC 2019 normalized utility"
+trajectory = "Full raw hourly trajectory of unchanged eligible validation patients"
+labels = "Unmodified original SepsisLabel; no additional time shift"
+binary_predictions = "Hourly probability >= frozen threshold; no alarm suppression"
+threshold_tuning_for_utility = false
+regularization_selection_uses_utility = false
+test_sets_evaluated = []
+dt_early = -12
+dt_optimal = -6
+dt_late = 3
+max_u_tp = 1.0
+min_u_fn = -2.0
+u_fp = -0.05
+u_tn = 0.0

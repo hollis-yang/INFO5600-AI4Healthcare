@@ -1,0 +1,20 @@
+[
+  {
+    "stage": "validation",
+    "fold": -1,
+    "model": "lr",
+    "candidate": "baseline"
+  },
+  {
+    "stage": "validation",
+    "fold": -1,
+    "model": "ebm",
+    "candidate": "baseline"
+  },
+  {
+    "stage": "validation",
+    "fold": -1,
+    "model": "lightgbm",
+    "candidate": "baseline"
+  }
+]

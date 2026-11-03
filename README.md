@@ -144,6 +144,46 @@ Settings are in `configs/ab_expansion.toml`. The runner freezes source/input fin
 
 Bootstrap intervals condition on the fitted models and chosen training subsets. Two matched draws do not capture all training uncertainty, and the exploratory comparisons are not adjusted for multiplicity. Compare AUPRC changes within the same evaluation cohort. Full A+B versus A-only changes source distribution and sample size together; full versus matched A+B provides a more focused mixed-pool size control. No final model is selected from B test.
 
+## Hospital-stratified A+B regularization and missingness study
+
+This study keeps all existing A/B patient assignments and the common 312-feature pipeline. It creates three internal folds from the same 27,911 A+B training patients, stratifying by hospital and event status while keeping each patient's complete hourly trajectory together. Every fold fits its own imputation, clipping and scaling using only its outer training partition. Existing event-stratified patient bags provide internal early stopping within that partition.
+
+`configs/ab_regularization.toml` fixes 11 candidates: five LR L2 penalties (`C=0.001,0.01,0.1,1,10`); three joint EBM leaf-size/L2 settings; and three joint LightGBM child-size/L2 settings. Tree size, bins, learning rate and maximum iterations are unchanged. The 33 CV fits use the mean of A/B-specific AUPRC, averaged over three folds. A candidate must gain at least 0.001 and improve at least two folds to replace the original setting. Otherwise the original setting is retained. The selection file is written before scoring the selected full-training models on A/B validation. Neither test set is evaluated in this round.
+
+```sh
+python scripts/run_ab_regularization.py
+python scripts/analyze_ab_missingness.py
+python scripts/report_ab_regularization.py
+python scripts/verify_ab_regularization.py
+```
+
+On macOS, use the study's environment helper at process startup for report/verification commands that load LightGBM (the runner already uses it for model workers):
+
+```sh
+python - <<'PY'
+import subprocess, sys
+sys.path.insert(0, 'src')
+from sepsis_warning.ab_regularization import runtime_environment
+for script in ['report_ab_regularization.py', 'verify_ab_regularization.py']:
+    subprocess.run([sys.executable, '-u', 'scripts/' + script],
+                   env=runtime_environment(), check=True)
+PY
+```
+
+The scheduler requests at most eight CPU threads across three workers, including at most two concurrent EBMs; LR uses two threads. Runtime package versions and input/source hashes are saved before fitting. On this machine the helper reuses the same verified pinned InterpretML/LightGBM wheels outside the Desktop cloud directory when that cache exists. Matching completed candidates are cached for resumption; changing a frozen protocol requires a separate study directory.
+
+The missingness analysis uses only fixed training patients. It separates observations absent in an hourly bin from latest measurements unavailable after six-hour expiry, reports hour- and patient-weighted proportions, standardizes both hospitals to the pooled event-patient proportion, and includes first-24-hour and ICU-hour-band controls. A separate patient-level hospital classifier measures source separability using 40 whole-eligible-episode missing fractions with fold-fitted scaling. Those full-episode diagnostic features never enter hourly sepsis prediction. Missingness differences and source separability describe distribution shift; they do not establish that missingness caused model errors.
+
+New raw/processed caches are under `processed_data/ab_regularization/`, fitted candidates and predictions under `outputs/ab_regularization/`, and small reports, fixed fold assignments and verification evidence under `reports/ab_regularization/`. Fold caches need approximately 4.6 GB; the full-training normalization and matrices reuse the unchanged A+B training artifacts. Both original and selected full models calibrate alarms on the same pooled validation patients. Validation and paired-bootstrap results remain exploratory because validation has been viewed during earlier development; CV fold variation is not a confidence interval, and the reported validation intervals condition on selected models.
+
+### Official utility supplement
+
+`run_utility_comparison.py` evaluates A-only, original A+B and CV-selected A+B models on the complete raw trajectories of the same A/B validation patients. It retains the original SepsisLabel without another shift and applies each model's frozen pooled-validation budget threshold to every hour, without the custom alarm suppression rule. A fixed 0.5 threshold is a secondary sensitivity check. Utility is never used to change the frozen CV selection or tune thresholds. Neither test set is evaluated.
+
+The unmodified official [PhysioNet/CinC 2019 scorer](https://github.com/physionetchallenges/evaluation-2019) is pinned under `third_party/physionet2019/` with its original BSD 2-Clause license, Git blob IDs and SHA-256. Utility is normalized after summing patient contributions: 0 means inaction and 1 means the cohort oracle; negative scores are possible. This full-trajectory supplement and its selected cohort differ from the custom pre-onset task and from the official hidden Challenge test.
+
+After the regularization run, use the same macOS environment wrapper for `run_utility_comparison.py` and `verify_utility_comparison.py`. `run_utility_comparison.py --prepare-only` can prepare full trajectories while CV is running. The supplement adds about 0.3 GB under `processed_data/ab_regularization/utility/`; results and patient-level contributions remain under `outputs/ab_regularization/utility/`, and small snapshots under `reports/ab_regularization/utility/`. Unit fixtures and real patient subsets are checked against the upstream directory-based evaluator.
+
 ## Local outputs
 
 - `processed_data/`: fixed patient split list, raw numeric cache, causal features, transformed matrices and labels. This directory is separate from `data/` and ignored by Git.
@@ -160,7 +200,7 @@ Bootstrap intervals condition on the fitted models and chosen training subsets. 
 - `outputs/ebm_regularized/selected_model.joblib`: internally selected regularized model, preprocessing, class weight and validation alarm threshold.
 - `reports/baseline_comparison/`, `reports/ebm_regularized/`: small, versioned result snapshots for comparing experiments.
 
-## Analysis protocol
+## Original A-only analysis protocol
 
 1. Verify every raw file against the committed manifest (MD5/SHA-256), header and row count.
 2. Require adult age, consecutive integer ICU hours, binary monotonic labels, an observed 0-to-1 transition for event cases, and a reconstructed onset within the observation period. Exclude start-positive and ambiguous cases, post-onset hours, and negative windows without 6 hours of follow-up. Record each exclusion; these conservative choices restrict the target population.

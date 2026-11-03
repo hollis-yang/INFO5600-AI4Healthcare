@@ -1,0 +1,13 @@
+{
+  "training_patients": 27911,
+  "training_hours": 918004,
+  "variables": 40,
+  "test_sets_used": [],
+  "target_event_patient_prevalence": 0.0624126688402422,
+  "protocol_sha256": "292f00c9ae823bb5ca46e8005aaed8d63d1a61bd1fec2b996979c7e954bab020",
+  "input_training_features_sha256": "4c0fe7fc8b9f3540f93736d918cbbdea096f0d26edf167ea7d6b0da16c9dcbf1",
+  "source_fingerprints": {
+    "scripts/analyze_ab_missingness.py": "f0b7a81e08bc71ebc291f677cada0e787219ae3506e402c176dddb59ffb0fe7d",
+    "src/sepsis_warning/missingness.py": "6682181215f50b80e439fd5ede7e138f6dc8ba95bdcb4ac9824b560da275a79a"
+  }
+}

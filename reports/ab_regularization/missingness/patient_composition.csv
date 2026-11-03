@@ -1,0 +1,3 @@
+hospital,patients,event_patients,event_patient_prevalence,median_eligible_hours,median_patient_raw_missing_fraction,mean_hour_raw_missing_fraction,mean_hour_latest_missing_fraction,hours_without_any_lab_measurement_rate
+A,14091,1109,0.07870271804698034,33.0,0.7008333333333334,0.6950491004465807,0.5099598588668439,0.6734378195950093
+B,13820,633,0.04580318379160637,33.0,0.6917918399168399,0.6996807159095975,0.564053180582178,0.7430236704854456

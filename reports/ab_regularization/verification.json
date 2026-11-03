@@ -1,0 +1,293 @@
+{
+  "cv_models_verified": 33,
+  "selected_validation_models_verified": 3,
+  "preprocessing_cases_verified": 4,
+  "all_training_raw_rows_match_original_A_and_B_sources": true,
+  "existing_patient_partitions_unchanged": true,
+  "hospital_event_patient_folds_reproduced": true,
+  "fold_train_only_preprocessing_statistics_recomputed": true,
+  "sampled_transformed_matrices_and_serialized_predictions_verified": true,
+  "internal_early_stopping_patients_reproduced": true,
+  "candidate_parameters_and_selection_rule_reproduced": true,
+  "validation_thresholds_reproduced": true,
+  "missingness_rates_and_hospital_diagnostic_reproduced": true,
+  "test_sets_evaluated": [],
+  "A_test_patients_reserved": 3020,
+  "B_test_patients_not_scored_this_round": 2962,
+  "cases": {
+    "/Users/hollisyang/Desktop/AI for Healthcare/INFO5600-AI4Healthcare/processed_data/ab_regularization/fold0": {
+      "training_rows": 611936,
+      "patient_count": 18607,
+      "features": 312
+    },
+    "/Users/hollisyang/Desktop/AI for Healthcare/INFO5600-AI4Healthcare/processed_data/ab_regularization/fold1": {
+      "training_rows": 609390,
+      "patient_count": 18607,
+      "features": 312
+    },
+    "/Users/hollisyang/Desktop/AI for Healthcare/INFO5600-AI4Healthcare/processed_data/ab_regularization/fold2": {
+      "training_rows": 614682,
+      "patient_count": 18608,
+      "features": 312
+    },
+    "/Users/hollisyang/Desktop/AI for Healthcare/INFO5600-AI4Healthcare/processed_data/ab_regularization/full": {
+      "training_rows": 918004,
+      "patient_count": 27911,
+      "features": 312
+    }
+  },
+  "models": [
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "ebm",
+      "candidate": "baseline",
+      "signature": "807b1ddee1314868ee503cfba167ff7b2b3c3fe3fe580f7b581c38361db4e4e1"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "ebm",
+      "candidate": "baseline",
+      "signature": "54b772291cffa8b09764a068698d76a8df24a3e29c7d1d5ebc80c523797caf0c"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "ebm",
+      "candidate": "baseline",
+      "signature": "1a18b25fbc5efb603f717555df71bdd918148d473fd57f912549e3cf0bc5cd1e"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "ebm",
+      "candidate": "stronger",
+      "signature": "8e6c6d6551baaa327530009d23642ae2a0af1b6f2a444a4577635bc222a42029"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "ebm",
+      "candidate": "stronger",
+      "signature": "9047388e1612fd2dff73cd7561f77db59dbeb11e001e57a6b6c13e35e6f3f853"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "ebm",
+      "candidate": "stronger",
+      "signature": "566879ae6d7026f471afeaf346bf93c936a1b156a576baedd0f9ac4ad55a3509"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "ebm",
+      "candidate": "weaker",
+      "signature": "c75d6fd6d804f27ec864da6a9d4a2f4f1ce60cf6a00b5a7e3c0636ff8fa96859"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "ebm",
+      "candidate": "weaker",
+      "signature": "f9fe74fa9fc3b2d5f6dd8a969826222911ed98ea1f2523ae20170e3d5886b13f"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "ebm",
+      "candidate": "weaker",
+      "signature": "3153a4323bdeceb934babea3b5959dfdc467725b347ca110f99b377e98649de6"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "signature": "5e80a1c1516b545b1bd8c467f17e9339d8c6c29491940f9561f9ad081f6abde9"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "signature": "8bde7138e967b20fb910d6bda0a4df4263885e528ba508cfc0940bf7a1598e46"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "signature": "957b48b25741e2ab64434bba8f5ded1f39348e7ee0855a55699d62ec0ee9889c"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "signature": "32725ba2de2645cd55e743c11e262920f4a5a651b8103771ccd0ef01068f417f"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "signature": "d566e65bca4617771aa8bc7459bc675c09d3d22a105fc418598c7abd1493758b"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lightgbm",
+      "candidate": "stronger",
+      "signature": "150631e88e8cafd1bb81a87c5690c37628b64c291cdf7efae135cd0351b047d3"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "signature": "84f0ab3c9062fc5b50f13b9f2ff06e1bad72559ef8d96b9f62106163be15f1ef"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "signature": "ee1fc9f13c96151c5515bba88a4d5cab10f95d9ffcff6ddf1def764fb90fad06"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lightgbm",
+      "candidate": "weaker",
+      "signature": "0374ffdad9af6a81e3466bee1563be781c7414bd677f2bcd8495a2bb60ab21a1"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lr",
+      "candidate": "C_0p001",
+      "signature": "664898da929a7e75ecf167b5570743a67ae7f75dd2cff125f1c5d38d9879dc10"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lr",
+      "candidate": "C_0p001",
+      "signature": "83c03d1853bdac01f1d9ea3b711ae945c13a487aa679e647bf5f3a8e61826f3e"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lr",
+      "candidate": "C_0p001",
+      "signature": "5d185c3c7a6454cfd4b3718c05a272ee1bc6c798ee45f0e37eba78ca005063ba"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lr",
+      "candidate": "C_0p01",
+      "signature": "7224a9374f1517054757f966eea87be61ad4e2802383f9e6b36a9ec3c31a22e7"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lr",
+      "candidate": "C_0p01",
+      "signature": "df9889287f7ce05f1588c91ef28bfb949e018edc9b5c1229f09f6dad3f23bf9d"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lr",
+      "candidate": "C_0p01",
+      "signature": "1896e990553e8fc2b62c636da20c3cb7964c9bb9fa20d1702ced1fbb4f27f32c"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lr",
+      "candidate": "C_0p1",
+      "signature": "c447325c5124bb0aecc9d27a0697dafc017467e3cd28f0f1801e7b8030f13d74"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lr",
+      "candidate": "C_0p1",
+      "signature": "6165020461a4f90894e8575db48982df639fa6d9623c9c5e5fe0648451b17d58"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lr",
+      "candidate": "C_0p1",
+      "signature": "5c93ac616fc5c463412cf097f5caf43632aab2f945e5f4765c965598e00f2897"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lr",
+      "candidate": "C_10p0",
+      "signature": "e8d698c19504ee0f1b75cb2aeb2dbb1246cc6309b673cf895464c46346475c19"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lr",
+      "candidate": "C_10p0",
+      "signature": "2ba4fbd3754dcfca7af6d10a51fc54534b1b49a8328af4971ff1843d0919dfc3"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lr",
+      "candidate": "C_10p0",
+      "signature": "7f56166f5282843713e882e93c1ae92c50aa185238b1ddf7314af54f7f66b3e8"
+    },
+    {
+      "stage": "cv",
+      "fold": 0,
+      "model": "lr",
+      "candidate": "baseline",
+      "signature": "b5538c9feb5371bddbf2d5833fd6f458fddc2311ec95ca459f6df76359fe3fd3"
+    },
+    {
+      "stage": "cv",
+      "fold": 1,
+      "model": "lr",
+      "candidate": "baseline",
+      "signature": "daed6981c735dbbefba07f366ef982a60cd28f9cf49157b644802e27a1db7a33"
+    },
+    {
+      "stage": "cv",
+      "fold": 2,
+      "model": "lr",
+      "candidate": "baseline",
+      "signature": "e80e0da2f70a9af3efed58eb784dbbdd82c2a94d32d8dba38c0f7358f4ee582c"
+    },
+    {
+      "stage": "validation",
+      "fold": -1,
+      "model": "lr",
+      "candidate": "baseline",
+      "signature": "1eaa114ef0228c8aa957d2bee25d45e29694fe5b61d4d19bc8ca2829467a9f6c"
+    },
+    {
+      "stage": "validation",
+      "fold": -1,
+      "model": "ebm",
+      "candidate": "baseline",
+      "signature": "dde8210419ab4071800e18af1b078bed502865348a66d2f73c8998c9e49823c8"
+    },
+    {
+      "stage": "validation",
+      "fold": -1,
+      "model": "lightgbm",
+      "candidate": "baseline",
+      "signature": "2cdaf79a93cf5c9239a59a36b05a971c5df64a5a1999437cfe1d4123258bf9ef"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "created_at_utc": "2026-11-03T15:08:43.827141+00:00",
+  "settings": {
+    "study": {
+      "stages": [
+        "A_only",
+        "A_B_baseline",
+        "A_B_cv"
+      ],
+      "models": [
+        "lr",
+        "ebm",
+        "lightgbm"
+      ],
+      "evaluation_splits": [
+        "A_validation",
+        "B_validation"
+      ],
+      "threshold_policies": [
+        "existing_validation_budget",
+        "fixed_0p5"
+      ],
+      "bootstrap_samples": 300,
+      "bootstrap_seed": 42,
+      "prediction_threads": 2
+    },
+    "protocol": {
+      "score": "Official PhysioNet/CinC 2019 normalized utility",
+      "trajectory": "Full raw hourly trajectory of unchanged eligible validation patients",
+      "labels": "Unmodified original SepsisLabel; no additional time shift",
+      "binary_predictions": "Hourly probability >= frozen threshold; no alarm suppression",
+      "threshold_tuning_for_utility": false,
+      "regularization_selection_uses_utility": false,
+      "test_sets_evaluated": [],
+      "dt_early": -12,
+      "dt_optimal": -6,
+      "dt_late": 3,
+      "max_u_tp": 1.0,
+      "min_u_fn": -2.0,
+      "u_fp": -0.05,
+      "u_tn": 0.0
+    }
+  },
+  "input_fingerprints": {
+    "processed_data/raw_records.npy": "53391ae161f195746532b4ab760a15bb349203a3df9bac875ac6b4536c3330cb",
+    "outputs/patient_summary.csv": "5cdcace60518a45192b06f1f464596b701aa3c107eaff0dac6aa584ff6b0079f",
+    "processed_data/splits/patient_splits.csv": "b5c6868bdb31b40ce264fe86eb36f8e54b053d7fb05aab6db1c412fef5f872f1",
+    "processed_data/ab_expansion/B_patient_splits.csv": "0cd4634769593bd977db454664143c5eeb18fc88600ac0b9b54a7289fbecb166",
+    "processed_data/ab_expansion/A_validation_rows.csv.gz": "bf8fb0162b1831612de32e9dd12f6988ff685156cd3dc609c882a2888ccec244",
+    "processed_data/ab_expansion/B_validation_rows.csv.gz": "769cdfbaddf2abdb02ca1bddf776f57d3171c9d2505d022e0f1e99cde87f3e67",
+    "outputs/ab_expansion/models/A_only__common/lr_model.joblib": "29f389f159fd8579cf19f8e6f9cf3bc3f4f73ecff46657b50ef763430a93560b",
+    "outputs/ab_expansion/models/A_only__common/ebm_model.joblib": "aaa4191af92e06434ccfc2ec0b416abe080b55e6436112f06dfaf3ee3fb5703f",
+    "outputs/ab_expansion/models/A_only__common/lightgbm_model.joblib": "96d7cf8b678a834a1e61779da97bae2dff528ce0e5c683a34e12a2c09a09764a",
+    "outputs/ab_expansion/models/A_B_full__common/lr_model.joblib": "c5ad9ba95ad9ad46bcc6baf545d9ec3915e31f0923705ed7f8bee742f58f0616",
+    "outputs/ab_expansion/models/A_B_full__common/ebm_model.joblib": "61a87993abd947b5a38e00d273cd2c596d76187593d76800c98c94bbdbe9d4e1",
+    "outputs/ab_expansion/models/A_B_full__common/lightgbm_model.joblib": "a9125fdb35028d4733a52ab6a10ab115d050fd3331726d4546255846761eb79b"
+  },
+  "source_fingerprints": {
+    "scripts/run_utility_comparison.py": "cc60341ea44f65b0722ba6742d65016a8f94eccf2e3ee74a8c159e59f7cd284d",
+    "configs/utility_comparison.toml": "b4fcec3febee877af6c4382faaa8ed6a814ae579601ca5f2fac7fe81f834e0c3",
+    "configs/baseline.toml": "4fa4339197c4a3624132dbdbf69069c45e01977e8127a3aeb928eafc8e57fad4",
+    "src/sepsis_warning/utility.py": "da4c44fcc3ecd3fdc9d4bb2e93d871d34d7cd7b95de56281457530764b0c23de",
+    "src/sepsis_warning/data.py": "4a7a9fef3f3772ed5f03db6cefb6dc530eea4e99fa3b43514e7aedb82f729506",
+    "third_party/physionet2019/evaluate_sepsis_score.py": "26b8b26267ed32e8b7a7a27e45201cfc8c6640e717ba4cdc1f452b32f12b99e5",
+    "third_party/physionet2019/LICENSE.txt": "abc6e0bb01abee7aa79502c8c0a344f55ad2826e5ba5b97e73786bd2104859b6",
+    "third_party/physionet2019/UPSTREAM.json": "60226b47823e2ec4a9aaddfe9732b75eae697f67cf076f0deb1baaff67b7bbdd"
+  },
+  "upstream": {
+    "repository": "https://github.com/physionetchallenges/evaluation-2019",
+    "commit": "467c49b514542be7a4a0bafe40fa2c3b064dda2e",
+    "license": "BSD-2-Clause",
+    "unmodified": true,
+    "files": {
+      "evaluate_sepsis_score.py": {
+        "git_blob_sha": "f79b9e5e4c08358a50cde79fd193809a794aa64c",
+        "sha256": "26b8b26267ed32e8b7a7a27e45201cfc8c6640e717ba4cdc1f452b32f12b99e5"
+      },
+      "LICENSE.txt": {
+        "git_blob_sha": "21c0555095e672a4cb72a6202a5e36536478f43a",
+        "sha256": "abc6e0bb01abee7aa79502c8c0a344f55ad2826e5ba5b97e73786bd2104859b6"
+      }
+    }
+  },
+  "regularization_selection_existed_at_design": false,
+  "added_during_regularization_study_at_user_request": true,
+  "model_choice_uses_utility": false,
+  "test_sets_evaluated": []
+}

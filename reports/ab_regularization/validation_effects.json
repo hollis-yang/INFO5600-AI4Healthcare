@@ -1,0 +1,74 @@
+[
+  {
+    "model": "lr",
+    "candidate": "baseline",
+    "evaluation": "A_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  {
+    "model": "lr",
+    "candidate": "baseline",
+    "evaluation": "B_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  {
+    "model": "ebm",
+    "candidate": "baseline",
+    "evaluation": "A_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  {
+    "model": "ebm",
+    "candidate": "baseline",
+    "evaluation": "B_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  {
+    "model": "lightgbm",
+    "candidate": "baseline",
+    "evaluation": "A_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  {
+    "model": "lightgbm",
+    "candidate": "baseline",
+    "evaluation": "B_validation",
+    "difference": 0.0,
+    "lower": 0.0,
+    "upper": 0.0,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  }
+]

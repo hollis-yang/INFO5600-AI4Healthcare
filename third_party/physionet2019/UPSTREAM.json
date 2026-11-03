@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/physionetchallenges/evaluation-2019",
+  "commit": "467c49b514542be7a4a0bafe40fa2c3b064dda2e",
+  "license": "BSD-2-Clause",
+  "unmodified": true,
+  "files": {
+    "evaluate_sepsis_score.py": {
+      "git_blob_sha": "f79b9e5e4c08358a50cde79fd193809a794aa64c",
+      "sha256": "26b8b26267ed32e8b7a7a27e45201cfc8c6640e717ba4cdc1f452b32f12b99e5"
+    },
+    "LICENSE.txt": {
+      "git_blob_sha": "21c0555095e672a4cb72a6202a5e36536478f43a",
+      "sha256": "abc6e0bb01abee7aa79502c8c0a344f55ad2826e5ba5b97e73786bd2104859b6"
+    }
+  }
+}
