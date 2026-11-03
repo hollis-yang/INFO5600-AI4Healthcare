@@ -5,3 +5,4 @@ scikit-learn==1.7.1
 matplotlib==3.10.5
 joblib==1.5.2
 threadpoolctl==3.6.0
+interpret-core==0.7.8

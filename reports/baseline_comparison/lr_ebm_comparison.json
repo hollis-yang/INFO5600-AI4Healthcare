@@ -1,0 +1,126 @@
+{
+  "evaluation_split": "hospital_A_validation",
+  "patients": 3020,
+  "hours": 101888,
+  "positive_hours": 1428,
+  "same_patient_split": true,
+  "same_preprocessed_inputs": true,
+  "no_test_sets_evaluated": true,
+  "model_metrics": [
+    {
+      "model": "LR",
+      "auroc": 0.7954179262786142,
+      "auprc_average_precision": 0.07386326483502609,
+      "brier_score": 0.01345374158125777,
+      "positive_hour_prevalence": 0.014015389447236182,
+      "event_sensitivity": 0.33613445378151263,
+      "alert_ppv": 0.07944389275074479,
+      "false_alerts_per_100_patient_hours": 0.9098225502512562,
+      "median_true_alert_lead_hours": 4.0,
+      "detected_event_patients": 80,
+      "event_patients": 238,
+      "total_alert_episodes": 1007,
+      "threshold": 0.05608881219514777,
+      "fit_seconds": 2.62
+    },
+    {
+      "model": "EBM",
+      "auroc": 0.7186801985377069,
+      "auprc_average_precision": 0.05194820723317906,
+      "brier_score": 0.014824520305458486,
+      "positive_hour_prevalence": 0.014015389447236182,
+      "event_sensitivity": 0.35294117647058826,
+      "alert_ppv": 0.0784313725490196,
+      "false_alerts_per_100_patient_hours": 0.9687107412060302,
+      "median_true_alert_lead_hours": 3.0,
+      "detected_event_patients": 84,
+      "event_patients": 238,
+      "total_alert_episodes": 1071,
+      "threshold": 0.09846557345148146,
+      "fit_seconds": 1025.18
+    }
+  ],
+  "training_metrics": {
+    "LR": {
+      "auroc": 0.8118118833486405,
+      "auprc_average_precision": 0.07587980307183192,
+      "brier_score": 0.013555446218033512,
+      "positive_hour_prevalence": 0.014177234608304357
+    },
+    "EBM": {
+      "auroc": 0.9303228156449987,
+      "auprc_average_precision": 0.3579143320871698,
+      "brier_score": 0.011136604247376525,
+      "positive_hour_prevalence": 0.014177234608304357
+    }
+  },
+  "ebm_minus_lr": {
+    "auroc": -0.07673772774090726,
+    "auprc_average_precision": -0.021915057601847025,
+    "brier_score": 0.0013707787242007163,
+    "event_sensitivity": 0.016806722689075626,
+    "alert_ppv": -0.001012520201725181
+  },
+  "paired_patient_bootstrap_95_ci": {
+    "lr": {
+      "auroc": {
+        "lower": 0.768804580330058,
+        "upper": 0.8212810219898998
+      },
+      "auprc_average_precision": {
+        "lower": 0.0626331188752244,
+        "upper": 0.08944674795161278
+      },
+      "brier_score": {
+        "lower": 0.01205211163092328,
+        "upper": 0.015052914208977303
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "ebm": {
+      "auroc": {
+        "lower": 0.6887123507089893,
+        "upper": 0.7487822662425536
+      },
+      "auprc_average_precision": {
+        "lower": 0.04283440132409342,
+        "upper": 0.06315455636700427
+      },
+      "brier_score": {
+        "lower": 0.013459922547366028,
+        "upper": 0.016511105327968446
+      },
+      "positive_hour_prevalence": {
+        "lower": 0.012559337655512825,
+        "upper": 0.015755182441399
+      }
+    },
+    "ebm_minus_lr": {
+      "auroc": {
+        "lower": -0.1082029466633117,
+        "upper": -0.052196671532447
+      },
+      "auprc_average_precision": {
+        "lower": -0.037620179932593874,
+        "upper": -0.009948655680140209
+      },
+      "brier_score": {
+        "lower": 0.0008976542721862578,
+        "upper": 0.0018621662629889656
+      }
+    },
+    "valid_resamples": 300
+  },
+  "bootstrap_samples": 300,
+  "alert_comparison": "Same validation false-alert ceiling and suppression rule; realized false-alert rates can differ.",
+  "limitations": [
+    "Only validation performance; test and external generalization remain unmeasured.",
+    "Each model's alarm threshold was selected and reported on the same validation cohort.",
+    "One fixed configuration per model, no hyperparameter search or CV.",
+    "EBM has no early stopping or bagging; its train-validation gap must be considered.",
+    "Recorded fit times use LR with 4 threads and EBM with 1 job; not a controlled speed benchmark."
+  ]
+}

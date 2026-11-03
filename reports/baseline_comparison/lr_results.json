@@ -1,0 +1,107 @@
+{
+  "evaluation_split": "hospital_A_validation",
+  "test_sets_evaluated": [],
+  "patients": 3020,
+  "hours": 101888,
+  "training_patients": 14091,
+  "training_hours": 469344,
+  "features": 312,
+  "training_positive_hour_prevalence": 0.014177234608304357,
+  "validation": {
+    "auroc": 0.7954179262786142,
+    "auprc_average_precision": 0.07386326483502609,
+    "brier_score": 0.01345374158125777,
+    "positive_hour_prevalence": 0.014015389447236182
+  },
+  "training": {
+    "auroc": 0.8118118833486405,
+    "auprc_average_precision": 0.07587980307183192,
+    "brier_score": 0.013555446218033512,
+    "positive_hour_prevalence": 0.014177234608304357
+  },
+  "constant_probability_reference": {
+    "auroc": 0.5,
+    "auprc_average_precision": 0.014015389447236182,
+    "brier_score": 0.013818984499734645,
+    "positive_hour_prevalence": 0.014015389447236182
+  },
+  "patient_bootstrap_95_ci": {
+    "auroc": {
+      "lower": 0.768804580330058,
+      "upper": 0.8212810219898998
+    },
+    "auprc_average_precision": {
+      "lower": 0.0626331188752244,
+      "upper": 0.08944674795161278
+    },
+    "brier_score": {
+      "lower": 0.01205211163092328,
+      "upper": 0.015052914208977303
+    },
+    "positive_hour_prevalence": {
+      "lower": 0.012559337655512825,
+      "upper": 0.015755182441399
+    }
+  },
+  "bootstrap_samples": 300,
+  "default_threshold_0_5": {
+    "threshold": 0.5,
+    "hour_sensitivity": 0.0007002801120448179,
+    "hour_precision": 1.0,
+    "hour_specificity": 1.0,
+    "tp": 1,
+    "fp": 0,
+    "tn": 100460,
+    "fn": 1427
+  },
+  "validation_selected_threshold_hour_metrics": {
+    "threshold": 0.05608881219514777,
+    "hour_sensitivity": 0.26330532212885155,
+    "hour_precision": 0.09224730127576054,
+    "hour_specificity": 0.9631694206649413,
+    "tp": 376,
+    "fp": 3700,
+    "tn": 96760,
+    "fn": 1052
+  },
+  "validation_selected_threshold_alert_metrics": {
+    "threshold": 0.05608881219514777,
+    "suppression_hours": 6,
+    "eligible_patient_hours": 101888,
+    "event_patients": 238,
+    "detected_event_patients": 80,
+    "event_sensitivity": 0.33613445378151263,
+    "false_alert_episodes": 927,
+    "false_alerts_per_100_patient_hours": 0.9098225502512562,
+    "total_alert_episodes": 1007,
+    "true_alert_episodes": 80,
+    "alert_ppv": 0.07944389275074479,
+    "median_true_alert_lead_hours": 4.0
+  },
+  "threshold_selection": "maximize event sensitivity subject to validation false-alert budget; tie-break on PPV then lower burden",
+  "threshold_result_limitation": "threshold selected and reported on the same validation set; not a held-out estimate",
+  "model": {
+    "type": "L2 logistic regression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "class_weight": null,
+    "iterations": 38,
+    "converged": true,
+    "convergence_warnings": []
+  },
+  "fit_seconds": 2.62,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-15.3-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scipy": "1.16.1",
+      "scikit-learn": "1.7.1",
+      "matplotlib": "3.10.5",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "total_seconds": 9.81
+}

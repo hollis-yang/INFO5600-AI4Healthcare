@@ -91,3 +91,28 @@ def patient_bootstrap(rows, scores, repetitions, seed):
     frame = pd.DataFrame(samples)
     return {name: {"lower": float(frame[name].quantile(0.025)), "upper": float(frame[name].quantile(0.975))}
             for name in frame.columns}
+
+
+def paired_patient_bootstrap(rows, reference_scores, candidate_scores, repetitions, seed):
+    """Use identical patient resamples for model metrics and candidate-reference differences."""
+    codes, identifiers = pd.factorize(rows.patient_id, sort=False)
+    labels = rows.label.to_numpy()
+    rng = np.random.default_rng(seed)
+    reference, candidate, differences = [], [], []
+    for _ in range(repetitions):
+        frequencies = np.bincount(rng.integers(len(identifiers), size=len(identifiers)), minlength=len(identifiers))
+        weights = frequencies[codes]
+        if np.sum(weights*labels) == 0:
+            continue
+        a = ranking_metrics(labels, reference_scores, weights)
+        b = ranking_metrics(labels, candidate_scores, weights)
+        reference.append(a)
+        candidate.append(b)
+        differences.append({key: b[key]-a[key] for key in a if key != "positive_hour_prevalence"})
+    result = {}
+    for name, values in [("lr", reference), ("ebm", candidate), ("ebm_minus_lr", differences)]:
+        frame = pd.DataFrame(values)
+        result[name] = {column: {"lower": float(frame[column].quantile(0.025)),
+                                "upper": float(frame[column].quantile(0.975))} for column in frame}
+    result["valid_resamples"] = len(differences)
+    return result

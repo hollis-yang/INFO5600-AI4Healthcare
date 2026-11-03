@@ -33,6 +33,15 @@ python scripts/prepare_data.py
 python scripts/train_lr.py
 ```
 
+To compare a pure additive EBM with the saved LR baseline on the same cached data:
+
+```bash
+python scripts/train_ebm.py
+python scripts/compare_models.py
+```
+
+EBM settings are in `configs/ebm.toml`. The first EBM run uses one fixed configuration (`interactions=0`, 64 bins, 1,000 rounds) and all A-training rows, with internal random-hour validation/early stopping disabled. It reuses LR's training-fitted preprocessor and exact matrices. Comparison intervals use paired patient resamples. Both test sets remain reserved.
+
 Run commands from the repository root. Settings are recorded in `configs/baseline.toml`. A complete preparation run writes approximately 3.6 GB of processed arrays. The raw files in `data/` remain unchanged.
 
 ## Local outputs
@@ -44,6 +53,10 @@ Run commands from the repository root. Settings are recorded in `configs/baselin
 - `outputs/lr_baseline.joblib`, `lr_results.json`, `lr_validation_predictions.csv.gz`: fitted baseline, metrics and validation predictions.
 - `outputs/lr_validation_curves.png`, `lr_coefficients.png`: preliminary performance and coefficient plots.
 - `outputs/baseline_report.txt`: human-readable summary of this local run.
+- `outputs/ebm_baseline.joblib`, `ebm_results.json`, `ebm_validation_predictions.csv.gz`: fitted additive EBM and validation results.
+- `outputs/lr_ebm_comparison.json`, `lr_ebm_comparison.csv`, `ebm_vs_lr_report.txt`: paired validation comparison, including operating points under the same false-alert ceiling.
+- `outputs/lr_ebm_validation_comparison.png`, `ebm_feature_importance.png`, `ebm_shape_functions.png`: model comparison and EBM explanations.
+- `outputs/ebm_input_fingerprint.json`: fingerprints of reused data, split list, preprocessor and LR reference predictions; checked unchanged after EBM training.
 
 ## Analysis protocol
 

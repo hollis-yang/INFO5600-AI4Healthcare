@@ -1,0 +1,19 @@
+# Prespecified additive EBM baseline; no external validation-set tuning.
+[model]
+interactions = 0
+max_bins = 64
+learning_rate = 0.03
+max_rounds = 1000
+min_samples_leaf = 100
+max_leaves = 3
+reg_lambda = 1.0
+greedy_ratio = 0.0
+cyclic_progress = true
+smoothing_rounds = 75
+# Use every A-training row, with no random hourly early-stopping holdout.
+validation_size = 0
+early_stopping_rounds = 0
+outer_bags = 1
+inner_bags = 0
+n_jobs = 1
+random_state = 42
