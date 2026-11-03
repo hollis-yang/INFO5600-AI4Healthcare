@@ -1,0 +1,4 @@
+cohort,patients,event_patients,hours,positive_hours,positive_hour_prevalence,A_patients,A_event_patients,B_patients,B_event_patients
+A_validation,3020,238,101888,1428,0.014015389447236182,3020,238,0,0
+B_validation,2961,136,96822,816,0.008427836648695545,0,0,2961,136
+B_test,2962,136,95988,816,0.008501062632829104,0,0,2962,136

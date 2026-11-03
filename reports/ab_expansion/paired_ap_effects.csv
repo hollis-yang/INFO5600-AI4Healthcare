@@ -1,0 +1,22 @@
+evaluation,profile,model,contrast,difference,lower,upper,resamples,reference_runs,candidate_runs,uncertainty
+A_validation,common,lr,full_minus_A_only,-0.004381665769535678,-0.010950319029413395,0.0009681490600772524,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,common,lr,full_minus_mean_matched,0.0004779441033055526,-0.0021102313281547314,0.006449938218783246,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,common,ebm,full_minus_A_only,0.0013512500662721388,-0.005309436064218199,0.008106468579809059,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,common,ebm,full_minus_mean_matched,0.004140443522978224,-0.0015823326599115064,0.011960663157009593,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,common,lightgbm,full_minus_A_only,0.00013470025888540071,-0.008193382948273608,0.008671438347092452,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,common,lightgbm,full_minus_mean_matched,-0.004874895475423802,-0.013282476407876071,0.002333467297114762,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+A_validation,enhanced_lightgbm,lightgbm,full_minus_A_only,-0.003609875608716992,-0.013454190478434385,0.006474577999775121,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,lr,full_minus_A_only,0.021947687222905368,0.013858998660691072,0.037337471496886904,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,lr,full_minus_mean_matched,0.0035694919483315046,-0.00045832233344512816,0.008500474457300912,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,ebm,full_minus_A_only,0.012229840610094973,0.002939698852806918,0.027231586835988923,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,ebm,full_minus_mean_matched,0.005720137020936961,-0.0043957629024618805,0.015712598738018668,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,lightgbm,full_minus_A_only,0.02907197655764164,0.012771367868820284,0.06724077551500839,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,common,lightgbm,full_minus_mean_matched,0.0019467936751805526,-0.009310928666031998,0.01665097807973568,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_validation,enhanced_lightgbm,lightgbm,full_minus_A_only,0.037778505295810914,0.02145837138761414,0.07321820780970045,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,lr,full_minus_A_only,0.030383392751703486,0.012416237367750615,0.049467007993105584,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,lr,full_minus_mean_matched,-0.0013427603606507993,-0.011473343898766935,0.01253723929647495,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,ebm,full_minus_A_only,0.002200878814921481,-0.013426217721067538,0.019892469756200997,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,ebm,full_minus_mean_matched,0.014480563098497837,0.0031343051027303355,0.024172730647230356,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,lightgbm,full_minus_A_only,0.026012407832004543,0.0012088755033419717,0.04598708930135412,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,common,lightgbm,full_minus_mean_matched,0.009646073858916776,7.267541190802638e-05,0.023522401028565558,300,2,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.
+B_test,enhanced_lightgbm,lightgbm,full_minus_A_only,0.0150683013711235,-0.011486591260546632,0.03375402845479261,300,1,1,Patient-resampled validation uncertainty conditional on the chosen training subsets.

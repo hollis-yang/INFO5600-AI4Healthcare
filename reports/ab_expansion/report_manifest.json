@@ -1,0 +1,15 @@
+{
+  "model_results": 14,
+  "metric_rows": 56,
+  "paired_contrasts": 21,
+  "original_A_test_untouched": true,
+  "B_test_unseen_hospital": false,
+  "analysis_source_fingerprints": {
+    "scripts/report_ab_expansion.py": "a91ed55efa3d1cfc393d89c88cf49a697c1022af6f582d2c5668fa71c44c7859",
+    "scripts/verify_ab_expansion.py": "b8092ca06ea51532efd3d8360ec9d4bf1b074217d50d396e8298ee57b5e6e8d7",
+    "scripts/resume_ab_expansion.py": "afafc1a2263661a4609bfd5f8cba8d60371b16dd7e97887adabc9bc94fc96393",
+    "scripts/recover_ab_inputs.py": "d7cce4e5137c1764fd26aaebfcb8a32dd0b6678d0ed49c1c20d5cb216f7ee335"
+  },
+  "cohort_membership_sha256": "e286999e504aac5634a0254ceec1e5e25b96a578a172a11683256be7548d025d",
+  "protocol_sha256": "9abacc9688ce4201860793c43e7e041e6c0b0d15b739d320b38d06b9ba5404c5"
+}

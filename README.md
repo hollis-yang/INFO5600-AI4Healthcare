@@ -114,6 +114,36 @@ Recovery records document macOS eviction of one result JSON, two deterministic i
 
 Run commands from the repository root. Settings are recorded in `configs/baseline.toml`. A complete preparation run writes approximately 3.6 GB of processed arrays. The raw files in `data/` remain unchanged.
 
+## A+B expansion experiment
+
+This separate experiment changes the earlier role of hospital B. It preserves the original A split, stratifies B patients 70/15/15 with seed 42, and compares A-only training, full A+B training, and two A+B samples with exactly the original A training patient count. The matched samples preserve the full mixture's hospital/event proportions using seeds 2026 and 2027. They do not match A-only's higher event prevalence. B test patients remain excluded from fitting and threshold selection, but B is now represented in pooled training: this is no longer unseen-hospital validation. A test remains reserved.
+
+```sh
+python scripts/run_ab_expansion.py
+python scripts/report_ab_expansion.py
+python scripts/verify_ab_expansion.py
+```
+
+On macOS, launch commands with the existing OpenMP environment helper (use the same wrapper for reporting and verification):
+
+```sh
+python - <<'PY'
+import subprocess, sys
+sys.path.insert(0, 'src')
+from sepsis_warning.history_study import child_environment
+subprocess.run([sys.executable, '-u', 'scripts/run_ab_expansion.py'],
+               env=child_environment(), check=True)
+PY
+```
+
+The main comparison freezes the original A-defined 312 features for all three classifiers and retains classifier settings from `reports/history_study/model_settings.json`. Each new training cohort fits its own preprocessing. A secondary LightGBM control uses the previous 349-feature, native-missing, no-clipping pipeline. Four original A-only models are reused, and ten new models are fitted. A single threshold per model is selected on the same pooled A+B validation patients, then applied unchanged to the component validation sets and B test. Thus A-only describes risk-model fitting; its threshold calibration also uses B validation.
+
+Settings are in `configs/ab_expansion.toml`. The runner freezes source/input fingerprints before fitting and evaluating B test. It allows two workers, at most one EBM, and seven requested CPU threads. Generated arrays, the versioned split and case-specific transforms are under `processed_data/ab_expansion/`; models and predictions are under `outputs/ab_expansion/`. Small result snapshots, paired patient-bootstrap intervals, hospital distribution diagnostics, fixed B patient assignments and a Chinese report are under `reports/ab_expansion/`. The experiment needs approximately 7 GB of additional local storage. The original data and split artifacts remain unchanged.
+
+`resume_ab_expansion.py` resumes model jobs only after every case and the model manifest have already been prepared under the frozen protocol. It checks frozen source hashes and records post-run input availability. This macOS execution used this route after Desktop cloud eviction stalled redundant reads of old inputs. `recover_ab_inputs.py` rebuilt the evicted B features and patient audit; its `--rows-only` and `--processor-only` options recover hourly metadata and the redundant original processor. Each replacement must reproduce its pre-experiment SHA-256 exactly. Identical pinned InterpretML/LightGBM wheels were imported from a non-cloud temporary directory; wheel digests, input recovery and post-run comparisons are recorded with the report. These maintenance steps change neither the data content nor model versions.
+
+Bootstrap intervals condition on the fitted models and chosen training subsets. Two matched draws do not capture all training uncertainty, and the exploratory comparisons are not adjusted for multiplicity. Compare AUPRC changes within the same evaluation cohort. Full A+B versus A-only changes source distribution and sample size together; full versus matched A+B provides a more focused mixed-pool size control. No final model is selected from B test.
+
 ## Local outputs
 
 - `processed_data/`: fixed patient split list, raw numeric cache, causal features, transformed matrices and labels. This directory is separate from `data/` and ignored by Git.

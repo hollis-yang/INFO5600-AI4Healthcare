@@ -1,0 +1,156 @@
+{
+  "model_results_verified": 14,
+  "preprocessing_cases_verified": 6,
+  "patient_partitions_and_matched_draws_reproduced": true,
+  "canonical_inputs_and_sources_unchanged": true,
+  "A_test_patient_count_reserved": 3020,
+  "A_test_evaluated": false,
+  "B_test_unseen_hospital": false,
+  "fixed_A_defined_feature_columns": true,
+  "training_only_statistics_recomputed": true,
+  "secondary_raw_feature_inputs_unchanged": true,
+  "serialized_predictions_and_ranking_metrics_verified": true,
+  "pooled_validation_thresholds_reproduced": true,
+  "patient_grouped_internal_stopping_assignments_reproduced": true,
+  "real_B_patient_prefix_causality_verified": true,
+  "cases": {
+    "A_only__common": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 469344,
+      "features": 312
+    },
+    "A_B_full__common": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 918004,
+      "features": 312
+    },
+    "A_B_matched_seed2026__common": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 462881,
+      "features": 312
+    },
+    "A_B_matched_seed2027__common": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 463104,
+      "features": 312
+    },
+    "A_only__enhanced_lightgbm": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current",
+        "Creatinine__last2_slope_24h",
+        "HR__slope_12h"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 469344,
+      "features": 349
+    },
+    "A_B_full__enhanced_lightgbm": {
+      "statistics_probes": [
+        "HR__latest",
+        "Creatinine__latest",
+        "ICULOS__current",
+        "Creatinine__last2_slope_24h",
+        "HR__slope_12h"
+      ],
+      "matrix_probe_rows": 64,
+      "training_rows": 918004,
+      "features": 349
+    }
+  },
+  "models": [
+    {
+      "case": "A_only__common",
+      "model": "lr",
+      "signature": "17852aef378221e5a6ec58dc4acc239a745fb435c654ccd3b9eb20f49c5e8d65"
+    },
+    {
+      "case": "A_only__common",
+      "model": "ebm",
+      "signature": "c55086872d4ef2b4391e716b7310f0feaaf199bac26362ceeb7186b9043b035d"
+    },
+    {
+      "case": "A_only__common",
+      "model": "lightgbm",
+      "signature": "7ecb726ba0a9f67efb3b7b13b16af8d66991adbf430cc4ec48dfc940c0b9f23f"
+    },
+    {
+      "case": "A_B_full__common",
+      "model": "lr",
+      "signature": "93b2a62568fd79233972b34eec9e7c9910eab59a76bfd9b46234f8a9c3ce1a4f"
+    },
+    {
+      "case": "A_B_full__common",
+      "model": "ebm",
+      "signature": "4943079be1478aabafede2030bd6fa436be35f519b3dfe07997ca1ed8e283ecd"
+    },
+    {
+      "case": "A_B_full__common",
+      "model": "lightgbm",
+      "signature": "f1b2dff7a4bd5aec4d8791d4d769cbb06ba4dff995444189446ac2f5d36274ed"
+    },
+    {
+      "case": "A_B_matched_seed2026__common",
+      "model": "lr",
+      "signature": "a4b77a817d27d45d0ff945a975398ebd9dd0c478052dca271a6953bcc27868f8"
+    },
+    {
+      "case": "A_B_matched_seed2026__common",
+      "model": "ebm",
+      "signature": "a1eec4da2a1165240266e3c9386ba5c368b86b238aeb6371d2becfb98f912eff"
+    },
+    {
+      "case": "A_B_matched_seed2026__common",
+      "model": "lightgbm",
+      "signature": "fc854db45ba0b6c2266774fa821f91964da8b38cb6ab792438f6383c3870d525"
+    },
+    {
+      "case": "A_B_matched_seed2027__common",
+      "model": "lr",
+      "signature": "d60d023039f34d7dd958b06ae943813826db8c9aa5f2ec451f07a73c5af9264c"
+    },
+    {
+      "case": "A_B_matched_seed2027__common",
+      "model": "ebm",
+      "signature": "5f96b51a7dcb9f852d69d20150daeb2de4f27e7d5667cc374d1efcbc720e1238"
+    },
+    {
+      "case": "A_B_matched_seed2027__common",
+      "model": "lightgbm",
+      "signature": "e00a5001bec3689ac14cab699d6881dbfdded42f8fb7057871081efc7176bf51"
+    },
+    {
+      "case": "A_only__enhanced_lightgbm",
+      "model": "lightgbm",
+      "signature": "f09bc5e52078374b063398b1284c5df4562d3dcf98653c43594152e6e380d60c"
+    },
+    {
+      "case": "A_B_full__enhanced_lightgbm",
+      "model": "lightgbm",
+      "signature": "5c17384c942b32507071594cecf4d6eb5297d4c60be48f17637f92f03141ef2a"
+    }
+  ],
+  "analysis_source_hashes_rechecked_after_visual_QA": true,
+  "final_report_manifest_sha256": "55ee2bcf68e56326c2db9d539abde3ce8db7e4f839f399fb4c45b915a77af84b"
+}

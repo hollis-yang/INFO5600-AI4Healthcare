@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-11-03T14:13:41.617854+00:00",
+  "recorded_before_secondary_model_fit": true,
+  "feature_settings": {
+    "lab_trend_window_hours": 24,
+    "vital_slope_windows": [
+      3,
+      12
+    ],
+    "vital_variability_window": 12,
+    "personal_baseline_window": 12,
+    "personal_baseline_minimum_observations": 3,
+    "combination_maximum_age_hours": 3,
+    "combination_maximum_age_difference_hours": 2
+  },
+  "fingerprints": {
+    "processed_data/feature_optimization/train_combined_features.npy": "cebf58ae64b317eed70933429ddb0fad3c6af2468d14111f0dec89eda046ba54",
+    "processed_data/feature_optimization/validation_combined_features.npy": "de2c49c50ab5eb168a30cf351a38473ff1f9c48265e657ca48780790baef3a06",
+    "processed_data/ab_expansion/B_combined_features.npy": "6c3e3092a5d3317d623170cffe9294b0f19d1782d521936d2a99f56a5b99182a",
+    "configs/feature_optimization.toml": "55c633f8f75e638c2002d6d80ddeb9a4cf439cf49c71f9e32b09240a717ea39a"
+  },
+  "secondary_full_worker_created_unix": 1793715233.733405
+}

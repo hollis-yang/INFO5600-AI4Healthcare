@@ -1,0 +1,86 @@
+[
+  {
+    "case": "A_only__common",
+    "model": "lr",
+    "cohort": "A_only",
+    "profile": "common"
+  },
+  {
+    "case": "A_only__common",
+    "model": "ebm",
+    "cohort": "A_only",
+    "profile": "common"
+  },
+  {
+    "case": "A_only__common",
+    "model": "lightgbm",
+    "cohort": "A_only",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_full__common",
+    "model": "lr",
+    "cohort": "A_B_full",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_full__common",
+    "model": "ebm",
+    "cohort": "A_B_full",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_full__common",
+    "model": "lightgbm",
+    "cohort": "A_B_full",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2026__common",
+    "model": "lr",
+    "cohort": "A_B_matched_seed2026",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2026__common",
+    "model": "ebm",
+    "cohort": "A_B_matched_seed2026",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2026__common",
+    "model": "lightgbm",
+    "cohort": "A_B_matched_seed2026",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2027__common",
+    "model": "lr",
+    "cohort": "A_B_matched_seed2027",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2027__common",
+    "model": "ebm",
+    "cohort": "A_B_matched_seed2027",
+    "profile": "common"
+  },
+  {
+    "case": "A_B_matched_seed2027__common",
+    "model": "lightgbm",
+    "cohort": "A_B_matched_seed2027",
+    "profile": "common"
+  },
+  {
+    "case": "A_only__enhanced_lightgbm",
+    "model": "lightgbm",
+    "cohort": "A_only",
+    "profile": "enhanced_lightgbm"
+  },
+  {
+    "case": "A_B_full__enhanced_lightgbm",
+    "model": "lightgbm",
+    "cohort": "A_B_full",
+    "profile": "enhanced_lightgbm"
+  }
+]

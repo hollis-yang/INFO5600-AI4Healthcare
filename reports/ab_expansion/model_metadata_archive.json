@@ -1,0 +1,2135 @@
+{
+  "available_model_results": 14,
+  "results": {
+    "outputs/ab_expansion/models/A_only__common/lr_results.json": {
+      "signature": "17852aef378221e5a6ec58dc4acc239a745fb435c654ccd3b9eb20f49c5e8d65",
+      "case": {
+        "key": "A_only__common",
+        "signature": "b5493d7980a335345b0c45070d00a0c8219e69867d4619bca11de656d957dc90",
+        "cohort": "A_only",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 1109,
+        "training_hours": 469344,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lr",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "training": {
+        "auroc": 0.8118118833486405,
+        "auprc_average_precision": 0.07587980307183192,
+        "brier_score": 0.013555446218033512,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.7954179262786142,
+          "auprc_average_precision": 0.07386326483502609,
+          "brier_score": 0.01345374158125777,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.7239301552027181,
+          "auprc_average_precision": 0.029274050252384193,
+          "brier_score": 0.008507599218220991,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.6943747692516253,
+          "auprc_average_precision": 0.039663599745548235,
+          "brier_score": 0.0083413564102677,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.7696108394873965,
+          "auprc_average_precision": 0.053234856824692665,
+          "brier_score": 0.011043719962446703,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.044704648190330556,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 108,
+          "event_sensitivity": 0.453781512605042,
+          "false_alert_episodes": 1293,
+          "false_alerts_per_100_patient_hours": 1.269040515075377,
+          "total_alert_episodes": 1401,
+          "true_alert_episodes": 108,
+          "alert_ppv": 0.07708779443254818,
+          "median_true_alert_lead_hours": 3.5
+        },
+        "B_validation": {
+          "threshold": 0.044704648190330556,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 26,
+          "event_sensitivity": 0.19117647058823528,
+          "false_alert_episodes": 566,
+          "false_alerts_per_100_patient_hours": 0.5845778851913821,
+          "total_alert_episodes": 592,
+          "true_alert_episodes": 26,
+          "alert_ppv": 0.04391891891891892,
+          "median_true_alert_lead_hours": 3.5
+        },
+        "B_test": {
+          "threshold": 0.044704648190330556,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 30,
+          "event_sensitivity": 0.22058823529411764,
+          "false_alert_episodes": 466,
+          "false_alerts_per_100_patient_hours": 0.4854773513355836,
+          "total_alert_episodes": 496,
+          "true_alert_episodes": 30,
+          "alert_ppv": 0.06048387096774194,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.044704648190330556,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 134,
+          "event_sensitivity": 0.3582887700534759,
+          "false_alert_episodes": 1859,
+          "false_alerts_per_100_patient_hours": 0.9355341955613709,
+          "total_alert_episodes": 1993,
+          "true_alert_episodes": 134,
+          "alert_ppv": 0.0672353236327145,
+          "median_true_alert_lead_hours": 3.5
+        }
+      },
+      "threshold": 0.044704648190330556,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 2.62,
+      "reused_A_only_model": true,
+      "details": {
+        "reused_from": "outputs/lr_baseline.joblib",
+        "reference_snapshot": "outputs/ab_expansion/references/common_lr_model.joblib"
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_only__common/ebm_results.json": {
+      "signature": "c55086872d4ef2b4391e716b7310f0feaaf199bac26362ceeb7186b9043b035d",
+      "case": {
+        "key": "A_only__common",
+        "signature": "b5493d7980a335345b0c45070d00a0c8219e69867d4619bca11de656d957dc90",
+        "cohort": "A_only",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 1109,
+        "training_hours": 469344,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "ebm",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "training": {
+        "auroc": 0.8408381140402256,
+        "auprc_average_precision": 0.09051161450480337,
+        "brier_score": 0.013370603469159276,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8060986966954808,
+          "auprc_average_precision": 0.07116442262760742,
+          "brier_score": 0.013405986130817296,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.7800810958302034,
+          "auprc_average_precision": 0.05334208602507927,
+          "brier_score": 0.008158914130059893,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.756171411636146,
+          "auprc_average_precision": 0.07522459042668228,
+          "brier_score": 0.008204139951244941,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8033947689905224,
+          "auprc_average_precision": 0.06481482516714551,
+          "brier_score": 0.01084933570931192,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04883624914598487,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 107,
+          "event_sensitivity": 0.4495798319327731,
+          "false_alert_episodes": 1176,
+          "false_alerts_per_100_patient_hours": 1.1542085427135678,
+          "total_alert_episodes": 1283,
+          "true_alert_episodes": 107,
+          "alert_ppv": 0.08339828526890102,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.04883624914598487,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 49,
+          "event_sensitivity": 0.3602941176470588,
+          "false_alert_episodes": 533,
+          "false_alerts_per_100_patient_hours": 0.5504947222738634,
+          "total_alert_episodes": 582,
+          "true_alert_episodes": 49,
+          "alert_ppv": 0.08419243986254296,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.04883624914598487,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 37,
+          "event_sensitivity": 0.27205882352941174,
+          "false_alert_episodes": 509,
+          "false_alerts_per_100_patient_hours": 0.5302746176605408,
+          "total_alert_episodes": 546,
+          "true_alert_episodes": 37,
+          "alert_ppv": 0.06776556776556776,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04883624914598487,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 156,
+          "event_sensitivity": 0.41711229946524064,
+          "false_alert_episodes": 1709,
+          "false_alerts_per_100_patient_hours": 0.8600473051180112,
+          "total_alert_episodes": 1865,
+          "true_alert_episodes": 156,
+          "alert_ppv": 0.0836461126005362,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04883624914598487,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 200.27,
+      "reused_A_only_model": true,
+      "details": {
+        "reused_from": "outputs/ebm_regularized/regularized_16bins/model.joblib",
+        "reference_snapshot": "outputs/ab_expansion/references/common_ebm_model.joblib"
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_only__common/lightgbm_results.json": {
+      "signature": "7ecb726ba0a9f67efb3b7b13b16af8d66991adbf430cc4ec48dfc940c0b9f23f",
+      "case": {
+        "key": "A_only__common",
+        "signature": "b5493d7980a335345b0c45070d00a0c8219e69867d4619bca11de656d957dc90",
+        "cohort": "A_only",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 1109,
+        "training_hours": 469344,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8699681099334147,
+        "auprc_average_precision": 0.1607450117242569,
+        "brier_score": 0.013086987399327784,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8225527768344048,
+          "auprc_average_precision": 0.08133134843418771,
+          "brier_score": 0.013317970294265586,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8257074887170042,
+          "auprc_average_precision": 0.050805049676784814,
+          "brier_score": 0.008185289605985954,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7708799851950195,
+          "auprc_average_precision": 0.05448752740792886,
+          "brier_score": 0.00829688261594028,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8300688926449797,
+          "auprc_average_precision": 0.06781614620400771,
+          "brier_score": 0.010817057357822476,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.06718892132359253,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 94,
+          "event_sensitivity": 0.3949579831932773,
+          "false_alert_episodes": 1019,
+          "false_alerts_per_100_patient_hours": 1.0001177763819096,
+          "total_alert_episodes": 1113,
+          "true_alert_episodes": 94,
+          "alert_ppv": 0.08445642407906559,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.06718892132359253,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 58,
+          "event_sensitivity": 0.4264705882352941,
+          "false_alert_episodes": 823,
+          "false_alerts_per_100_patient_hours": 0.8500134267005433,
+          "total_alert_episodes": 881,
+          "true_alert_episodes": 58,
+          "alert_ppv": 0.06583427922814983,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.06718892132359253,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 49,
+          "event_sensitivity": 0.3602941176470588,
+          "false_alert_episodes": 779,
+          "false_alerts_per_100_patient_hours": 0.8115597783056215,
+          "total_alert_episodes": 828,
+          "true_alert_episodes": 49,
+          "alert_ppv": 0.059178743961352656,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.06718892132359253,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 152,
+          "event_sensitivity": 0.40641711229946526,
+          "false_alert_episodes": 1842,
+          "false_alerts_per_100_patient_hours": 0.9269790146444568,
+          "total_alert_episodes": 1994,
+          "true_alert_episodes": 152,
+          "alert_ppv": 0.07622868605817452,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.06718892132359253,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 45.34,
+      "reused_A_only_model": true,
+      "details": {
+        "inner_selected_trees": 135,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_selected_training_patients": true,
+        "reference_snapshot": "outputs/ab_expansion/references/common_lightgbm_model.joblib"
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_full__common/lr_results.json": {
+      "signature": "93b2a62568fd79233972b34eec9e7c9910eab59a76bfd9b46234f8a9c3ce1a4f",
+      "case": {
+        "key": "A_B_full__common",
+        "signature": "1fc048cc0ee4602187bb3253d77a8cb312712f56c99dd9b964589d4e0c28a25c",
+        "cohort": "A_B_full",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lr",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "training": {
+        "auroc": 0.8194973400551482,
+        "auprc_average_precision": 0.07074246473443743,
+        "brier_score": 0.010927994823352723,
+        "positive_hour_prevalence": 0.011385571304700198
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.7859060088299704,
+          "auprc_average_precision": 0.06948159906549041,
+          "brier_score": 0.01347386037031889,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8153182853563482,
+          "auprc_average_precision": 0.051221737475289575,
+          "brier_score": 0.008291434574392633,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7718153144605885,
+          "auprc_average_precision": 0.07004699249725173,
+          "brier_score": 0.008184841697565413,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.804743682273981,
+          "auprc_average_precision": 0.06110813553600088,
+          "brier_score": 0.010948708991861983,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 99,
+          "event_sensitivity": 0.41596638655462187,
+          "false_alert_episodes": 1219,
+          "false_alerts_per_100_patient_hours": 1.1964117462311559,
+          "total_alert_episodes": 1318,
+          "true_alert_episodes": 99,
+          "alert_ppv": 0.07511380880121396,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 620,
+          "false_alerts_per_100_patient_hours": 0.6403503336018673,
+          "total_alert_episodes": 674,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.08011869436201781,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 49,
+          "event_sensitivity": 0.3602941176470588,
+          "false_alert_episodes": 581,
+          "false_alerts_per_100_patient_hours": 0.6052839938325624,
+          "total_alert_episodes": 630,
+          "true_alert_episodes": 49,
+          "alert_ppv": 0.07777777777777778,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04598757356107251,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 153,
+          "event_sensitivity": 0.4090909090909091,
+          "false_alert_episodes": 1839,
+          "false_alerts_per_100_patient_hours": 0.9254692768355895,
+          "total_alert_episodes": 1992,
+          "true_alert_episodes": 153,
+          "alert_ppv": 0.07680722891566265,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04598757356107251,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 7.7,
+      "reused_A_only_model": false,
+      "details": {
+        "iterations": 38
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_full__common/ebm_results.json": {
+      "signature": "4943079be1478aabafede2030bd6fa436be35f519b3dfe07997ca1ed8e283ecd",
+      "case": {
+        "key": "A_B_full__common",
+        "signature": "1fc048cc0ee4602187bb3253d77a8cb312712f56c99dd9b964589d4e0c28a25c",
+        "cohort": "A_B_full",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "ebm",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "training": {
+        "auroc": 0.8526014707338757,
+        "auprc_average_precision": 0.0899895791305362,
+        "brier_score": 0.010763290070837506,
+        "positive_hour_prevalence": 0.011385571304700198
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8071172048353484,
+          "auprc_average_precision": 0.07251567269387958,
+          "brier_score": 0.013404551227608662,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8359690958857555,
+          "auprc_average_precision": 0.06557192663517424,
+          "brier_score": 0.00812778253277157,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.8023737002891772,
+          "auprc_average_precision": 0.07742546924160376,
+          "brier_score": 0.008147636622067118,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8252876092388514,
+          "auprc_average_precision": 0.06980750388507491,
+          "brier_score": 0.010833431009343267,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 106,
+          "event_sensitivity": 0.44537815126050423,
+          "false_alert_episodes": 1139,
+          "false_alerts_per_100_patient_hours": 1.1178941582914572,
+          "total_alert_episodes": 1245,
+          "true_alert_episodes": 106,
+          "alert_ppv": 0.08514056224899598,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 63,
+          "event_sensitivity": 0.4632352941176471,
+          "false_alert_episodes": 637,
+          "false_alerts_per_100_patient_hours": 0.6579083266199831,
+          "total_alert_episodes": 700,
+          "true_alert_episodes": 63,
+          "alert_ppv": 0.09,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 52,
+          "event_sensitivity": 0.38235294117647056,
+          "false_alert_episodes": 630,
+          "false_alerts_per_100_patient_hours": 0.6563320415051882,
+          "total_alert_episodes": 682,
+          "true_alert_episodes": 52,
+          "alert_ppv": 0.07624633431085044,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.05106413005999721,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 169,
+          "event_sensitivity": 0.45187165775401067,
+          "false_alert_episodes": 1776,
+          "false_alerts_per_100_patient_hours": 0.8937647828493784,
+          "total_alert_episodes": 1945,
+          "true_alert_episodes": 169,
+          "alert_ppv": 0.08688946015424165,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.05106413005999721,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 482.6,
+      "reused_A_only_model": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          114.40705128205128,
+          132.74679487179486,
+          110.8525641025641
+        ]
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_full__common/lightgbm_results.json": {
+      "signature": "f1b2dff7a4bd5aec4d8791d4d769cbb06ba4dff995444189446ac2f5d36274ed",
+      "case": {
+        "key": "A_B_full__common",
+        "signature": "1fc048cc0ee4602187bb3253d77a8cb312712f56c99dd9b964589d4e0c28a25c",
+        "cohort": "A_B_full",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8740072158367058,
+        "auprc_average_precision": 0.13539692429343717,
+        "brier_score": 0.010554242838659514,
+        "positive_hour_prevalence": 0.011385571304700198
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8167788606583386,
+          "auprc_average_precision": 0.0814660486930731,
+          "brier_score": 0.0133048444928494,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.848485661945965,
+          "auprc_average_precision": 0.07987702623442647,
+          "brier_score": 0.008013159505481073,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.8032351050894027,
+          "auprc_average_precision": 0.0804999352399334,
+          "brier_score": 0.008137063756448645,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8371543851876926,
+          "auprc_average_precision": 0.08025124897592313,
+          "brier_score": 0.010726456269574396,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 107,
+          "event_sensitivity": 0.4495798319327731,
+          "false_alert_episodes": 1173,
+          "false_alerts_per_100_patient_hours": 1.151264133165829,
+          "total_alert_episodes": 1280,
+          "true_alert_episodes": 107,
+          "alert_ppv": 0.08359375,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 68,
+          "event_sensitivity": 0.5,
+          "false_alert_episodes": 692,
+          "false_alerts_per_100_patient_hours": 0.714713598149181,
+          "total_alert_episodes": 760,
+          "true_alert_episodes": 68,
+          "alert_ppv": 0.08947368421052632,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 51,
+          "event_sensitivity": 0.375,
+          "false_alert_episodes": 681,
+          "false_alerts_per_100_patient_hours": 0.7094636829603701,
+          "total_alert_episodes": 732,
+          "true_alert_episodes": 51,
+          "alert_ppv": 0.06967213114754098,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "pooled_validation": {
+          "threshold": 0.05175862501544144,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 175,
+          "event_sensitivity": 0.4679144385026738,
+          "false_alert_episodes": 1865,
+          "false_alerts_per_100_patient_hours": 0.9385536711791053,
+          "total_alert_episodes": 2040,
+          "true_alert_episodes": 175,
+          "alert_ppv": 0.0857843137254902,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.05175862501544144,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 93.89,
+      "reused_A_only_model": false,
+      "details": {
+        "inner_selected_trees": 190,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2026__common/lr_results.json": {
+      "signature": "a4b77a817d27d45d0ff945a975398ebd9dd0c478052dca271a6953bcc27868f8",
+      "case": {
+        "key": "A_B_matched_seed2026__common",
+        "signature": "b485760f3e4789849201e37d7def460e3ca20f1d2e7294a652c410ffd98dfb01",
+        "cohort": "A_B_matched_seed2026",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 462881,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lr",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "training": {
+        "auroc": 0.8289190482902499,
+        "auprc_average_precision": 0.07866216701501455,
+        "brier_score": 0.01088319559970983,
+        "positive_hour_prevalence": 0.011406819463317786
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.787159570178858,
+          "auprc_average_precision": 0.06797278104516817,
+          "brier_score": 0.013519495121371487,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8061141782192534,
+          "auprc_average_precision": 0.047163611223490574,
+          "brier_score": 0.00841105309028444,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7636823484910293,
+          "auprc_average_precision": 0.07994446826911449,
+          "brier_score": 0.008199506157212629,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.801253571735562,
+          "auprc_average_precision": 0.05874354678394226,
+          "brier_score": 0.011030392538039448,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04626752850856058,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 105,
+          "event_sensitivity": 0.4411764705882353,
+          "false_alert_episodes": 1306,
+          "false_alerts_per_100_patient_hours": 1.281799623115578,
+          "total_alert_episodes": 1411,
+          "true_alert_episodes": 105,
+          "alert_ppv": 0.0744153082919915,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_validation": {
+          "threshold": 0.04626752850856058,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 50,
+          "event_sensitivity": 0.36764705882352944,
+          "false_alert_episodes": 627,
+          "false_alerts_per_100_patient_hours": 0.6475800954328562,
+          "total_alert_episodes": 677,
+          "true_alert_episodes": 50,
+          "alert_ppv": 0.07385524372230429,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.04626752850856058,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 695,
+          "false_alerts_per_100_patient_hours": 0.7240488394382631,
+          "total_alert_episodes": 749,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.07209612817089453,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04626752850856058,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 155,
+          "event_sensitivity": 0.4144385026737968,
+          "false_alert_episodes": 1933,
+          "false_alerts_per_100_patient_hours": 0.9727743948467616,
+          "total_alert_episodes": 2088,
+          "true_alert_episodes": 155,
+          "alert_ppv": 0.07423371647509579,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04626752850856058,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 5.38,
+      "reused_A_only_model": false,
+      "details": {
+        "iterations": 43
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2026__common/ebm_results.json": {
+      "signature": "a1eec4da2a1165240266e3c9386ba5c368b86b238aeb6371d2becfb98f912eff",
+      "case": {
+        "key": "A_B_matched_seed2026__common",
+        "signature": "b485760f3e4789849201e37d7def460e3ca20f1d2e7294a652c410ffd98dfb01",
+        "cohort": "A_B_matched_seed2026",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 462881,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "ebm",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "training": {
+        "auroc": 0.8512958906389468,
+        "auprc_average_precision": 0.08895598163433618,
+        "brier_score": 0.010783612121792987,
+        "positive_hour_prevalence": 0.011406819463317786
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8036971527611643,
+          "auprc_average_precision": 0.06705612399598414,
+          "brier_score": 0.013453295545170194,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8293481989279264,
+          "auprc_average_precision": 0.06173697386510449,
+          "brier_score": 0.0081218288563346,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7946975439925896,
+          "auprc_average_precision": 0.06800738678529633,
+          "brier_score": 0.008188752883304992,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8204695008936246,
+          "auprc_average_precision": 0.06498230734559225,
+          "brier_score": 0.010855523577244874,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04651522367354017,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 104,
+          "event_sensitivity": 0.4369747899159664,
+          "false_alert_episodes": 1197,
+          "false_alerts_per_100_patient_hours": 1.1748194095477387,
+          "total_alert_episodes": 1301,
+          "true_alert_episodes": 104,
+          "alert_ppv": 0.07993850883935434,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.04651522367354017,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 56,
+          "event_sensitivity": 0.4117647058823529,
+          "false_alert_episodes": 630,
+          "false_alerts_per_100_patient_hours": 0.6506785647889942,
+          "total_alert_episodes": 686,
+          "true_alert_episodes": 56,
+          "alert_ppv": 0.08163265306122448,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.04651522367354017,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 47,
+          "event_sensitivity": 0.34558823529411764,
+          "false_alert_episodes": 679,
+          "false_alerts_per_100_patient_hours": 0.7073800891778139,
+          "total_alert_episodes": 726,
+          "true_alert_episodes": 47,
+          "alert_ppv": 0.06473829201101929,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04651522367354017,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 160,
+          "event_sensitivity": 0.42780748663101603,
+          "false_alert_episodes": 1827,
+          "false_alerts_per_100_patient_hours": 0.9194303256001207,
+          "total_alert_episodes": 1987,
+          "true_alert_episodes": 160,
+          "alert_ppv": 0.0805234021137393,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04651522367354017,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 139.2,
+      "reused_A_only_model": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          50.07051282051282,
+          70.72115384615384,
+          103.21794871794872
+        ]
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2026__common/lightgbm_results.json": {
+      "signature": "fc854db45ba0b6c2266774fa821f91964da8b38cb6ab792438f6383c3870d525",
+      "case": {
+        "key": "A_B_matched_seed2026__common",
+        "signature": "b485760f3e4789849201e37d7def460e3ca20f1d2e7294a652c410ffd98dfb01",
+        "cohort": "A_B_matched_seed2026",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 462881,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8911622884479287,
+        "auprc_average_precision": 0.19585872679003866,
+        "brier_score": 0.010326327910312846,
+        "positive_hour_prevalence": 0.011406819463317786
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8249723610328065,
+          "auprc_average_precision": 0.09037705522456481,
+          "brier_score": 0.01327352163646856,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8412341492749841,
+          "auprc_average_precision": 0.07240157678584981,
+          "brier_score": 0.008070867856303308,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.8038066773119957,
+          "auprc_average_precision": 0.06886277705675657,
+          "brier_score": 0.00820995137733112,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8377047405371271,
+          "auprc_average_precision": 0.08082422767645348,
+          "brier_score": 0.010738514116448631,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.049437308315036996,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 105,
+          "event_sensitivity": 0.4411764705882353,
+          "false_alert_episodes": 1194,
+          "false_alerts_per_100_patient_hours": 1.171875,
+          "total_alert_episodes": 1299,
+          "true_alert_episodes": 105,
+          "alert_ppv": 0.08083140877598152,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.049437308315036996,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 69,
+          "event_sensitivity": 0.5073529411764706,
+          "false_alert_episodes": 738,
+          "false_alerts_per_100_patient_hours": 0.7622234616099647,
+          "total_alert_episodes": 807,
+          "true_alert_episodes": 69,
+          "alert_ppv": 0.08550185873605948,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.049437308315036996,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 789,
+          "false_alerts_per_100_patient_hours": 0.8219777472184023,
+          "total_alert_episodes": 843,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.06405693950177936,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "pooled_validation": {
+          "threshold": 0.049437308315036996,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 174,
+          "event_sensitivity": 0.46524064171123,
+          "false_alert_episodes": 1932,
+          "false_alerts_per_100_patient_hours": 0.9722711489104725,
+          "total_alert_episodes": 2106,
+          "true_alert_episodes": 174,
+          "alert_ppv": 0.08262108262108261,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.049437308315036996,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 56.1,
+      "reused_A_only_model": false,
+      "details": {
+        "inner_selected_trees": 166,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2027__common/lr_results.json": {
+      "signature": "d60d023039f34d7dd958b06ae943813826db8c9aa5f2ec451f07a73c5af9264c",
+      "case": {
+        "key": "A_B_matched_seed2027__common",
+        "signature": "6814c9ba557b1ce9b4705501d5634eaa7a0f6452f519349fcba93bc4e8e25989",
+        "cohort": "A_B_matched_seed2027",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 463104,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lr",
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      },
+      "training": {
+        "auroc": 0.821338238222019,
+        "auprc_average_precision": 0.07598706249119327,
+        "brier_score": 0.010898775737066466,
+        "positive_hour_prevalence": 0.011401326699834163
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.7854522906116458,
+          "auprc_average_precision": 0.07003452887920157,
+          "brier_score": 0.013499818231210456,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8136090631386192,
+          "auprc_average_precision": 0.048140879830425545,
+          "brier_score": 0.00847080737097939,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7715119421555029,
+          "auprc_average_precision": 0.06283503744669056,
+          "brier_score": 0.008286620726863727,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8047401347405808,
+          "auprc_average_precision": 0.058114744877468046,
+          "brier_score": 0.011049418706731103,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.04640849661047575,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 90,
+          "event_sensitivity": 0.37815126050420167,
+          "false_alert_episodes": 1242,
+          "false_alerts_per_100_patient_hours": 1.2189855527638191,
+          "total_alert_episodes": 1332,
+          "true_alert_episodes": 90,
+          "alert_ppv": 0.06756756756756757,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_validation": {
+          "threshold": 0.04640849661047575,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 50,
+          "event_sensitivity": 0.36764705882352944,
+          "false_alert_episodes": 634,
+          "false_alerts_per_100_patient_hours": 0.654809857263845,
+          "total_alert_episodes": 684,
+          "true_alert_episodes": 50,
+          "alert_ppv": 0.07309941520467836,
+          "median_true_alert_lead_hours": 2.0
+        },
+        "B_test": {
+          "threshold": 0.04640849661047575,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 45,
+          "event_sensitivity": 0.33088235294117646,
+          "false_alert_episodes": 619,
+          "false_alerts_per_100_patient_hours": 0.6448722757011293,
+          "total_alert_episodes": 664,
+          "true_alert_episodes": 45,
+          "alert_ppv": 0.0677710843373494,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.04640849661047575,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 140,
+          "event_sensitivity": 0.37433155080213903,
+          "false_alert_episodes": 1876,
+          "false_alerts_per_100_patient_hours": 0.944089376478285,
+          "total_alert_episodes": 2016,
+          "true_alert_episodes": 140,
+          "alert_ppv": 0.06944444444444445,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.04640849661047575,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 5.83,
+      "reused_A_only_model": false,
+      "details": {
+        "iterations": 44
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2027__common/ebm_results.json": {
+      "signature": "5f96b51a7dcb9f852d69d20150daeb2de4f27e7d5667cc374d1efcbc720e1238",
+      "case": {
+        "key": "A_B_matched_seed2027__common",
+        "signature": "6814c9ba557b1ce9b4705501d5634eaa7a0f6452f519349fcba93bc4e8e25989",
+        "cohort": "A_B_matched_seed2027",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 463104,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "ebm",
+      "parameters": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "training": {
+        "auroc": 0.8484399827176541,
+        "auprc_average_precision": 0.08380174555488097,
+        "brier_score": 0.010818258655124858,
+        "positive_hour_prevalence": 0.011401326699834163
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8026732841255156,
+          "auprc_average_precision": 0.06969433434581852,
+          "brier_score": 0.013408724003034157,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8219404332572351,
+          "auprc_average_precision": 0.057966605363370054,
+          "brier_score": 0.00815291664519795,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7874563458069311,
+          "auprc_average_precision": 0.05788242550091549,
+          "brier_score": 0.008239173729450829,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8167620177411874,
+          "auprc_average_precision": 0.06526520404870034,
+          "brier_score": 0.010847817254504052,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.046309534614364815,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 107,
+          "event_sensitivity": 0.4495798319327731,
+          "false_alert_episodes": 1217,
+          "false_alerts_per_100_patient_hours": 1.1944488065326633,
+          "total_alert_episodes": 1324,
+          "true_alert_episodes": 107,
+          "alert_ppv": 0.08081570996978851,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.046309534614364815,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 56,
+          "event_sensitivity": 0.4117647058823529,
+          "false_alert_episodes": 601,
+          "false_alerts_per_100_patient_hours": 0.6207266943463262,
+          "total_alert_episodes": 657,
+          "true_alert_episodes": 56,
+          "alert_ppv": 0.0852359208523592,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.046309534614364815,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 41,
+          "event_sensitivity": 0.3014705882352941,
+          "false_alert_episodes": 618,
+          "false_alerts_per_100_patient_hours": 0.6438304788098512,
+          "total_alert_episodes": 659,
+          "true_alert_episodes": 41,
+          "alert_ppv": 0.0622154779969651,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "pooled_validation": {
+          "threshold": 0.046309534614364815,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 163,
+          "event_sensitivity": 0.4358288770053476,
+          "false_alert_episodes": 1818,
+          "false_alerts_per_100_patient_hours": 0.9149011121735192,
+          "total_alert_episodes": 1981,
+          "true_alert_episodes": 163,
+          "alert_ppv": 0.08228167592125189,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.046309534614364815,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 117.57,
+      "reused_A_only_model": false,
+      "details": {
+        "executed_cycles_including_patience": [
+          74.06410256410257,
+          65.72115384615384,
+          81.24679487179488
+        ]
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_matched_seed2027__common/lightgbm_results.json": {
+      "signature": "e00a5001bec3689ac14cab699d6881dbfdded42f8fb7057871081efc7176bf51",
+      "case": {
+        "key": "A_B_matched_seed2027__common",
+        "signature": "6814c9ba557b1ce9b4705501d5634eaa7a0f6452f519349fcba93bc4e8e25989",
+        "cohort": "A_B_matched_seed2027",
+        "profile": "common",
+        "features": 312,
+        "training_patients": 14091,
+        "training_event_patients": 880,
+        "training_hours": 463104,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8763437186511132,
+        "auprc_average_precision": 0.1518530244804481,
+        "brier_score": 0.010537615864997135,
+        "positive_hour_prevalence": 0.011401326699834163
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8124496538611463,
+          "auprc_average_precision": 0.08230483311242902,
+          "brier_score": 0.013309726947824313,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8415597391176124,
+          "auprc_average_precision": 0.08345888833264199,
+          "brier_score": 0.008032374367879966,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7938241897229619,
+          "auprc_average_precision": 0.07284494570527666,
+          "brier_score": 0.008190354282924856,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8315245211315314,
+          "auprc_average_precision": 0.08221523806317364,
+          "brier_score": 0.01073832222991695,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.051421469371227255,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 103,
+          "event_sensitivity": 0.4327731092436975,
+          "false_alert_episodes": 1130,
+          "false_alerts_per_100_patient_hours": 1.1090609296482412,
+          "total_alert_episodes": 1233,
+          "true_alert_episodes": 103,
+          "alert_ppv": 0.08353609083536091,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_validation": {
+          "threshold": 0.051421469371227255,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 63,
+          "event_sensitivity": 0.4632352941176471,
+          "false_alert_episodes": 727,
+          "false_alerts_per_100_patient_hours": 0.7508624073041251,
+          "total_alert_episodes": 790,
+          "true_alert_episodes": 63,
+          "alert_ppv": 0.07974683544303797,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_test": {
+          "threshold": 0.051421469371227255,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 50,
+          "event_sensitivity": 0.36764705882352944,
+          "false_alert_episodes": 675,
+          "false_alerts_per_100_patient_hours": 0.7032129016127016,
+          "total_alert_episodes": 725,
+          "true_alert_episodes": 50,
+          "alert_ppv": 0.06896551724137931,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.051421469371227255,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 166,
+          "event_sensitivity": 0.44385026737967914,
+          "false_alert_episodes": 1857,
+          "false_alerts_per_100_patient_hours": 0.9345277036887927,
+          "total_alert_episodes": 2023,
+          "true_alert_episodes": 166,
+          "alert_ppv": 0.08205635195254572,
+          "median_true_alert_lead_hours": 4.0
+        }
+      },
+      "threshold": 0.051421469371227255,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 47.04,
+      "reused_A_only_model": false,
+      "details": {
+        "inner_selected_trees": 124,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_only__enhanced_lightgbm/lightgbm_results.json": {
+      "signature": "f09bc5e52078374b063398b1284c5df4562d3dcf98653c43594152e6e380d60c",
+      "case": {
+        "key": "A_only__enhanced_lightgbm",
+        "signature": "551f2ced305204f8a1170479b941eeb514bc383f763f04f737cce0e8459b3cc6",
+        "cohort": "A_only",
+        "profile": "enhanced_lightgbm",
+        "features": 349,
+        "training_patients": 14091,
+        "training_event_patients": 1109,
+        "training_hours": 469344,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8796821642830513,
+        "auprc_average_precision": 0.19115187263177885,
+        "brier_score": 0.012922598346072645,
+        "positive_hour_prevalence": 0.014177234608304357
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8251557750314937,
+          "auprc_average_precision": 0.08822629743934061,
+          "brier_score": 0.01328172746275208,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8166599409330217,
+          "auprc_average_precision": 0.04820396717114219,
+          "brier_score": 0.008224657718538798,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.7665874602268091,
+          "auprc_average_precision": 0.05561531576688909,
+          "brier_score": 0.00829426009040104,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8278322692366269,
+          "auprc_average_precision": 0.07074569248505418,
+          "brier_score": 0.010817656169036523,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.06672311262444416,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 95,
+          "event_sensitivity": 0.39915966386554624,
+          "false_alert_episodes": 998,
+          "false_alerts_per_100_patient_hours": 0.9795069095477387,
+          "total_alert_episodes": 1093,
+          "true_alert_episodes": 95,
+          "alert_ppv": 0.08691674290942361,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.06672311262444416,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 830,
+          "false_alerts_per_100_patient_hours": 0.8572431885315321,
+          "total_alert_episodes": 884,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.06108597285067873,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_test": {
+          "threshold": 0.06672311262444416,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 51,
+          "event_sensitivity": 0.375,
+          "false_alert_episodes": 819,
+          "false_alerts_per_100_patient_hours": 0.8532316539567446,
+          "total_alert_episodes": 870,
+          "true_alert_episodes": 51,
+          "alert_ppv": 0.05862068965517241,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "pooled_validation": {
+          "threshold": 0.06672311262444416,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 149,
+          "event_sensitivity": 0.3983957219251337,
+          "false_alert_episodes": 1828,
+          "false_alerts_per_100_patient_hours": 0.9199335715364099,
+          "total_alert_episodes": 1977,
+          "true_alert_episodes": 149,
+          "alert_ppv": 0.0753667172483561,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.06672311262444416,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 52.99,
+      "reused_A_only_model": true,
+      "details": {
+        "inner_selected_trees": 147,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_selected_training_patients": true,
+        "reference_snapshot": "outputs/ab_expansion/references/enhanced_lightgbm_lightgbm_model.joblib"
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    },
+    "outputs/ab_expansion/models/A_B_full__enhanced_lightgbm/lightgbm_results.json": {
+      "signature": "5c17384c942b32507071594cecf4d6eb5297d4c60be48f17637f92f03141ef2a",
+      "case": {
+        "key": "A_B_full__enhanced_lightgbm",
+        "signature": "e041168dc1d9652bf0247548b0ff489425cfc214d5902b542ebaa19291348abf",
+        "cohort": "A_B_full",
+        "profile": "enhanced_lightgbm",
+        "features": 349,
+        "training_patients": 27911,
+        "training_event_patients": 1742,
+        "training_hours": 918004,
+        "normalizer_fitted_on": "this training cohort only",
+        "feature_columns_frozen_from_A": true
+      },
+      "model": "lightgbm",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "training": {
+        "auroc": 0.8736850959396297,
+        "auprc_average_precision": 0.1426789059547401,
+        "brier_score": 0.010534169382847368,
+        "positive_hour_prevalence": 0.011385571304700198
+      },
+      "evaluation": {
+        "A_validation": {
+          "auroc": 0.8184309529107283,
+          "auprc_average_precision": 0.08461642183062361,
+          "brier_score": 0.013294236234336232,
+          "positive_hour_prevalence": 0.014015389447236182
+        },
+        "B_validation": {
+          "auroc": 0.8529374108766896,
+          "auprc_average_precision": 0.08598247246695312,
+          "brier_score": 0.007983904693457182,
+          "positive_hour_prevalence": 0.008427836648695545
+        },
+        "B_test": {
+          "auroc": 0.801202729547247,
+          "auprc_average_precision": 0.07068361713801258,
+          "brier_score": 0.008170943945707774,
+          "positive_hour_prevalence": 0.008501062632829104
+        },
+        "pooled_validation": {
+          "auroc": 0.8393846881345242,
+          "auprc_average_precision": 0.08382382656602015,
+          "brier_score": 0.01070676242601762,
+          "positive_hour_prevalence": 0.011292838810326607
+        }
+      },
+      "alerts": {
+        "A_validation": {
+          "threshold": 0.050645663243792625,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 101888,
+          "event_patients": 238,
+          "detected_event_patients": 105,
+          "event_sensitivity": 0.4411764705882353,
+          "false_alert_episodes": 1171,
+          "false_alerts_per_100_patient_hours": 1.1493011934673367,
+          "total_alert_episodes": 1276,
+          "true_alert_episodes": 105,
+          "alert_ppv": 0.0822884012539185,
+          "median_true_alert_lead_hours": 3.0
+        },
+        "B_validation": {
+          "threshold": 0.050645663243792625,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 96822,
+          "event_patients": 136,
+          "detected_event_patients": 73,
+          "event_sensitivity": 0.5367647058823529,
+          "false_alert_episodes": 682,
+          "false_alerts_per_100_patient_hours": 0.7043853669620541,
+          "total_alert_episodes": 755,
+          "true_alert_episodes": 73,
+          "alert_ppv": 0.09668874172185431,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "B_test": {
+          "threshold": 0.050645663243792625,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 95988,
+          "event_patients": 136,
+          "detected_event_patients": 54,
+          "event_sensitivity": 0.39705882352941174,
+          "false_alert_episodes": 721,
+          "false_alerts_per_100_patient_hours": 0.7511355586114931,
+          "total_alert_episodes": 775,
+          "true_alert_episodes": 54,
+          "alert_ppv": 0.0696774193548387,
+          "median_true_alert_lead_hours": 4.0
+        },
+        "pooled_validation": {
+          "threshold": 0.050645663243792625,
+          "suppression_hours": 6,
+          "eligible_patient_hours": 198710,
+          "event_patients": 374,
+          "detected_event_patients": 178,
+          "event_sensitivity": 0.47593582887700536,
+          "false_alert_episodes": 1853,
+          "false_alerts_per_100_patient_hours": 0.9325147199436364,
+          "total_alert_episodes": 2031,
+          "true_alert_episodes": 178,
+          "alert_ppv": 0.08764155588380108,
+          "median_true_alert_lead_hours": 3.0
+        }
+      },
+      "threshold": 0.050645663243792625,
+      "threshold_fit_on": [
+        "A_validation",
+        "B_validation"
+      ],
+      "fit_seconds": 138.53,
+      "reused_A_only_model": false,
+      "details": {
+        "inner_selected_trees": 156,
+        "early_stopping_patient_grouped": true,
+        "refit_on_all_training_patients": true
+      },
+      "warnings": [],
+      "A_test_evaluated": false,
+      "B_test_is_unseen_hospital": false,
+      "environment": {
+        "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+        "platform": "macOS-15.3-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.3.2",
+          "pandas": "2.3.2",
+          "scipy": "1.16.1",
+          "scikit-learn": "1.7.1",
+          "matplotlib": "3.10.5",
+          "joblib": "1.5.2",
+          "threadpoolctl": "3.6.0",
+          "interpret-core": "0.7.8",
+          "lightgbm": "4.6.0"
+        }
+      }
+    }
+  }
+}

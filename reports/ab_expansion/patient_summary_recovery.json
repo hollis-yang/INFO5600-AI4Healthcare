@@ -1,0 +1,6 @@
+{
+  "exact_original_bytes_restored": true,
+  "original_sha256": "5cdcace60518a45192b06f1f464596b701aa3c107eaff0dac6aa584ff6b0079f",
+  "reconstructed_sha256": "5cdcace60518a45192b06f1f464596b701aa3c107eaff0dac6aa584ff6b0079f",
+  "source": "Original prepare_data patient dictionary and unchanged raw_records/manifest"
+}

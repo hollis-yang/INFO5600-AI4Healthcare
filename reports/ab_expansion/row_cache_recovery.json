@@ -1,0 +1,12 @@
+{
+  "restored": [
+    {
+      "path": "processed_data/train_rows.csv.gz",
+      "original_sha256": "9a668466d706263b8bb014de660e28982580a7264b699d29c1eee3c05606d752",
+      "reconstructed_sha256": "9a668466d706263b8bb014de660e28982580a7264b699d29c1eee3c05606d752",
+      "exact_original_bytes_restored": true,
+      "gzip_mtime": 1793684330,
+      "source": "Frozen prepared row copies; original gzip filename and timestamp"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "path": "outputs/preprocessor.joblib",
+  "original_sha256": "67de9cce4f39ace73e71caa2b601608aa68697257b8f1b61b88a93a6bd6b713e",
+  "reconstructed_sha256": "67de9cce4f39ace73e71caa2b601608aa68697257b8f1b61b88a93a6bd6b713e",
+  "exact_original_bytes_restored": true,
+  "source": "Unchanged A-only reference model preprocessor"
+}

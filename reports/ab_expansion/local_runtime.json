@@ -1,0 +1,21 @@
+{
+  "reason": "macOS evicted existing Desktop library files into unavailable cloud placeholders; experiment imports use the same verified pinned wheels from a non-cloud temporary directory",
+  "runtime_path": "/private/tmp/info5600_ab_runtime",
+  "interpret-core": {
+    "version": "0.7.8",
+    "wheel_sha256": "6644f1498b8d247c5004fe691a9815ff0efc74af243f249f295a5e9f3202b483"
+  },
+  "lightgbm": {
+    "version": "4.6.0",
+    "wheel_sha256": "2dafd98d4e02b844ceb0b61450a660681076b1ea6c7adb8c566dfd66832aafad"
+  },
+  "dependency_versions_changed": false,
+  "source_recovery": "Evicted tracked Python sources were restored from identical HEAD Git blobs; unavailable generated pyc files were removed for regeneration.",
+  "source_recovery_blob_ids": {
+    "src/sepsis_warning/regularized.py": "59591d19abdd93125a707c16e14096e3fe3ee5f4",
+    "src/sepsis_warning/feature_cache.py": "270ad4cb41560127e6c0d6e59b966665cfdf2ac2",
+    "src/sepsis_warning/context_splines.py": "9f3f38787ee066033e9b030774846041f637afb2",
+    "tests/test_context_splines.py": "d86c0065e18fd9d8e763b548116397dda1b4387e",
+    "tests/test_model_comparison.py": "88f8f80d45c42c8bf355d46a92d0e0050324a3ec"
+  }
+}

@@ -1,0 +1,24 @@
+[study]
+b_split_seed = 42
+b_train_fraction = 0.70
+b_validation_fraction = 0.15
+b_test_fraction = 0.15
+matched_sample_seeds = [2026, 2027]
+models = ["lr", "ebm", "lightgbm"]
+bootstrap_samples = 300
+maximum_workers = 2
+maximum_ebm_workers = 1
+cpu_budget = 7
+
+[protocol]
+prediction_horizon_hours = 6
+latest_value_expiry_hours = 6
+common_features = "Original A-training baseline feature names (312); no hospital or patient ID input"
+threshold_selection = "Pooled A-validation and B-validation; one threshold per fitted model"
+a_test_evaluated = false
+b_test_role = "Unseen patients from a hospital represented in pooled training, not an unseen-hospital test"
+
+[secondary]
+profile = "without_clipping"
+models = ["lightgbm"]
+cohorts = ["A_only", "A_B_full"]

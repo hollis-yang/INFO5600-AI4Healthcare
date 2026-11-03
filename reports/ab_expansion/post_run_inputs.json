@@ -1,0 +1,46 @@
+{
+  "processed_data/train_features.npy": {
+    "sha256_at_freeze": "bc4417c1e96a57e1012c5ad0e81dba0bff460d809f8b6c0b269b84595d8a84e8",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/validation_features.npy": {
+    "sha256_at_freeze": "74f5aea97e2483b24620ae6b8cfde2ba7d62f35f7aec52108435c88fd3e11efb",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/external_test_features.npy": {
+    "sha256_at_freeze": "91f34766f8b79786fb899cc90c897bc7788a24fb4d22b8d689e7aada58aa18f4",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/train_rows.csv.gz": {
+    "sha256_at_freeze": "9a668466d706263b8bb014de660e28982580a7264b699d29c1eee3c05606d752",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/validation_rows.csv.gz": {
+    "sha256_at_freeze": "46cb585c4e8bc11897a2fdb1dc93e9034886c693577253993c1ef105ec4bed0c",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/external_test_rows.csv.gz": {
+    "sha256_at_freeze": "1d3592b0e844cd0b71842adb135f7c625175ca83f5f0826fb6b76a3df0a170db",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/splits/patient_splits.csv": {
+    "sha256_at_freeze": "b5c6868bdb31b40ce264fe86eb36f8e54b053d7fb05aab6db1c412fef5f872f1",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "processed_data/raw_records.npy": {
+    "sha256_at_freeze": "53391ae161f195746532b4ab760a15bb349203a3df9bac875ac6b4536c3330cb",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "outputs/patient_summary.csv": {
+    "sha256_at_freeze": "5cdcace60518a45192b06f1f464596b701aa3c107eaff0dac6aa584ff6b0079f",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "outputs/preprocessor.joblib": {
+    "sha256_at_freeze": "67de9cce4f39ace73e71caa2b601608aa68697257b8f1b61b88a93a6bd6b713e",
+    "post_run_status": "exact SHA-256 match"
+  },
+  "data/manifest.csv": {
+    "sha256_at_freeze": "ae158e73fac89158547739cf1b67706e1bad00de4e8611306d83b50fdd45bac4",
+    "post_run_status": "exact SHA-256 match"
+  }
+}

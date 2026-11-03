@@ -1,0 +1,60 @@
+{
+  "model_results": 14,
+  "new_fits": 10,
+  "reused_A_only_models": 4,
+  "training_cohorts": [
+    {
+      "cohort": "A_only",
+      "patients": 14091,
+      "event_patients": 1109,
+      "hours": 469344,
+      "positive_hours": 6654,
+      "positive_hour_prevalence": 0.0141772346083043,
+      "A_patients": 14091,
+      "A_event_patients": 1109,
+      "B_patients": 0,
+      "B_event_patients": 0
+    },
+    {
+      "cohort": "A_B_full",
+      "patients": 27911,
+      "event_patients": 1742,
+      "hours": 918004,
+      "positive_hours": 10452,
+      "positive_hour_prevalence": 0.0113855713047001,
+      "A_patients": 14091,
+      "A_event_patients": 1109,
+      "B_patients": 13820,
+      "B_event_patients": 633
+    },
+    {
+      "cohort": "A_B_matched_seed2026",
+      "patients": 14091,
+      "event_patients": 880,
+      "hours": 462881,
+      "positive_hours": 5280,
+      "positive_hour_prevalence": 0.0114068194633177,
+      "A_patients": 7114,
+      "A_event_patients": 560,
+      "B_patients": 6977,
+      "B_event_patients": 320
+    },
+    {
+      "cohort": "A_B_matched_seed2027",
+      "patients": 14091,
+      "event_patients": 880,
+      "hours": 463104,
+      "positive_hours": 5280,
+      "positive_hour_prevalence": 0.0114013266998341,
+      "A_patients": 7114,
+      "A_event_patients": 560,
+      "B_patients": 6977,
+      "B_event_patients": 320
+    }
+  ],
+  "canonical_inputs_unchanged": true,
+  "resumed_from_frozen_prepared_cases": true,
+  "A_test_evaluated": false,
+  "B_test_is_unseen_hospital": false,
+  "elapsed_seconds": 765.63
+}
