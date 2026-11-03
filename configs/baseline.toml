@@ -1,0 +1,36 @@
+[data]
+directory = "data"
+processed_directory = "processed_data"
+split_file = "processed_data/splits/patient_splits.csv"
+output_directory = "outputs"
+
+[cohort]
+adult_minimum_age = 18
+prediction_horizon_hours = 6
+exclude_onset_beyond_observation = true
+require_complete_negative_window = true
+
+[split]
+random_seed = 42
+train_fraction = 0.70
+validation_fraction = 0.15
+test_fraction = 0.15
+development_hospital = "A"
+external_hospital = "B"
+
+[features]
+lookback_hours = 6
+forward_fill_hours = 6
+clip_lower_quantile = 0.005
+clip_upper_quantile = 0.995
+
+[lr]
+C = 1.0
+max_iter = 2000
+tolerance = 0.0001
+threads = 4
+bootstrap_samples = 300
+
+[alerts]
+suppression_hours = 6
+false_alert_budget_per_100_patient_hours = 1.0

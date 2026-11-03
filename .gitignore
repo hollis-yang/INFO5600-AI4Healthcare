@@ -7,3 +7,7 @@ venv/
 .ipynb_checkpoints/
 .env
 .env.*
+
+# Locally generated experiment data and artifacts
+processed_data/
+outputs/
