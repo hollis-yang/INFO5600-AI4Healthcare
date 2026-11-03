@@ -7,3 +7,11 @@ venv/
 .ipynb_checkpoints/
 .env
 .env.*
+
+# Regenerable patient-level artifacts, feature matrices, and fitted models
+/outputs/
+/artifacts/
+/models/
+/test-tmp/
+*.joblib
+*.npy

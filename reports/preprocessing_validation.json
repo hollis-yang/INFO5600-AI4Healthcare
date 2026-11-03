@@ -1,0 +1,75 @@
+{
+  "all_39874_patients_and_raw_hashes_match": true,
+  "all_patient_splits_and_cv_folds_match": true,
+  "full_record_hours": 1545966,
+  "excluded_patients": 462,
+  "standard_id": "SEPSIS_FULL_RECORD_V2",
+  "raw_patients": 40336,
+  "counts": [
+    {
+      "split": "test",
+      "hospital": "A",
+      "patients": 3020,
+      "event_patients": 238,
+      "hours": 117257,
+      "positive_hours": 2305
+    },
+    {
+      "split": "test",
+      "hospital": "B",
+      "patients": 2962,
+      "event_patients": 136,
+      "hours": 113453,
+      "positive_hours": 1325
+    },
+    {
+      "split": "train",
+      "hospital": "A",
+      "patients": 14091,
+      "event_patients": 1109,
+      "hours": 551330,
+      "positive_hours": 10748
+    },
+    {
+      "split": "train",
+      "hospital": "B",
+      "patients": 13820,
+      "event_patients": 633,
+      "hours": 530188,
+      "positive_hours": 6204
+    },
+    {
+      "split": "validation",
+      "hospital": "A",
+      "patients": 3020,
+      "event_patients": 238,
+      "hours": 119455,
+      "positive_hours": 2303
+    },
+    {
+      "split": "validation",
+      "hospital": "B",
+      "patients": 2961,
+      "event_patients": 136,
+      "hours": 114283,
+      "positive_hours": 1327
+    }
+  ],
+  "by_hospital": {
+    "A": {
+      "raw_patients": 20336,
+      "raw_hours": 790215,
+      "included": 20131,
+      "positive_at_first_record": 203,
+      "inferred_onset_after_record_end": 2
+    },
+    "B": {
+      "raw_patients": 20000,
+      "raw_hours": 761995,
+      "included": 19743,
+      "inferred_onset_after_record_end": 13,
+      "positive_at_first_record": 222,
+      "age_not_eligible": 22
+    }
+  }
+}
