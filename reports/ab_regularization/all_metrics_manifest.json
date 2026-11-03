@@ -1,0 +1,44 @@
+{
+  "hourly_metric_rows": 9,
+  "combined_validation_rows": 9,
+  "training_metric_rows": 9,
+  "hourly_metrics_use_suppression": false,
+  "alert_suppression_hours": 6,
+  "models_refitted": false,
+  "thresholds_changed": false,
+  "test_sets_evaluated": [],
+  "input_fingerprints": {
+    "reports/ab_regularization/model_metadata_archive.json": "f087d8a8e88fc6952fe51a7bb6bf81c563670687e451a6e83435409afcbeaf54",
+    "reports/ab_regularization/validation_manifest.json": "afcf98bf98910e8da113916a3ea209279c5b2953e6d3e009ddbe80f4d651941a",
+    "reports/ab_regularization/selection.json": "cd241c9e5d93b942c56b048ad4e9179bc5d734d89edfece8b60ccd96ffb31764",
+    "reports/ab_regularization/completed.json": "8dd312da0ac3c3d595e9871439387d9d30b724e5db21abdfdd6a576e1fbb1837",
+    "reports/ab_regularization/cv_summary.csv": "d377d9ebbbc916295be56a7454218c26f659272aa50616cc90d774cec62aa4ad",
+    "reports/ab_regularization/selected_validation_metrics.csv": "a326abaa96738a41db358b45716e73ee8ced75898abbe9d0861be0fcc996b6ef",
+    "reports/ab_regularization/alert_comparison.csv": "989f874028ab04acd6584a50a87e90bc5e558e97451a46f3136e61c8a0f8c968",
+    "reports/ab_regularization/utility/all_scores.csv": "2653d609cbe38b21378aadba8dc0804f1ae1f389ed236887f283d32a552e5e92",
+    "reports/ab_regularization/utility/paired_effects.csv": "2561ef8363b2578fc90db8b7eed7bbaaafcf0d2e0d6030040d001cbf9a7b0a20",
+    "reports/ab_regularization/missingness/cross_hospital.csv": "22fcb6fb1c3b932bf2b8a6e0442acc57af3e4c5a4d9f73f8921fa9cd5548dfb4",
+    "reports/ab_regularization/missingness/patient_composition.csv": "f8b989444a0109063dfb3cbdab880861d20f64d2903cf5edc225c59023ded5ac",
+    "reports/ab_regularization/missingness/hospital_classifier_folds.csv": "3010f237b723ee42c1c15199cb07303fa5c4b6f1df2f6df659f110ff82e40cdc",
+    "reports/ab_regularization/missingness/hospital_classifier.json": "3110498ec6afa378545e83739277276587725ddf34bbf0a7edd9b9dc0ad9ec0a",
+    "processed_data/ab_regularization/A_validation_rows.csv.gz": "bf8fb0162b1831612de32e9dd12f6988ff685156cd3dc609c882a2888ccec244",
+    "processed_data/ab_regularization/B_validation_rows.csv.gz": "769cdfbaddf2abdb02ca1bddf776f57d3171c9d2505d022e0f1e99cde87f3e67",
+    "processed_data/ab_regularization/training_rows.csv.gz": "d4daf107e9e59715f6067b7be1b34dff69836c44da8d323b3f37981eeaf68eeb",
+    "outputs/ab_regularization/validation/full/lr_baseline/A_validation_probability.npy": "f62965f25205183e3442d0618bfcad7557c5a75148324e3833f517c78d6bfc4e",
+    "outputs/ab_regularization/validation/full/lr_baseline/B_validation_probability.npy": "ecc779e7456c40107879012379f24316831f033e218c4d1e401207cd67796426",
+    "outputs/ab_regularization/validation/full/ebm_baseline/A_validation_probability.npy": "f3770d785da07d31b00fe22175adecd3888585b25ac9e5edfcd1536e9c9d83e7",
+    "outputs/ab_regularization/validation/full/ebm_baseline/B_validation_probability.npy": "87da0dc1767cce20c70411ce5f079eb5d30a3b0b3c588b6782d86db6673a75f0",
+    "outputs/ab_regularization/validation/full/lightgbm_baseline/A_validation_probability.npy": "e9b8fed76089dd27d6eb44d59314c958946f7ab6bd0101dca455d25caf0b69b8",
+    "outputs/ab_regularization/validation/full/lightgbm_baseline/B_validation_probability.npy": "fcaaf6e7e9a25b6f2afad435cdc40d9a507eb9cc4fab696a0572fa791e8735c3"
+  },
+  "source_fingerprints": {
+    "scripts/report_all_metrics.py": "ab25d4dd6178b2dc06fb378d5e8d27c4ba0f191127868ea78716b9fdb5db4a6a"
+  },
+  "output_fingerprints": {
+    "cohort_metrics.csv": "49cc840d5ba2452b2c6386840fe490dfcafac6729a7752020ee74ec295454e7e",
+    "training_metrics.csv": "69f068cace044ced5130db9e1b3cb404ccf17da8b929c2b913a6a5bbe543750e",
+    "hourly_classification_metrics.csv": "9ae57c903af0ecdf83683fe6c883ef6558d88b50769cc08859e29e80ae8197b4",
+    "all_model_metrics.csv": "acf839bb7732170fea8238646ac10bc2cc6bb2d1f3733ac1702565a4a7708e5c",
+    "all_metrics.md": "75406796d9af42c0c106493352f0d3b0716b9c5e23ad17e71a2a175d06afbc05"
+  }
+}
