@@ -1,0 +1,28 @@
+{
+  "model_results_checked": 45,
+  "data_conditions_checked": 15,
+  "canonical_inputs_unchanged": true,
+  "matched_patients_across_history_windows": true,
+  "nested_stratified_patient_subsets": true,
+  "outer_split_isolation": true,
+  "subset_only_preprocessing_fit_counts": true,
+  "sampled_matrix_transform_reconstruction": true,
+  "fixed_model_parameter_signatures": {
+    "lr": "4bf3d5dd5bc548a87247b57372fe527a4b859e5afb5672f2f7138039611ff3e8",
+    "ebm": "bc82c715ca886af8a99dd5e3733569c346fe748f98e2851f1ab9dfde39415a86",
+    "lightgbm": "7bd9911847d945dee26acf9d9769dcad90e4d7d0fe9a84b1a5472f1f0e9bba45"
+  },
+  "all_validation_metrics_recomputed": true,
+  "all_saved_models_prediction_checked": true,
+  "internal_patient_bags_reconstructed": true,
+  "test_sets_evaluated": [],
+  "source_fingerprints": {
+    "scripts/fit_history_model.py": "0bc39c2c89606341d8fc1daa5d5921be87a6d06ee7d1d81d3f6524ec92d79430",
+    "scripts/report_history_study.py": "095c7882db8c70bb447e7b0f32a79c7607a5322b91df3bf8a349e91a1baa5bb7",
+    "scripts/run_history_study.py": "ec3599fa98f7f7ab65c8057764206efee6c4967e2f67400ac8b227d722057042",
+    "scripts/verify_history_study.py": "acca82d419ca78c86ecc6f360d7c7e7f26719db9b3264762753a882ec5c45b7b",
+    "src/sepsis_warning/history_study.py": "b34024567dc4c40068a5e62b17053b1ccbdd9daebb9b61d10587c20e3233d969",
+    "src/sepsis_warning/data.py": "4a7a9fef3f3772ed5f03db6cefb6dc530eea4e99fa3b43514e7aedb82f729506",
+    "configs/history_study.toml": "f5e02c95771eb81ef7b506353dba30b3b36cdcae098c94fafec252789b88dc4f"
+  }
+}

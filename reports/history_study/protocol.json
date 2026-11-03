@@ -1,0 +1,16 @@
+{
+  "retention_intervention": "Only laboratory latest-value expiry changes; vital expiry, rolling statistics and target horizon remain 6h.",
+  "sample_design": "Two event-stratified nested patient samples at 25% and 50%; a single shared 100% cohort.",
+  "model_settings": "LR and EBM fixed at their previous settings; one prespecified LightGBM baseline.",
+  "preprocessing": "Re-fitted using only each selected training subset; all three models share the same transformed matrices per trial.",
+  "validation": "Identical 3,020 patients and 101,888 hours in every run; real class proportions preserved.",
+  "test_sets_evaluated": [],
+  "uncertainty": "300 paired patient bootstraps, conditional on the two training subsamples.",
+  "caveats": [
+    "Only two subsample repetitions; curves cannot establish an ultimate data-size ceiling.",
+    "Event and non-event patient counts vary together; positive-case scarcity is not isolated.",
+    "Fixed hyperparameters may have different effective regularization at different sample sizes.",
+    "Only latest-value retention changes; this does not test longer trend windows or all preprocessing choices.",
+    "Multiple exploratory comparisons on a previously viewed development validation set; no final generalization claim."
+  ]
+}

@@ -1,0 +1,31 @@
+[study]
+lab_retention_hours = [6, 12, 24]
+patient_fractions = [0.25, 0.50, 1.0]
+sample_seeds = [2026, 2027]
+bootstrap_samples = 300
+models = ["lr", "ebm", "lightgbm"]
+# Vital-sign expiry, rolling statistics and prediction horizon remain 6 hours.
+
+[lightgbm]
+boosting_type = "gbdt"
+objective = "binary"
+num_leaves = 15
+max_depth = -1
+learning_rate = 0.03
+n_estimators = 500
+min_child_samples = 200
+reg_lambda = 10.0
+max_bin = 63
+colsample_bytree = 1.0
+subsample = 1.0
+subsample_freq = 0
+n_jobs = 3
+random_state = 42
+deterministic = true
+force_col_wise = true
+verbosity = -1
+
+[lightgbm_stopping]
+rounds = 30
+min_delta = 0.00001
+metric = "binary_logloss"

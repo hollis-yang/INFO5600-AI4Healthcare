@@ -1,0 +1,57 @@
+{
+  "models": {
+    "ebm": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    },
+    "lightgbm": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    },
+    "lr": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    }
+  },
+  "lightgbm_stopping": {
+    "rounds": 30,
+    "min_delta": 1e-05,
+    "metric": "binary_logloss"
+  },
+  "note": "Hyperparameters and stopping rules are fixed; fitted stopping iterations may differ."
+}

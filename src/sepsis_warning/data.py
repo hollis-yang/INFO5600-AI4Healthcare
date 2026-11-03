@@ -83,7 +83,7 @@ def assess_patient(values, cfg):
     return reason, eligible, onset
 
 
-def causal_features(values, cfg):
+def causal_features(values, cfg, lab_retention_hours=None):
     """Current values and trailing observed-only statistics; never backfill."""
     physiology = values[:, :34].astype(np.float32, copy=True)
     physiology[~np.isfinite(physiology)] = np.nan
@@ -97,7 +97,10 @@ def causal_features(values, cfg):
     since = hours[:, None] - hours[safe_index]
     since = since.astype(np.float32)
     since[never] = np.nan
-    latest[never | (since > cfg["features"]["forward_fill_hours"])] = np.nan
+    expiry = np.full(d, cfg["features"]["forward_fill_hours"], dtype=float)
+    if lab_retention_hours is not None:
+        expiry[8:34] = lab_retention_hours
+    latest[never | (since > expiry)] = np.nan
 
     window = cfg["features"]["lookback_hours"]
     history = np.full((window, n, d), np.nan, np.float32)

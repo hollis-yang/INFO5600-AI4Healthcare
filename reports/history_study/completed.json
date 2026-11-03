@@ -1,0 +1,8 @@
+{
+  "trials": 15,
+  "model_results": 45,
+  "input_fingerprints_unchanged": true,
+  "test_sets_evaluated": [],
+  "model_settings_fixed_across_windows_and_sample_sizes": true,
+  "elapsed_seconds": 1542.77
+}

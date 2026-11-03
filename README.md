@@ -57,6 +57,24 @@ For weights greater than 1, probabilities are reported both raw and after subtra
 
 Experiments are cached under `outputs/ebm_regularized/`; matching completed configurations are reused on rerun. Curated metrics, reports and figures are copied into `reports/ebm_regularized/`. Large models, predictions and processed matrices remain local.
 
+For the controlled history-retention and patient-count study across all three models:
+
+```bash
+python scripts/run_history_study.py
+python scripts/report_history_study.py
+python scripts/verify_history_study.py
+```
+
+The protocol in `configs/history_study.toml` changes only the latest laboratory value expiry (6/12/24 hours). Vital-sign expiry, rolling statistics and the target horizon remain 6 hours. LR and the previously selected unweighted 16-bin EBM retain their settings. LightGBM uses one fixed regularized baseline, with a patient-grouped internal early-stopping split and then a refit on all selected training patients. Fitted stopping iterations can differ; the stopping rules and hyperparameters are fixed.
+
+Learning curves use nested, event-stratified 25%/50% training-patient subsets with two sample seeds, plus the shared full A-training cohort. The exact patients are matched across retention strategies and models. Each trial fits its imputer, clipping bounds and scaler using that trial's training subset only. Both test sets remain reserved. There are 15 data conditions and 45 model results; full-data 6h LR/EBM models are verified and reused.
+
+Workers run in separate local processes and log to `outputs/history_study/<trial>/`. On macOS they reuse sklearn's bundled OpenMP runtime when available; otherwise follow LightGBM's documented `libomp` setup. Matching completed models are cached for resumption. Data variants and matrices are in `processed_data/history_study/`; curated tables, patient membership, uncertainty intervals and plots are in `reports/history_study/`.
+
+The verification command checks all 45 result metrics and saved-model predictions, matched and nested patient membership, unchanged canonical inputs, preprocessing fit counts, sampled matrix reconstruction, fixed model settings, and internal patient holdouts. It writes `reports/history_study/final_checks.json`.
+
+The learning-curve bands show the range of two training subsamples, not confidence intervals. Separate patient-bootstrap intervals quantify validation uncertainty conditional on those draws. These curves vary event and non-event patient counts together; they cannot isolate positive-case scarcity or establish a final sample-size ceiling.
+
 Run commands from the repository root. Settings are recorded in `configs/baseline.toml`. A complete preparation run writes approximately 3.6 GB of processed arrays. The raw files in `data/` remain unchanged.
 
 ## Local outputs

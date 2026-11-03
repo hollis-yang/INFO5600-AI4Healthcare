@@ -1,0 +1,245 @@
+{
+  "lr_6h_full_minus_25pct": {
+    "difference": 0.008309598121098383,
+    "lower": -0.0012705184344027386,
+    "upper": 0.01883675670314932,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_6h_full_minus_50pct": {
+    "difference": 0.002167156907770057,
+    "lower": -0.003906977145488369,
+    "upper": 0.01054035588559775,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_6h_50pct_minus_25pct": {
+    "difference": 0.006142441213328326,
+    "lower": -0.0015917998324564862,
+    "upper": 0.014548746926399809,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_12h_full_minus_25pct": {
+    "difference": 0.0069410795581392876,
+    "lower": -0.0006667501101114421,
+    "upper": 0.015400952700274896,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_12h_full_minus_50pct": {
+    "difference": 0.0019480851198056398,
+    "lower": -0.0023776143616631466,
+    "upper": 0.007235450144575637,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_12h_50pct_minus_25pct": {
+    "difference": 0.004992994438333648,
+    "lower": -0.0018695080535709938,
+    "upper": 0.012569270233547408,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_24h_full_minus_25pct": {
+    "difference": 0.00811913447274168,
+    "lower": 0.0007908294626200354,
+    "upper": 0.016002119181064554,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_24h_full_minus_50pct": {
+    "difference": 0.0022791805388129305,
+    "lower": -0.0026609218433674576,
+    "upper": 0.008579496916401752,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lr_24h_50pct_minus_25pct": {
+    "difference": 0.005839953933928749,
+    "lower": -0.0006191222125323683,
+    "upper": 0.012717139062303215,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_6h_full_minus_25pct": {
+    "difference": 0.006756082388593279,
+    "lower": -0.0003830883303728011,
+    "upper": 0.014991306445607732,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_6h_full_minus_50pct": {
+    "difference": 0.0008646397441226111,
+    "lower": -0.0034166171771359637,
+    "upper": 0.00662217257271313,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_6h_50pct_minus_25pct": {
+    "difference": 0.005891442644470668,
+    "lower": 0.0013920920476431988,
+    "upper": 0.011728466761725412,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_12h_full_minus_25pct": {
+    "difference": 0.00827648139537332,
+    "lower": 0.001254140272257727,
+    "upper": 0.01724639346087412,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_12h_full_minus_50pct": {
+    "difference": 0.000706058808181198,
+    "lower": -0.004413824361873512,
+    "upper": 0.006552549905263022,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_12h_50pct_minus_25pct": {
+    "difference": 0.007570422587192122,
+    "lower": 0.0033442429993206417,
+    "upper": 0.0134127774719092,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_24h_full_minus_25pct": {
+    "difference": 0.006930771768658445,
+    "lower": -0.00035439903628362674,
+    "upper": 0.01571182806936598,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_24h_full_minus_50pct": {
+    "difference": 0.0007162126569734417,
+    "lower": -0.004513427958335647,
+    "upper": 0.006808298216701928,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "ebm_24h_50pct_minus_25pct": {
+    "difference": 0.006214559111685003,
+    "lower": 0.0018718990783329723,
+    "upper": 0.012123769646301468,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_6h_full_minus_25pct": {
+    "difference": 0.01093841916020974,
+    "lower": 0.001725175543993477,
+    "upper": 0.025988412084655084,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_6h_full_minus_50pct": {
+    "difference": -0.005021705178625796,
+    "lower": -0.014513212012865687,
+    "upper": 0.004752111268496772,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_6h_50pct_minus_25pct": {
+    "difference": 0.015960124338835535,
+    "lower": 0.006789987349085157,
+    "upper": 0.027342340443064075,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_12h_full_minus_25pct": {
+    "difference": 0.00937224431128808,
+    "lower": -0.002841130341035548,
+    "upper": 0.026283813554480045,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_12h_full_minus_50pct": {
+    "difference": -0.0019767882032876577,
+    "lower": -0.015315110855688945,
+    "upper": 0.012333023194271573,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_12h_50pct_minus_25pct": {
+    "difference": 0.011349032514575738,
+    "lower": -0.002496186335280758,
+    "upper": 0.02779381377712962,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_24h_full_minus_25pct": {
+    "difference": 0.011636473309882947,
+    "lower": -0.0011847928797362318,
+    "upper": 0.028293064406591652,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_24h_full_minus_50pct": {
+    "difference": 0.0029765513261132692,
+    "lower": -0.005999656532502679,
+    "upper": 0.01198360648159265,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_24h_50pct_minus_25pct": {
+    "difference": 0.008659921983769678,
+    "lower": -0.00018981176963323642,
+    "upper": 0.02163436047203144,
+    "resamples": 300,
+    "reference_runs": 2,
+    "candidate_runs": 2,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  }
+}
