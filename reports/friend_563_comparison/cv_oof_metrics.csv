@@ -1,0 +1,3 @@
+split,model,auroc,auprc,selected_final_rounds
+train_OOF_development,xgboost,0.8580659399683295,0.1296587231934512,216
+train_OOF_development,lightgbm,0.8582198142922561,0.1301210838101663,276

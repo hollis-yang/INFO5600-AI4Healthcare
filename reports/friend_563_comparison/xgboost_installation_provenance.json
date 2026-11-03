@@ -1,0 +1,8 @@
+{
+  "package": "xgboost",
+  "version": "3.1.1",
+  "wheel": "/private/tmp/info5600_pinned_wheels/xgboost-3.1.1-py3-none-macosx_12_0_arm64.whl",
+  "sha256": "fac06c989f2cf11af7aa546b3bb78e7fa87595891e5dfde28edf3e7492e5440a",
+  "url": "https://files.pythonhosted.org/packages/af/7f/c8bde020171c900fcc808a16fe643c16d5ef96fd1516a24478bc54a428b0/xgboost-3.1.1-py3-none-macosx_12_0_arm64.whl",
+  "metadata_url": "https://pypi.org/pypi/xgboost/3.1.1/json"
+}

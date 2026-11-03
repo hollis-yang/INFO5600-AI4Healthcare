@@ -18,7 +18,7 @@ See [data/README.md](data/README.md) for the source, label definition, checksums
 
 ## Status
 
-The local pipeline audits the raw data, constructs a conservative incident-onset cohort, fixes patient splits, and compares logistic regression, additive EBM and LightGBM. It includes controlled lab-retention experiments, patient learning curves, and preprocessing/feature screening through patient-grouped CV within hospital A training data. Hospital A test and hospital B external-test results remain reserved.
+The local pipeline audits the raw data, constructs a conservative incident-onset cohort, and compares interpretable models. Historical studies include retention, patient learning curves, A-only feature screening, A+B expansion and hospital-stratified regularization. The new [563-feature matched comparison](reports/friend_563_comparison/report.md) uses the original pooled A+B patient split and complete records to compare XGBoost and LightGBM. Training CV determines iteration counts, validation selects utility thresholds, and frozen models are evaluated on test patients. The source data were inspected during earlier development; results remain exploratory. Full-record recognition is distinct from the original pre-onset warning task.
 
 ## Run locally
 
@@ -185,6 +185,28 @@ The consolidated [complete metrics report](reports/ab_regularization/all_metrics
 The unmodified official [PhysioNet/CinC 2019 scorer](https://github.com/physionetchallenges/evaluation-2019) is pinned under `third_party/physionet2019/` with its original BSD 2-Clause license, Git blob IDs and SHA-256. Utility is normalized after summing patient contributions: 0 means inaction and 1 means the cohort oracle; negative scores are possible. This full-trajectory supplement and its selected cohort differ from the custom pre-onset task and from the official hidden Challenge test.
 
 After the regularization run, use the same macOS environment wrapper for `run_utility_comparison.py` and `verify_utility_comparison.py`. `run_utility_comparison.py --prepare-only` can prepare full trajectories while CV is running. The supplement adds about 0.3 GB under `processed_data/ab_regularization/utility/`; results and patient-level contributions remain under `outputs/ab_regularization/utility/`, and small snapshots under `reports/ab_regularization/utility/`. Unit fixtures and real patient subsets are checked against the upstream directory-based evaluator.
+
+## 563-feature full-record XGBoost and LightGBM comparison
+
+The separate [563-feature full-record comparison](reports/friend_563_comparison/report.md) follows the preprocessing and unchanged augmented feature code published on `main` at `32ee355b9373e81a9d3bdb1f1b4a22883e04678e`. It compares native XGBoost and LightGBM using the same original A+B patient splits and hospital/event-stratified training folds. Original PSV bytes are read from that Git commit, verified against the manifest and parsed as float64 before the published code produces float32 features. It does not reuse the earlier float32 raw cache. Features retain NaN; there is no imputation, scaling, clipping, class weighting or resampling.
+
+Both models use a fixed shallow-tree configuration and equal early-stopping budgets. Training CV selects round counts by AUROC, final fits use the median selected count, and validation selects one utility-maximizing threshold per model. Models and thresholds are frozen before test feature construction or evaluation. The CV holdout also provides early stopping, so CV is a development estimate; validation utility is a calibration result. Test results use frozen choices, but the source patients have been examined historically. Full-record performance includes post-onset recognition and is distinct from the original pre-onset warning task.
+
+Install the additional XGBoost dependency with `python -m pip install -r requirements-friend563.txt`. On this machine a verified official wheel is isolated under `/private/tmp/info5600_xgb_runtime`; the helper includes it and the existing macOS OpenMP settings:
+
+```sh
+git fetch origin main
+python - <<'PY'
+import subprocess, sys
+sys.path.insert(0, 'src')
+from sepsis_warning.friend_563 import runtime_environment
+for script in ['run_friend_563.py', 'verify_friend_563.py']:
+    subprocess.run([sys.executable, '-u', 'scripts/' + script],
+                   env=runtime_environment(), check=True)
+PY
+```
+
+Generated matrices and source snapshots are isolated in `processed_data/friend_563_comparison/`; models, saved predictions, calibration and freeze records are in `outputs/friend_563_comparison/`. Small reports are in `reports/friend_563_comparison/`. Parameters and package versions are recorded; the friend's unpublished training configuration is not claimed to be reproduced.
 
 ## Local outputs
 

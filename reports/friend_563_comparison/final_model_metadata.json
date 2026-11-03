@@ -1,0 +1,119 @@
+{
+  "xgboost": {
+    "signature": "7f122dd194f74528526d0fda66bdd4baa2a149426aee3841558725f0df26eb88",
+    "model": "xgboost",
+    "fold": -1,
+    "parameters": {
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "tree_method": "hist",
+      "device": "cpu",
+      "max_depth": 4,
+      "max_leaves": 16,
+      "eta": 0.05,
+      "min_child_weight": 5,
+      "lambda": 10.0,
+      "alpha": 0.0,
+      "max_bin": 255,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "scale_pos_weight": 1.0,
+      "seed": 42,
+      "nthread": 4
+    },
+    "selected_rounds": 216,
+    "maximum_rounds": 1000,
+    "training_patients": 27911,
+    "training_event_patients": 1742,
+    "training_hours": 1081518,
+    "evaluation_patients": 5981,
+    "evaluation_hours": 233738,
+    "evaluation": {
+      "validation": {
+        "auroc": 0.8583153354364541,
+        "auprc_average_precision": 0.1437617844809329,
+        "brier_score": 0.014206612288107217,
+        "positive_hour_prevalence": 0.015530209037469303
+      }
+    },
+    "fit_seconds": 84.979,
+    "execution_seconds": 88.727,
+    "feature_count": 563,
+    "model_sha256": "022c72c7fa138939138eb49dddfab2660e7e631b95ca3c00e98fc0f90cd86561",
+    "test_read": false,
+    "validation_used_for_fitting": false,
+    "training_hospitals": [
+      "A",
+      "B"
+    ],
+    "preprocessing": "Unchanged causal 563 features; native NaN; no clipping/imputation/scaling",
+    "rounds_source": "Frozen median of three training CV best-round counts",
+    "warnings": [],
+    "environment": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scikit-learn": "1.7.1",
+      "xgboost": "3.1.1",
+      "lightgbm": "4.6.0"
+    }
+  },
+  "lightgbm": {
+    "signature": "ce97f8211b6a0380e001b0b89df7208487758c9c35a8390fbde7bd3f0ce01f09",
+    "model": "lightgbm",
+    "fold": -1,
+    "parameters": {
+      "objective": "binary",
+      "metric": "auc",
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "num_leaves": 16,
+      "min_data_in_leaf": 200,
+      "lambda_l2": 10.0,
+      "lambda_l1": 0.0,
+      "max_bin": 255,
+      "feature_fraction": 1.0,
+      "bagging_fraction": 1.0,
+      "bagging_freq": 0,
+      "seed": 42,
+      "num_threads": 4,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    },
+    "selected_rounds": 276,
+    "maximum_rounds": 1000,
+    "training_patients": 27911,
+    "training_event_patients": 1742,
+    "training_hours": 1081518,
+    "evaluation_patients": 5981,
+    "evaluation_hours": 233738,
+    "evaluation": {
+      "validation": {
+        "auroc": 0.8582221650286528,
+        "auprc_average_precision": 0.14410674530824877,
+        "brier_score": 0.014229973717945075,
+        "positive_hour_prevalence": 0.015530209037469303
+      }
+    },
+    "fit_seconds": 143.626,
+    "execution_seconds": 147.318,
+    "feature_count": 563,
+    "model_sha256": "72c7a002a76d6db2cfc54d586d1066159d67d401fb008f9cf59ae6fad26bd22b",
+    "test_read": false,
+    "validation_used_for_fitting": false,
+    "training_hospitals": [
+      "A",
+      "B"
+    ],
+    "preprocessing": "Unchanged causal 563 features; native NaN; no clipping/imputation/scaling",
+    "rounds_source": "Frozen median of three training CV best-round counts",
+    "warnings": [],
+    "environment": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scikit-learn": "1.7.1",
+      "xgboost": "3.1.1",
+      "lightgbm": "4.6.0"
+    }
+  }
+}

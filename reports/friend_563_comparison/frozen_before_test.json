@@ -1,0 +1,12 @@
+{
+  "model_sha256": {
+    "xgboost": "022c72c7fa138939138eb49dddfab2660e7e631b95ca3c00e98fc0f90cd86561",
+    "lightgbm": "72c7a002a76d6db2cfc54d586d1066159d67d401fb008f9cf59ae6fad26bd22b"
+  },
+  "threshold_sha256": {
+    "xgboost": "90d9f890b90244d552168175ec4588011c12029f2b60701e5b47973cdf028fc5",
+    "lightgbm": "460c91527ae1ae3a7e8ecdd91b6364576be51fb824eeb4c1e118dc81fe6373f6"
+  },
+  "rounds_sha256": "885edd2aa7569d455c7e1820fe5f1e8c3e35388a42225159a37c7c53f393e83f",
+  "test_used_for_selection": false
+}

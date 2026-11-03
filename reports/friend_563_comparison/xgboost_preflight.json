@@ -1,0 +1,11 @@
+{
+  "version": "3.1.1",
+  "best_iteration": 11,
+  "num_boosted_rounds": 12,
+  "quantile_dmatrix_ref": true,
+  "native_nan": true,
+  "min_delta_callback": true,
+  "save_reload_exact": true,
+  "prediction_min": 0.01886138692498207,
+  "prediction_max": 0.9806853532791138
+}
