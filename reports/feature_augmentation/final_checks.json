@@ -1,0 +1,30 @@
+{
+  "cv_comparisons": 81,
+  "distinct_cv_models": 78,
+  "final_selected_validation_models": 3,
+  "distinct_validation_models_verified": 4,
+  "saved_model_predictions_verified": 82,
+  "preprocessing_cases_checked": 54,
+  "canonical_inputs_unchanged": true,
+  "standalone_preprocessor_caches_refreshed_from_fitted_bundles": true,
+  "patient_isolation_and_exact_row_mappings": true,
+  "fold_only_statistics_recomputed_on_probe_features": true,
+  "sampled_processed_matrices_reconstructed": true,
+  "internal_stopping_patients_reconstructed": true,
+  "original_full_baseline_preprocessor_reproduced_exactly": true,
+  "real_patient_prefix_causality_and_feature_cache_checked": true,
+  "all_metrics_recomputed": true,
+  "fixed_classifier_settings_verified": true,
+  "selection_reproduced_without_outer_validation": true,
+  "information_preserving_addition_verified": true,
+  "supplement_designed_before_initial_validation": true,
+  "cv_cache_bytes_purged_after_verification": 9636574080,
+  "processed_verification_probes_retained": true,
+  "test_sets_evaluated": [],
+  "verification_sources": {
+    "scripts/verify_feature_optimization.py": "b8f466389418c6cc3688861b46ccdc9dd0ad2135c13548ebe213d77bc0d39101",
+    "scripts/report_feature_optimization.py": "ee35ec622b70c2d628ed396f41a22fdae08367b3f90f44bcb9ec58d7c9ef5865",
+    "tests/test_feature_optimization.py": "4fd483dafcafcf0aa76be0dbb890ea3837c19668a4c1f47c5f680afa9ac60f23",
+    "src/sepsis_warning/feature_cache.py": "342bb836783e7d84d2a3b3eb5deb52d763d4c40c00aff0f19aa99e0e0d5fbbf9"
+  }
+}

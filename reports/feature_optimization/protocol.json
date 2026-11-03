@@ -1,0 +1,170 @@
+{
+  "study": {
+    "study": {
+      "folds": 3,
+      "fold_seed": 2026,
+      "bootstrap_samples": 300,
+      "models": [
+        "lr",
+        "ebm",
+        "lightgbm"
+      ],
+      "profiles": [
+        "baseline",
+        "native_missing",
+        "lab_trends",
+        "vital_dynamics",
+        "clinical_combinations",
+        "without_context_time",
+        "without_clipping",
+        "lr_splines"
+      ],
+      "worker_cpu_budget": 10,
+      "maximum_workers": 3,
+      "minimum_mean_ap_gain": 0.001,
+      "minimum_improved_folds": 2
+    },
+    "features": {
+      "lab_trend_window_hours": 24,
+      "vital_slope_windows": [
+        3,
+        12
+      ],
+      "vital_variability_window": 12,
+      "personal_baseline_window": 12,
+      "personal_baseline_minimum_observations": 3,
+      "combination_maximum_age_hours": 3,
+      "combination_maximum_age_difference_hours": 2
+    },
+    "splines": {
+      "variables": [
+        "HR",
+        "Resp",
+        "Temp",
+        "SBP"
+      ],
+      "n_knots": 4,
+      "degree": 2,
+      "knots": "quantile",
+      "extrapolation": "linear",
+      "include_bias": false
+    }
+  },
+  "profiles": {
+    "baseline": {
+      "source": "baseline",
+      "native": false,
+      "clip": true
+    },
+    "native_missing": {
+      "source": "baseline",
+      "native": true,
+      "clip": true
+    },
+    "lab_trends": {
+      "source": "labs",
+      "native": true,
+      "clip": true
+    },
+    "vital_dynamics": {
+      "source": "dynamic",
+      "native": true,
+      "clip": true
+    },
+    "clinical_combinations": {
+      "source": "combined",
+      "native": true,
+      "clip": true
+    },
+    "without_context_time": {
+      "source": "combined",
+      "native": true,
+      "clip": true,
+      "drop_context": true
+    },
+    "without_clipping": {
+      "source": "combined",
+      "native": true,
+      "clip": false
+    },
+    "lr_splines": {
+      "source": "combined",
+      "native": false,
+      "clip": true,
+      "splines": true,
+      "models": [
+        "lr"
+      ]
+    }
+  },
+  "model_settings": {
+    "models": {
+      "ebm": {
+        "interactions": 0,
+        "learning_rate": 0.03,
+        "max_rounds": 150,
+        "early_stopping_rounds": 15,
+        "early_stopping_tolerance": 0.0001,
+        "smoothing_rounds": 25,
+        "greedy_ratio": 0.0,
+        "cyclic_progress": true,
+        "max_leaves": 2,
+        "outer_bags": 3,
+        "inner_bags": 0,
+        "n_jobs": 3,
+        "validation_size": 0.2,
+        "random_state": 42,
+        "max_bins": 16,
+        "min_samples_leaf": 400,
+        "reg_lambda": 50.0
+      },
+      "lightgbm": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "num_leaves": 15,
+        "max_depth": -1,
+        "learning_rate": 0.03,
+        "n_estimators": 500,
+        "min_child_samples": 200,
+        "reg_lambda": 10.0,
+        "max_bin": 63,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "n_jobs": 3,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "verbosity": -1
+      },
+      "lr": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "penalty": "l2",
+        "class_weight": null,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "random_state": 42
+      }
+    },
+    "lightgbm_stopping": {
+      "rounds": 30,
+      "min_delta": 1e-05,
+      "metric": "binary_logloss"
+    },
+    "note": "Hyperparameters and stopping rules are fixed; fitted stopping iterations may differ."
+  },
+  "selection_rule": "Highest mean matched-fold AP among profiles gaining >=0.001 and improving >=2/3 folds; otherwise baseline.",
+  "selection_uses_outer_validation_metrics": false,
+  "target_horizon_hours": 6,
+  "latest_value_expiry_hours": 6,
+  "preprocessing": "Fitted afresh on each CV-training partition; internal stopping bags share that training-fitted transform.",
+  "clinical_combinations": "HR/SBP and SBP-DBP only when readings are <=3h old and <=2h apart.",
+  "test_sets_evaluated": [],
+  "source_fingerprints": {
+    "src/sepsis_warning/feature_engineering.py": "cb6000d064a2079f3c5f5cdad4fcfd159e845ba22cc6cbd1cce25578626819c5",
+    "src/sepsis_warning/optimization.py": "b15e15525608ee6b1d03350f1c3df79c0b7f39319f7e51a9acdf0dd6044121e8",
+    "scripts/run_feature_optimization.py": "c969888c41ad316493fbaa16eacc54508f367fa6db3556dfacbb7a5406f1afb3",
+    "scripts/fit_feature_model.py": "ada7ed00db3366f5b7e84f3ce4c396348f146fe6bc0ce88a98daa4980af371d0"
+  }
+}

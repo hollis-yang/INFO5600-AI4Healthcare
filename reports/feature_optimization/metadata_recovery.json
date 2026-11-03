@@ -1,0 +1,12 @@
+{
+  "recovered_utc": "2026-11-03T10:55:36.211745+00:00",
+  "case": "fold1_baseline_15db77f09e22",
+  "model": "lightgbm",
+  "reason": "macOS compressed/dataless placeholder returned zero bytes despite nonzero stat size; cloud retrieval did not restore content.",
+  "previous_stat_size": 2150,
+  "previous_flags": 1073741920,
+  "model_refitted": false,
+  "all_saved_evaluation_predictions_reproduced": true,
+  "previous_summary_metrics_matched": true,
+  "configuration_signature_matched": true
+}

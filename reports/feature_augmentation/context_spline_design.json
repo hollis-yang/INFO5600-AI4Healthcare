@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-03T10:50:50.773391+00:00",
+  "profile": "baseline_context_splines",
+  "reason": "Context removal reduced matched-fold AP; test whether LR benefits from nonlinear functions of available time/context inputs while preserving all baseline features.",
+  "columns": [
+    "HR__latest",
+    "Resp__latest",
+    "Temp__latest",
+    "SBP__latest",
+    "ICULOS__current",
+    "HospAdmTime__current"
+  ],
+  "model_parameters_unchanged": true,
+  "selection_uses_outer_validation_metrics": false,
+  "initial_validation_already_evaluated": true,
+  "source_fingerprints": {
+    "scripts/run_context_splines.py": "8326b0f3a1c5c004b5a52d02f810c5ecafe6751323b72445b56c1c1375a82627",
+    "src/sepsis_warning/context_splines.py": "7b3fcacb16870c5f9003170238cf3303c262d963b2258b99e799937d3e80d49b"
+  },
+  "test_sets_evaluated": []
+}

@@ -1,0 +1,21 @@
+{
+  "restored": [
+    {
+      "path": "processed_data/train_y.npy",
+      "previous_flags": 1073741920,
+      "source": "Unchanged train_rows.csv.gz labels, original int8 dtype and NumPy format",
+      "original_sha256": "6b53319081d289035d796b0f83ed365fae30c0173983cb83a122302c20c99ebd",
+      "reconstructed_sha256": "6b53319081d289035d796b0f83ed365fae30c0173983cb83a122302c20c99ebd",
+      "exact_original_bytes_restored": true
+    },
+    {
+      "path": "processed_data/validation_X.npy",
+      "previous_flags": 1073741920,
+      "source": "Unchanged validation_features.npy and original training-fitted preprocessor",
+      "original_sha256": "54f8e14d301b56642d1a99647fba144036b5879b72c7e9b93a2c278c609b0d91",
+      "reconstructed_sha256": "54f8e14d301b56642d1a99647fba144036b5879b72c7e9b93a2c278c609b0d91",
+      "exact_original_bytes_restored": true
+    }
+  ],
+  "models_refitted": false
+}

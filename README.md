@@ -18,7 +18,7 @@ See [data/README.md](data/README.md) for the source, label definition, checksums
 
 ## Status
 
-The local pipeline audits the raw data, constructs a conservative incident-onset cohort, fixes patient splits, builds causal features, and runs a logistic regression baseline on hospital A validation data. Hospital A test and hospital B external-test results remain reserved.
+The local pipeline audits the raw data, constructs a conservative incident-onset cohort, fixes patient splits, and compares logistic regression, additive EBM and LightGBM. It includes controlled lab-retention experiments, patient learning curves, and preprocessing/feature screening through patient-grouped CV within hospital A training data. Hospital A test and hospital B external-test results remain reserved.
 
 ## Run locally
 
@@ -74,6 +74,43 @@ Workers run in separate local processes and log to `outputs/history_study/<trial
 The verification command checks all 45 result metrics and saved-model predictions, matched and nested patient membership, unchanged canonical inputs, preprocessing fit counts, sampled matrix reconstruction, fixed model settings, and internal patient holdouts. It writes `reports/history_study/final_checks.json`.
 
 The learning-curve bands show the range of two training subsamples, not confidence intervals. Separate patient-bootstrap intervals quantify validation uncertainty conditional on those draws. These curves vary event and non-event patient counts together; they cannot isolate positive-case scarcity or establish a final sample-size ceiling.
+
+To screen preprocessing and feature improvements within the original A training set:
+
+```bash
+python scripts/run_feature_optimization.py
+python scripts/report_feature_optimization.py
+python scripts/verify_feature_optimization.py
+```
+
+The information-preserving supplement retains all original features and appends the new dynamics. It was added after observing losses on the initial training CV folds and was fixed before viewing this run's initial outer-validation results:
+
+```bash
+python scripts/run_feature_augmentation.py
+python scripts/run_context_splines.py
+python scripts/report_feature_optimization.py --include-augmentation
+python scripts/verify_feature_optimization.py --include-augmentation --purge-cv-matrices
+```
+
+This adds 12 CV models, including a spline-expanded LR, for 75 distinct CV fits and 78 comparison rows overall. Final selection still uses only the same three training-patient folds and the original eligibility rule. The consolidated results are under `reports/feature_augmentation/`; its `added_design.json` records when the supplement was fixed and whether initial validation artifacts existed at that time. The supplement waits for the initial study before taking model CPU slots.
+
+The LR-specific context-spline control adds three further CV fits (78 distinct fits and 81 comparison rows overall). It retains the original features and adds fold-fitted splines for four vital signs plus ICULOS and HospAdmTime, testing whether LR's linear context effects are too restrictive. This control was designed from the training-CV ablation after initial validation had been evaluated; its timestamp and scope are recorded in `context_spline_design.json`. Selection still reads only training-CV metrics, and both the earlier selection and the final selection are retained.
+
+`configs/feature_optimization.toml` prespecifies three patient-stratified CV folds and the candidate profiles. The original cohort, outer split, six-hour target and six-hour latest-value expiry remain fixed. Classifier settings and internal stopping rules come directly from the previous three-model study. Every CV fold fits its own preprocessing using only its training patients; neither CV holdout patients nor outer validation patients enter that fit. Internal early-stopping bags share the preprocessing fitted within the current CV training partition.
+
+The study compares median imputation with native NaN handling for EBM/LightGBM; replaces sparse six-hour lab summaries with changes between the last two real observations within 24 hours; adds vital slopes, variability and deviations from each patient's earlier observations; and tests two measurement-age-aware combinations. Separate controls remove time/unit context or quantile clipping. LR also has a small fold-fitted spline expansion. These are cumulative profiles, with the context/clipping/spline controls branching from the combined features. LR's native-missing profile is identical to its baseline and reuses those three fits.
+
+There are 66 CV comparison rows from 63 distinct model fits. For each classifier, a candidate must improve mean fold AUPRC by at least 0.001 and improve at least two folds; the qualifying candidate with the highest mean is selected, otherwise the original baseline is retained. `selection.json` is frozen before evaluating the three selected full-training models on A validation. Both test sets remain reserved, and no model hyperparameter tuning is mixed into this feature study.
+
+Raw alternative features and fold-specific matrices are under `processed_data/feature_optimization/`; fitted models, predictions and worker logs are under `outputs/feature_optimization/`. The scheduler limits simultaneous model workers to ten requested CPU threads across three processes. Matching completed models and preprocessing cases are cached for resumption. Curated CV tables, selected validation results, uncertainty intervals, patient folds, plots and verification evidence are under `reports/feature_optimization/`. Large cached matrices remain local and require approximately 25 GB of additional disk space.
+
+`--purge-cv-matrices` removes only generated CV train/evaluation matrices after all requested checks pass. It retains verification probes, raw features, patient indices, fitted preprocessors, models and predictions, as well as the full-training selected-model matrices. To reconstruct the CV matrices before forcing model refits, run `python scripts/restore_feature_cv_matrices.py`. The cache round trip is covered by a test with exact numerical reconstruction. The supplement's raw feature cache is separate under `processed_data/feature_augmentation/`.
+
+CV-fold variation is not an independent confidence interval. Outer validation has been viewed during earlier development, so this study remains exploratory; the previously reserved tests are still required for a final generalization claim. Different classifiers can select different preprocessing profiles, while using the same patient splits and information available at prediction time.
+
+The selected-profile table compares complete model pipelines; different feature profiles mean these differences cannot be attributed solely to classifier architecture. The original shared-feature baselines remain available as controls. Full small result records are retained in `model_metadata_archive.json` alongside the summaries.
+
+Recovery records document macOS eviction of one result JSON, two deterministic input caches and some virtual-environment files during this run. Metadata was recovered from saved models and predictions; input caches were restored only after matching their original SHA-256; InterpretML 0.7.8 and LightGBM 4.6.0 wheels were restored with official PyPI digest verification. These recoveries did not alter patient assignments or classifier settings. The optional `recover_feature_result.py`, `recover_feature_inputs.py` and `repair_pinned_libraries.py` maintenance scripts record this local recovery procedure.
 
 Run commands from the repository root. Settings are recorded in `configs/baseline.toml`. A complete preparation run writes approximately 3.6 GB of processed arrays. The raw files in `data/` remain unchanged.
 

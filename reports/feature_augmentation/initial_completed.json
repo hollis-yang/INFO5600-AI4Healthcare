@@ -1,0 +1,13 @@
+{
+  "cv_comparisons": 66,
+  "distinct_cv_models": 63,
+  "selected_validation_models": 3,
+  "selected_profiles": {
+    "lr": "baseline",
+    "ebm": "baseline",
+    "lightgbm": "without_clipping"
+  },
+  "canonical_inputs_unchanged": true,
+  "test_sets_evaluated": [],
+  "elapsed_seconds": 1745.17
+}

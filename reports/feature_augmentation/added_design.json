@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-03T10:29:32.052640+00:00",
+  "reason": "All three classifiers lost mean CV AP when old lab summaries were replaced; preserve original information and append dynamics as a separate control.",
+  "profiles": {
+    "preserve_baseline": {
+      "splines": false,
+      "models": [
+        "lr",
+        "ebm",
+        "lightgbm"
+      ]
+    },
+    "preserve_baseline_splines": {
+      "splines": true,
+      "models": [
+        "lr"
+      ]
+    }
+  },
+  "raw_features": 459,
+  "initial_outer_validation_manifest_present_at_design": false,
+  "selection_uses_outer_validation_metrics": false,
+  "same_patient_folds": true,
+  "source_fingerprints": {
+    "scripts/run_feature_augmentation.py": "878f292ccb2d3f153903f433ec8c24fec898a1da2e26257224a7e84d56e1cfa0",
+    "src/sepsis_warning/augmentation.py": "d45327ae0996fbc1fbe61227c90ea2b9436dbb046c84b7b818a5519daba97316"
+  },
+  "classifier_settings_unchanged": true,
+  "test_sets_evaluated": []
+}

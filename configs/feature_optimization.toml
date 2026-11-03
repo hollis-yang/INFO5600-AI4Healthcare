@@ -1,0 +1,28 @@
+[study]
+folds = 3
+fold_seed = 2026
+bootstrap_samples = 300
+models = ["lr", "ebm", "lightgbm"]
+profiles = ["baseline", "native_missing", "lab_trends", "vital_dynamics", "clinical_combinations", "without_context_time", "without_clipping", "lr_splines"]
+worker_cpu_budget = 10
+maximum_workers = 3
+# Selection uses only patient CV within the original A training set.
+minimum_mean_ap_gain = 0.001
+minimum_improved_folds = 2
+
+[features]
+lab_trend_window_hours = 24
+vital_slope_windows = [3, 12]
+vital_variability_window = 12
+personal_baseline_window = 12
+personal_baseline_minimum_observations = 3
+combination_maximum_age_hours = 3
+combination_maximum_age_difference_hours = 2
+
+[splines]
+variables = ["HR", "Resp", "Temp", "SBP"]
+n_knots = 4
+degree = 2
+knots = "quantile"
+extrapolation = "linear"
+include_bias = false

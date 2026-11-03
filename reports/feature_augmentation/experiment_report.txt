@@ -1,0 +1,115 @@
+第一轮数据处理与特征优化：三模型、患者交叉验证
+
+主要观察
+ebm 选择 baseline：A 验证 AUPRC 0.0712 -> 0.0712，差值 +0.0000，95% CI [+0.0000, +0.0000]；患者配对区间包含 0，尚无明确改善证据。
+ebm 的本轮点估计尚未超过上轮保留期限实验的最高点估计 0.0720；上轮最高值也属于已查看验证集上的探索性结果。
+lightgbm 选择 without_clipping：A 验证 AUPRC 0.0813 -> 0.0882，差值 +0.0069，95% CI [-0.0050, +0.0189]；患者配对区间包含 0，尚无明确改善证据。
+lr 选择 baseline_context_splines：A 验证 AUPRC 0.0739 -> 0.0716，差值 -0.0023，95% CI [-0.0150, +0.0102]；患者配对区间包含 0，尚无明确改善证据。
+lr 的本轮点估计尚未超过上轮保留期限实验的最高点估计 0.0739；上轮最高值也属于已查看验证集上的探索性结果。
+
+实验协议
+原始队列、患者划分、未来 6h 预测目标和最近值 6h 保留期限不变。
+LR、EBM、LightGBM 参数与此前 6h 基线完全一致，没有随结果调整模型参数。
+在原有 A 训练患者中按发病状态分层做三折患者交叉验证，每折重新拟合插补、截尾、标准化和样条。
+模型内部停止仍按患者分组；内部停止患者共享本折训练分区的无监督预处理，外层 CV 患者不参与拟合。
+先完成 78 个独立 CV 模型，产生 81 行比较；LR 的原生缺失对照与基线相同，复用结果。
+选择规则预先固定：平均折 AUPRC 比基线高至少 0.001，且至少两折改善；符合者中取平均折 AUPRC 最高者，否则保留基线。
+补充对照在初始 A 验证模型评估前固定。第一阶段和最终阶段均保留评估结果；最终选择仅汇总两阶段训练 CV 分数，初始外层验证分数没有参与选择。
+A 测试集和医院 B 未使用。
+
+特征方案
+baseline：原始特征和中位数/众数插补。
+native_missing：仅 EBM/LightGBM 保留 NaN，有限值的截尾和缩放保持一致；LR 与基线相同。
+lab_trends：在 native_missing 上，将 26 种化验的 6h 均值/最小/最大/变化量，替换为过去 24h 内最后两次真实测量的差值、每小时变化率、间隔和 24h 测量次数。
+vital_dynamics：在 lab_trends 上，加入七种生命体征的 3/12h 斜率、12h 波动、相对过去 12h 本人中位数的偏离和 12h 测量次数。
+clinical_combinations：在 vital_dynamics 上，加入 HR/SBP 和 SBP-DBP；测量不超过 3h 旧、两项时差不超过 2h。
+without_context_time：从 clinical_combinations 去除 ICULOS/HospAdmTime/Unit1/Unit2 及其缺失标记，保留其余采样特征。
+without_clipping：从 clinical_combinations 去除分位数截尾，其他流程不变；这是敏感性分析，不代表极端值都正确。
+lr_splines：仅 LR；在 clinical_combinations 上，对 HR/Resp/Temp/SBP 最近值增加训练折拟合的少量样条。
+preserve_baseline：保留全部 318 项原始特征，追加 141 项新化验趋势、生命体征动态和组合特征；树模型保留原生缺失。
+preserve_baseline_splines：在保留原始特征的增量方案上追加同样的 LR 样条。
+baseline_context_splines：仅 LR，在完整原始特征上，对 HR/Resp/Temp/SBP/ICULOS/HospAdmTime 增加折内拟合的样条；分位数节点重复时使用训练范围内等距节点。该补充在第一阶段验证已完成后根据训练 CV 消融结果提出，其选择仍只使用训练 CV。
+所有趋势使用原始观测值计算；不对填补后的常数计算变化量，不回填未来数值。
+
+交叉验证结果
+折间标准差反映三折差异，不是置信区间；OOF 汇总值不参与筛选。
+   model                   profile  mean_fold_auprc  fold_sd_auprc  mean_fold_auroc  mean_training_auprc  mean_fold_brier  features_min  features_max  mean_fit_seconds  pooled_oof_auprc  pooled_oof_auroc  mean_gain_vs_baseline  improved_folds  eligible  selected
+      lr                  baseline         0.060400       0.000500         0.783611             0.081498         0.013853           312           312          2.426667          0.059601          0.783535               0.000000               0     False     False
+     ebm                  baseline         0.066996       0.005054         0.804654             0.097128         0.013658           312           312        129.723333          0.066374          0.804589               0.000000               0     False      True
+lightgbm                  baseline         0.073914       0.006631         0.819438             0.186906         0.013485           312           312         31.010000          0.073193          0.818555               0.000000               0     False     False
+      lr            native_missing         0.060400       0.000500         0.783611             0.081498         0.013853           312           312          2.426667          0.059601          0.783535               0.000000               0     False     False
+     ebm            native_missing         0.065594       0.005113         0.802458             0.093593         0.013680           312           312        118.710000          0.064938          0.802382              -0.001402               0     False     False
+lightgbm            native_missing         0.074278       0.005781         0.819275             0.205334         0.013496           312           312         39.403333          0.073687          0.818710               0.000363               2     False     False
+      lr                lab_trends         0.058418       0.000739         0.783577             0.086347         0.013884           312           312          3.886667          0.058019          0.783525              -0.001982               0     False     False
+     ebm                lab_trends         0.064355       0.003808         0.805213             0.102210         0.013711           312           312        135.283333          0.063846          0.805043              -0.002641               0     False     False
+lightgbm                lab_trends         0.072714       0.004728         0.819338             0.249850         0.013506           312           312         51.830000          0.072373          0.817538              -0.001201               1     False     False
+      lr            vital_dynamics         0.057780       0.000403         0.781291             0.088508         0.013915           347           347          5.326667          0.057203          0.781221              -0.002620               0     False     False
+     ebm            vital_dynamics         0.064558       0.003750         0.805194             0.103476         0.013702           347           347        137.753333          0.063895          0.804965              -0.002438               0     False     False
+lightgbm            vital_dynamics         0.074398       0.005884         0.818714             0.237139         0.013498           347           347         50.913333          0.073913          0.818150               0.000483               1     False     False
+      lr     clinical_combinations         0.058050       0.000666         0.781194             0.088253         0.013899           349           349          4.956667          0.057464          0.781163              -0.002350               0     False     False
+     ebm     clinical_combinations         0.064551       0.003874         0.805305             0.103270         0.013705           349           349        162.753333          0.063875          0.805099              -0.002445               0     False     False
+lightgbm     clinical_combinations         0.073889       0.005464         0.818182             0.246983         0.013501           349           349         59.406667          0.073415          0.817447              -0.000025               1     False     False
+      lr      without_context_time         0.051710       0.001840         0.766945             0.078881         0.013939           341           341          6.993333          0.051537          0.766824              -0.008690               0     False     False
+     ebm      without_context_time         0.057103       0.004058         0.788075             0.077911         0.013718           341           341        126.853333          0.056617          0.787920              -0.009893               0     False     False
+lightgbm      without_context_time         0.058714       0.002673         0.790520             0.206494         0.013685           341           341         60.086667          0.058263          0.789542              -0.015200               0     False     False
+      lr          without_clipping         0.055331       0.003889         0.777587             0.087540         0.014295           349           349          7.660000          0.054638          0.777522              -0.005069               0     False     False
+     ebm          without_clipping         0.064568       0.003970         0.805077             0.103319         0.013705           349           349        140.523333          0.063864          0.804865              -0.002428               0     False     False
+lightgbm          without_clipping         0.074972       0.005541         0.818924             0.231477         0.013490           349           349         51.643333          0.074185          0.818427               0.001058               2      True      True
+      lr                lr_splines         0.058262       0.000911         0.784802             0.090429         0.013925           365           365          5.190000          0.057767          0.784749              -0.002138               0     False     False
+      lr         preserve_baseline         0.057369       0.001226         0.778094             0.091057         0.013932           453           453          9.343333          0.057074          0.778044              -0.003031               0     False     False
+     ebm         preserve_baseline         0.062450       0.004878         0.800565             0.098684         0.013699           453           453        171.080000          0.061805          0.800406              -0.004546               0     False     False
+lightgbm         preserve_baseline         0.074879       0.005435         0.818614             0.238147         0.013488           453           453         75.543333          0.074338          0.817748               0.000965               2     False     False
+      lr preserve_baseline_splines         0.057948       0.001227         0.782000             0.092464         0.013953           469           469          5.643333          0.057515          0.781920              -0.002452               0     False     False
+      lr  baseline_context_splines         0.063560       0.002717         0.800953             0.086145         0.013806           336           336          1.686667          0.062991          0.800879               0.003160               3      True      True
+
+冻结选择
+{
+  "lr": "baseline_context_splines",
+  "ebm": "baseline",
+  "lightgbm": "without_clipping"
+}
+
+A 验证集结果
+baseline_6h 是受控基线；previous_history_best 是上轮 6/12/24h 中最高的验证点估计，仅供透明对照，不参与本轮选择。
+AP 差值区间使用相同验证患者的 300 次配对 bootstrap，以已训练模型为条件。
+   model         selected_profile  features  baseline_6h_auprc  previous_history_best_auprc  optimized_auprc  ap_difference  difference_lower  difference_upper  baseline_auroc  optimized_auroc  baseline_brier  optimized_brier  training_auprc  baseline_event_sensitivity  event_sensitivity  baseline_alert_ppv  alert_ppv  false_alerts_per_100_patient_hours  median_lead_hours  selected_threshold                       case
+     ebm                 baseline       312           0.071164                     0.071986         0.071164       0.000000          0.000000          0.000000        0.806099         0.806099        0.013406         0.013406        0.090512                    0.344538           0.344538            0.085239   0.085239                            0.863693                3.0            0.061493 full_baseline_38ca2dad8113
+lightgbm         without_clipping       349           0.081331                     0.084956         0.088226       0.006895         -0.005015          0.018947        0.822553         0.825156        0.013318         0.013282        0.191152                    0.382353           0.378151            0.086256   0.087294                            0.923563                3.0            0.069755 full_combined_f3a8818e555b
+      lr baseline_context_splines       336           0.073863                     0.073863         0.071594      -0.002269         -0.015013          0.010184        0.795418         0.802658        0.013454         0.013462        0.079263                    0.336134           0.340336            0.079444   0.087284                            0.831305                3.0            0.065255 full_baseline_761319b88dbc
+
+化验趋势可用性
+        variable  original_delta6h_missing_rate  new_last2_24h_missing_rate  median_last2_interval_when_available
+      BaseExcess                       0.821468                    0.571342                                   2.0
+            HCO3                       0.921676                    0.631645                                   5.0
+            FiO2                       0.713100                    0.513167                                   3.0
+              pH                       0.808258                    0.553110                                   3.0
+           PaCO2                       0.862862                    0.604314                                   4.0
+            SaO2                       0.918339                    0.791373                                   2.0
+             AST                       0.985446                    0.938054                                   1.0
+             BUN                       0.921167                    0.624448                                   5.0
+    Alkalinephos                       0.985703                    0.939394                                   1.0
+         Calcium                       0.990210                    0.812191                                   8.0
+        Chloride                       0.915420                    0.625113                                   5.0
+      Creatinine                       0.986317                    0.723491                                   9.0
+Bilirubin_direct                       0.998266                    0.993246                                   1.0
+         Glucose                       0.872443                    0.526558                                   5.0
+         Lactate                       0.947755                    0.836791                                   2.0
+       Magnesium                       0.923913                    0.635400                                   5.0
+       Phosphate                       0.989897                    0.810702                                   8.0
+       Potassium                       0.866011                    0.501413                                   4.0
+ Bilirubin_total                       0.998025                    0.968328                                   8.0
+       TroponinI                       0.999757                    0.993949                                   8.0
+             Hct                       0.849927                    0.476141                                   4.0
+             Hgb                       0.901520                    0.604103                                   4.0
+             PTT                       0.982169                    0.807727                                   7.0
+             WBC                       0.925871                    0.671275                                   3.0
+      Fibrinogen                       0.990804                    0.966884                                   2.0
+       Platelets                       0.978666                    0.749299                                   8.0
+
+解释边界
+这些候选方案检验了不同工程假设，不能预先保证三个模型同时改善。
+三折训练集合相互重叠，折分数不是独立重复试验；多项 CV 筛选可能产生选择偏差。
+此前 A 验证集已被多次查看，本轮结果仍为开发性验证；最终泛化和跨医院结论需要保留测试集。
+报警阈值仍在 A 验证集按每 100 合格患者小时最多 1 次误报、6h 抑制选择，同集合报警点估计可能偏乐观。
+这一轮没有增加患者，也不隔离阳性病例数量的作用，不能据此宣称样本量充足或已达上限。
+模型和大矩阵保留在本地 outputs/feature_optimization/ 与 processed_data/feature_optimization/。

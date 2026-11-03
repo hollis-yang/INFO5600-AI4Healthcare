@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-15.3-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.2",
+    "scipy": "1.16.1",
+    "scikit-learn": "1.7.1",
+    "matplotlib": "3.10.5",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.6.0",
+    "interpret-core": "0.7.8",
+    "lightgbm": "4.6.0"
+  }
+}

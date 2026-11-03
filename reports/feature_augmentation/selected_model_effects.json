@@ -1,0 +1,29 @@
+{
+  "ebm_minus_lr": {
+    "difference": -0.0004295091294801434,
+    "lower": -0.008945303568683382,
+    "upper": 0.009563026485446784,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_minus_lr": {
+    "difference": 0.016632365682253042,
+    "lower": 0.0023350861923496185,
+    "upper": 0.03301937426090279,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  },
+  "lightgbm_minus_ebm": {
+    "difference": 0.017061874811733185,
+    "lower": 0.0022654929855443684,
+    "upper": 0.0345586605599731,
+    "resamples": 300,
+    "reference_runs": 1,
+    "candidate_runs": 1,
+    "uncertainty": "Patient-resampled validation uncertainty conditional on the chosen training subsets."
+  }
+}
