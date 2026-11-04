@@ -1,0 +1,35 @@
+{
+  "standard_id": "SEPSIS_FULL_RECORD_V2",
+  "synthetic_tests_passed": 9,
+  "real_patients_checked": 18,
+  "real_hours_checked": 4186,
+  "hospitals_checked": [
+    "A",
+    "B"
+  ],
+  "splits_checked": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "selection": "First patient and longest negative/positive record per hospital and split; descriptive regression sample",
+  "profiles": {
+    "augmented": 563,
+    "recent": 410
+  },
+  "all_feature_values_equal_saved_experiment_inputs": true,
+  "comparison_tolerance": {
+    "rtol": 0,
+    "atol": 0,
+    "equal_nan": true
+  },
+  "both_profile_prefix_checks_passed": true,
+  "both_profile_batched_builds_passed": true,
+  "full_cohort_feature_matrices_rebuilt_in_this_publication": false,
+  "models_retrained": false,
+  "source_sha256": {
+    "baseline_core.py": "fde8c486dee5c29077cb5f21b42eaf4562a9e88b1b8bfef5c34c4e3f937e9e8f",
+    "utility_features.py": "09449a2a9461549239f92c5a25c00057ce1f0cccf516a5bf8869b47626e817a5",
+    "recent_features.py": "e7b8ddebf588bac008c97568c7c9198b57cc927d3cda88b1411fa111cdfeef90"
+  }
+}

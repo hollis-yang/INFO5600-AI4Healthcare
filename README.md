@@ -11,6 +11,20 @@ comparing 789 features with 736 features (derived clocks removed) and 734 featur
 (all explicit clocks removed). The main LR, additive EBM and LightGBM comparison
 uses the same prespecified 789 features; XGBoost is supplementary. Ensembling is disabled.
 
+Latest fixed-test results (5,982 patients, 230,710 hours; validation-calibrated thresholds):
+
+| Model, common 789 features | AUROC | AUPRC / AP | Official Utility |
+| --- | ---: | ---: | ---: |
+| Logistic regression | 0.8205 | 0.1252 | 0.3786 |
+| Additive EBM, 150 rounds | 0.8416 | 0.1347 | 0.4070 |
+| LightGBM | 0.8501 | 0.1508 | 0.4132 |
+| XGBoost, supplementary | 0.8508 | 0.1455 | 0.4055 |
+
+The 734-feature clock ablation reaches test Utility 0.4187, but its paired
+difference interval includes zero and training CV does not improve. The primary
+comparison retains its prespecified common 789 features. This full-record test
+includes available post-onset hours and has historical exposure; it is exploratory.
+
 ```bash
 python3.12 -m venv .venv-models
 .venv-models/bin/python -m pip install -r requirements-friend563.txt
@@ -73,9 +87,62 @@ Each patient has one pipe-delimited `.psv` file with hourly measurements, 40 inp
 
 See [data/README.md](data/README.md) for the source, label definition, checksums and license.
 
+## Native preprocessing and feature engineering
+
+These stages retain the original `main` workflow and its pinned `requirements.txt` environment in `.venv`. Modeling uses the separate `.venv-models` / `requirements-models.txt` environment above.
+
+
+The code is published in modeling order. The first two stages are runnable from the repository root with Python 3.12:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+
+# 1. Validate records, screen patients, and freeze splits.
+python -m sepsis_pipeline.preprocess --data data --output outputs/preprocessing
+
+# 2. Generate the main model's 563 causal features for every included hour.
+python -m sepsis_pipeline.build_features --profile augmented
+
+# Optional 410-feature comparison without explicit length-of-stay clocks.
+python -m sepsis_pipeline.build_features --profile recent
+
+python -m unittest discover -s tests -p 'test_preprocessing.py' -v
+python -m unittest discover -s tests -p 'test_features.py' -v
+```
+
+On Windows, activate the environment with `.venv\Scripts\activate`.
+Output directories must be new; use a different `--output` for a new run.
+Generated patient-level tables, feature matrices and models are ignored by Git.
+For the combined native and modeling test suite, use `.venv-models` with
+`requirements-tests.txt`, as shown in the modeling setup below.
+
+| Stage | Code | Explanation |
+| --- | --- | --- |
+| 01 · Preprocessing and patient split | [`sepsis_pipeline/preprocess.py`](sepsis_pipeline/preprocess.py) | [规则、分母、运行方式](docs/01_preprocessing.md) |
+| 02 · Feature engineering | [`sepsis_pipeline/features/`](sepsis_pipeline/features/), [`build_features.py`](sepsis_pipeline/build_features.py) | [563 / 410 维特征及防泄漏约束](docs/02_feature_engineering.md) |
+| Validation and provenance | [`tests/`](tests/), [`reports/`](reports/) | [来源和复现核验](docs/reproducibility.md) |
+
+## Fixed cohort and evaluation contract
+
+`SEPSIS_FULL_RECORD_V2` uses **all hours of the 39,874 included patients**, including post-onset and record-ending hours, with the original `SepsisLabel`. Full records do not reinstate patients excluded by the established cohort rules. See the preprocessing document for exclusions.
+
+Split patients within each hospital, stratified by event, into 70% training / 15% validation / 15% test (seed 42); then pool corresponding sets. Training-only three-fold cross-validation is stratified by hospital and event (seed 2026). All models must use the same manifest.
+
+| Split | Patients | Event patients | Full-record hours |
+| --- | ---: | ---: | ---: |
+| Training | 27,911 | 1,742 | 1,081,518 |
+| Validation | 5,981 | 374 | 233,738 |
+| Test | 5,982 | 374 | 230,710 |
+
+The sole primary comparison metric is pooled full-record hourly **AUROC**. Future model selection uses training out-of-fold AUROC; validation selects one threshold per model by maximizing full-record Utility. Test data must not select models, features, or thresholds. AP, Utility and hourly classification metrics are fixed secondary metrics. No notification cooldown is applied to this hourly evaluation.
+
+Full-record performance includes recognition after onset. It does not establish pre-onset warning performance. This split is a retrospective patient holdout within two known hospitals; the source data were previously inspected during development.
+
 ## Status
 
-The local pipeline audits the raw data, constructs a conservative incident-onset cohort, and compares interpretable models. Historical studies include retention, patient learning curves, A-only feature screening, A+B expansion and hospital-stratified regularization. The new [563-feature matched comparison](reports/friend_563_comparison/report.md) uses the original pooled A+B patient split and complete records to compare XGBoost and LightGBM. Training CV determines iteration counts, validation selects utility thresholds, and frozen models are evaluated on test patients. The source data were inspected during earlier development; results remain exploratory. Full-record recognition is distinct from the original pre-onset warning task.
+The latest [clock ablation and matched comparison](reports/clock_models/report.md) publishes the 789/736/734-feature LightGBM study and a common 789-feature LR/additive EBM/LightGBM comparison, with XGBoost supplementary and model blending disabled. Training patient CV determines tree rounds and EBM budget; validation selects utility thresholds before test evaluation. Feature catalogs, metrics, utility audits and independent verification records are included. Large processed matrices and model weights remain local. The [563-feature comparison](reports/friend_563_comparison/report.md) and earlier A-only/pre-onset/transfer studies are retained as separate historical protocols. The known-hospital full-record benchmark has historical test exposure and remains exploratory.
 
 ## Run locally
 
@@ -84,11 +151,15 @@ Use Python 3.11 or newer:
 ```bash
 python3.11 -m venv .venv-models
 source .venv-models/bin/activate
-python -m pip install -r requirements-models.txt
+python -m pip install -r requirements-tests.txt
 python -m unittest discover -s tests -v
 python scripts/prepare_data.py
 python scripts/train_lr.py
 ```
+
+`requirements-tests.txt` includes the pinned model packages, XGBoost and PyArrow
+for the full repository test suite. Use `requirements-models.txt` for the base
+model environment without the additional test/Parquet dependency.
 
 To compare a pure additive EBM with the saved LR baseline on the same cached data:
 

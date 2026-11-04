@@ -9,6 +9,11 @@ venv/
 .env
 .env.*
 
-# Locally generated experiment data and artifacts
+# Regenerable data, feature matrices, fitted models and temporary outputs
 processed_data/
 outputs/
+artifacts/
+models/
+test-tmp/
+*.joblib
+*.npy

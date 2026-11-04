@@ -1,2 +1,5 @@
+* text=auto eol=lf
+# Preserve the original dataset files and checksums exactly.
+data/** -text
 # Preserve archived report bytes, including files referenced by SHA-256.
 reports/** -text whitespace=cr-at-eol

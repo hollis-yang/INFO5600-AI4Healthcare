@@ -1,0 +1,3 @@
+# Combined repository tests, including the native Parquet feature builder.
+-r requirements-friend563.txt
+pyarrow==26.0.0
