@@ -1,0 +1,10 @@
+{
+  "threshold_fit_on": "A OOF only",
+  "B_used": false,
+  "model_settings_changed": false,
+  "thresholds": {
+    "lr": 0.05671479865792561,
+    "ebm": 0.0624674387757052,
+    "lightgbm": 0.06726431549194375
+  }
+}

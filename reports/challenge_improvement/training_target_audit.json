@@ -1,0 +1,10 @@
+{
+  "hours": 1081518,
+  "original_positive_hours": 16952,
+  "positive_utility_hours": 25239,
+  "zero_utility_hours": 1538,
+  "negative_utility_hours": 1054741,
+  "minimum_delta": -0.05,
+  "maximum_delta": 2.0,
+  "training_only": true
+}

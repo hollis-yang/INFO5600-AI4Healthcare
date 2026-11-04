@@ -1,0 +1,65 @@
+[
+  {
+    "model": "lr",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.7232621125557851,
+    "auprc": 0.03158071437753076,
+    "utility_score": 0.09912640869760077,
+    "A_validation_threshold": 0.05608881219514777,
+    "full_trajectory_auroc": 0.7386580831341928,
+    "full_trajectory_auprc": 0.05160033859840703,
+    "utility_components": {
+      "normalized_utility": 0.09912640869760077,
+      "normalization_denominator": 15370.777777777777,
+      "observed": -7139.905555555555,
+      "best": 6707.222222222223,
+      "inaction": -8663.555555555555,
+      "worst": -45861.90555555555
+    }
+  },
+  {
+    "model": "ebm",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.7918066276916227,
+    "auprc": 0.04903881978199659,
+    "utility_score": 0.1314980807737626,
+    "A_validation_threshold": 0.06149262568924752,
+    "full_trajectory_auroc": 0.801114887933319,
+    "full_trajectory_auprc": 0.07580066333123416,
+    "utility_components": {
+      "normalized_utility": 0.1314980807737626,
+      "normalization_denominator": 15370.777777777777,
+      "observed": -6642.327777777778,
+      "best": 6707.222222222223,
+      "inaction": -8663.555555555555,
+      "worst": -45861.90555555555
+    }
+  },
+  {
+    "model": "lightgbm",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.8160103314789727,
+    "auprc": 0.05107667265431095,
+    "utility_score": 0.22567534354511082,
+    "A_validation_threshold": 0.07077426809664598,
+    "full_trajectory_auroc": 0.8224972065437207,
+    "full_trajectory_auprc": 0.0782287936234404,
+    "utility_components": {
+      "normalized_utility": 0.22567534354511082,
+      "normalization_denominator": 15370.777777777777,
+      "observed": -5194.75,
+      "best": 6707.222222222223,
+      "inaction": -8663.555555555555,
+      "worst": -45861.90555555555
+    }
+  }
+]

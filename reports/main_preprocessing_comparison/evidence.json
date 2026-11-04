@@ -1,0 +1,284 @@
+{
+  "main_commit": "32ee355b9373e81a9d3bdb1f1b4a22883e04678e",
+  "raw_patients_checked": 40336,
+  "included_patients": 39874,
+  "actual_inclusion_disagreements": [],
+  "patient_split_disagreements_vs_our_AB": 0,
+  "cv_fold_disagreements_vs_our_AB": 0,
+  "pre_onset": {
+    "hours": 1312390,
+    "positive_hours": 14940
+  },
+  "full_record": {
+    "hours": 1545966,
+    "positive_hours": 24212
+  },
+  "real_patient_prefix_checks": [
+    {
+      "id": "A_p000003",
+      "kind": "first",
+      "hours": 48
+    },
+    {
+      "id": "A_p014462",
+      "kind": "longest_negative",
+      "hours": 334
+    },
+    {
+      "id": "A_p006507",
+      "kind": "longest_positive",
+      "hours": 328
+    },
+    {
+      "id": "A_p000001",
+      "kind": "first",
+      "hours": 54
+    },
+    {
+      "id": "A_p016581",
+      "kind": "longest_negative",
+      "hours": 336
+    },
+    {
+      "id": "A_p005359",
+      "kind": "longest_positive",
+      "hours": 330
+    },
+    {
+      "id": "A_p000017",
+      "kind": "first",
+      "hours": 37
+    },
+    {
+      "id": "A_p008132",
+      "kind": "longest_negative",
+      "hours": 336
+    },
+    {
+      "id": "A_p008867",
+      "kind": "longest_positive",
+      "hours": 305
+    },
+    {
+      "id": "B_p100007",
+      "kind": "first",
+      "hours": 37
+    },
+    {
+      "id": "B_p112520",
+      "kind": "longest_negative",
+      "hours": 326
+    },
+    {
+      "id": "B_p104049",
+      "kind": "longest_positive",
+      "hours": 307
+    },
+    {
+      "id": "B_p100001",
+      "kind": "first",
+      "hours": 24
+    },
+    {
+      "id": "B_p116439",
+      "kind": "longest_negative",
+      "hours": 336
+    },
+    {
+      "id": "B_p111512",
+      "kind": "longest_positive",
+      "hours": 334
+    },
+    {
+      "id": "B_p100003",
+      "kind": "first",
+      "hours": 43
+    },
+    {
+      "id": "B_p117406",
+      "kind": "longest_negative",
+      "hours": 336
+    },
+    {
+      "id": "B_p111353",
+      "kind": "longest_positive",
+      "hours": 335
+    }
+  ],
+  "same_prediction_scope_comparison": [
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "lr",
+      "scope": "pre_onset",
+      "patients": 5981,
+      "hours": 198710,
+      "positive_hours": 2244,
+      "positive_prevalence": 0.011292838810326607,
+      "auroc": 0.804743682273981,
+      "auprc": 0.06110813553600089
+    },
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "lr",
+      "scope": "full_record",
+      "patients": 5981,
+      "hours": 233738,
+      "positive_hours": 3630,
+      "positive_prevalence": 0.015530209037469303,
+      "auroc": 0.8193495941850468,
+      "auprc": 0.10094192755012704
+    },
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "ebm",
+      "scope": "pre_onset",
+      "patients": 5981,
+      "hours": 198710,
+      "positive_hours": 2244,
+      "positive_prevalence": 0.011292838810326607,
+      "auroc": 0.8252876092388514,
+      "auprc": 0.06980750388507491
+    },
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "ebm",
+      "scope": "full_record",
+      "patients": 5981,
+      "hours": 233738,
+      "positive_hours": 3630,
+      "positive_prevalence": 0.015530209037469303,
+      "auroc": 0.8369617541189546,
+      "auprc": 0.10998638992462836
+    },
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "lightgbm",
+      "scope": "pre_onset",
+      "patients": 5981,
+      "hours": 198710,
+      "positive_hours": 2244,
+      "positive_prevalence": 0.011292838810326607,
+      "auroc": 0.8371543851876926,
+      "auprc": 0.08025124897592313
+    },
+    {
+      "experiment": "unchanged_A_B_models_validation",
+      "model": "lightgbm",
+      "scope": "full_record",
+      "patients": 5981,
+      "hours": 233738,
+      "positive_hours": 3630,
+      "positive_prevalence": 0.015530209037469303,
+      "auroc": 0.8474428560339208,
+      "auprc": 0.12380212659273977
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "lr",
+      "scope": "pre_onset",
+      "patients": 19743,
+      "hours": 641470,
+      "positive_hours": 5430,
+      "positive_prevalence": 0.008464932109061999,
+      "auroc": 0.7504212057154286,
+      "auprc": 0.036136477881473256
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "lr",
+      "scope": "full_record",
+      "patients": 19743,
+      "hours": 757924,
+      "positive_hours": 8856,
+      "positive_prevalence": 0.011684548846586202,
+      "auroc": 0.7684424791307906,
+      "auprc": 0.06040729482709816
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "ebm",
+      "scope": "pre_onset",
+      "patients": 19743,
+      "hours": 641470,
+      "positive_hours": 5430,
+      "positive_prevalence": 0.008464932109061999,
+      "auroc": 0.7942677888785387,
+      "auprc": 0.0495410040622098
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "ebm",
+      "scope": "full_record",
+      "patients": 19743,
+      "hours": 757924,
+      "positive_hours": 8856,
+      "positive_prevalence": 0.011684548846586202,
+      "auroc": 0.8044120655482272,
+      "auprc": 0.0786309659009914
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "lightgbm",
+      "scope": "pre_onset",
+      "patients": 19743,
+      "hours": 641470,
+      "positive_hours": 5430,
+      "positive_prevalence": 0.008464932109061999,
+      "auroc": 0.808423180092337,
+      "auprc": 0.049960911347718906
+    },
+    {
+      "experiment": "unchanged_full_A_models_B",
+      "model": "lightgbm",
+      "scope": "full_record",
+      "patients": 19743,
+      "hours": 757924,
+      "positive_hours": 8856,
+      "positive_prevalence": 0.011684548846586202,
+      "auroc": 0.8146144832889572,
+      "auprc": 0.07478061709059639
+    }
+  ],
+  "boundary_hour7": {
+    "ours_HR_latest": 80.0,
+    "main_base_HR_current_is_NaN": true
+  },
+  "verification_environment": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.2"
+  },
+  "models_trained_in_this_comparison": false,
+  "full_main_build_integration_tests": "Not executed: current project environment lacks pyarrow; four preprocessing unit tests passed",
+  "friend_screenshot": {
+    "source": "User screenshot",
+    "evaluation_split": "Not specified in screenshot; main contract uses full records",
+    "auroc": 0.8481,
+    "auroc_ci95": [
+      0.8317,
+      0.8654
+    ],
+    "average_precision": 0.1201,
+    "utility": 0.3908,
+    "precision": 0.0831,
+    "recall": 0.5683,
+    "f1": 0.1449,
+    "accuracy": 0.8945,
+    "false_positive_rate": 0.1003
+  },
+  "our_full_record_validation_alarm_metrics": {
+    "evaluation": "A+B pooled validation, full records",
+    "patients": 5981,
+    "hours": 233738,
+    "threshold": 0.0517586250154414,
+    "utility": 0.342765278992324,
+    "precision": 0.1286755466197537,
+    "recall": 0.4231404958677686,
+    "f1": 0.1973405280400848,
+    "accuracy": 0.9465427102140003,
+    "false_positive_rate": 0.04520051454099814,
+    "tp": 1536,
+    "fp": 10401,
+    "tn": 219707,
+    "fn": 2094
+  }
+}

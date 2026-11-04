@@ -1,0 +1,287 @@
+{
+  "lr": {
+    "signature": "09d05e6f4028bf4532c8b71316cedc7353a0b0857419175c4e4d3c43052832c1",
+    "model": "lr",
+    "fold": -1,
+    "stage": "final",
+    "parameters": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    },
+    "fitted_parameters": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "class_weight": null,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "random_state": 42
+    },
+    "threshold": 0.05671479865792561,
+    "training_patients": 20131,
+    "training_event_patients": 1585,
+    "training_hours": 670920,
+    "features": 312,
+    "training": {
+      "auroc": 0.8122988060541916,
+      "auprc_average_precision": 0.07478769557291112,
+      "brier_score": 0.013560868071835125,
+      "positive_hour_prevalence": 0.014174566267215168
+    },
+    "evaluation": null,
+    "details": {
+      "training_patients": 20131,
+      "training_event_patients": 1585,
+      "training_hours": 670920,
+      "features": 312,
+      "fit_hospitals": [
+        "A"
+      ],
+      "inner_split_seed": 2026,
+      "outer_fold": -1,
+      "refit_on_all_selected_A_training_patients": true,
+      "threshold_fit_on": "All-A OOF predictions; frozen before final fitting",
+      "refit_model": {
+        "iterations": 37
+      }
+    },
+    "fit_seconds": 10.41,
+    "execution_seconds": 30.47,
+    "model_sha256": "2e8fd18a223e701bc24e019dc21466a6efe695673a8ab29d0ced7843508176df",
+    "warnings": [],
+    "B_evaluated": false,
+    "environment": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "platform": "macOS-15.3-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.3.2",
+        "pandas": "2.3.2",
+        "scipy": "1.16.1",
+        "scikit-learn": "1.7.1",
+        "matplotlib": "3.10.5",
+        "joblib": "1.5.2",
+        "threadpoolctl": "3.6.0",
+        "interpret-core": "0.7.8",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "limitations": [
+      "Fixed historical hyperparameters; no new feature or regularization search.",
+      "EBM internal bags share preprocessing fitted within the selected A training patients.",
+      "The final threshold transfers from cross-fitted A models to the full-A refit."
+    ]
+  },
+  "ebm": {
+    "signature": "900e717251e86d5a67b5815e4e1684c4b295017bde3da4bcd587c446ea5a1ccc",
+    "model": "ebm",
+    "fold": -1,
+    "stage": "final",
+    "parameters": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    },
+    "fitted_parameters": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_rounds": 150,
+      "early_stopping_rounds": 15,
+      "early_stopping_tolerance": 0.0001,
+      "smoothing_rounds": 25,
+      "greedy_ratio": 0.0,
+      "cyclic_progress": true,
+      "max_leaves": 2,
+      "outer_bags": 3,
+      "inner_bags": 0,
+      "n_jobs": 3,
+      "validation_size": 0.2,
+      "random_state": 42,
+      "max_bins": 16,
+      "min_samples_leaf": 400,
+      "reg_lambda": 50.0
+    },
+    "threshold": 0.0624674387757052,
+    "training_patients": 20131,
+    "training_event_patients": 1585,
+    "training_hours": 670920,
+    "features": 312,
+    "training": {
+      "auroc": 0.8407561717994971,
+      "auprc_average_precision": 0.08991124766636442,
+      "brier_score": 0.01337339335952834,
+      "positive_hour_prevalence": 0.014174566267215168
+    },
+    "evaluation": null,
+    "details": {
+      "training_patients": 20131,
+      "training_event_patients": 1585,
+      "training_hours": 670920,
+      "features": 312,
+      "fit_hospitals": [
+        "A"
+      ],
+      "inner_split_seed": 2026,
+      "outer_fold": -1,
+      "refit_on_all_selected_A_training_patients": true,
+      "threshold_fit_on": "All-A OOF predictions; frozen before final fitting",
+      "refit_model": {
+        "executed_cycles_including_patience": [
+          110.06410256410257,
+          112.75641025641026,
+          105.21794871794872
+        ],
+        "patient_bag_seed": 2026,
+        "patient_bag_holdout_fraction": 0.2,
+        "bag_preprocessing": "Shared within this fit's A training patients"
+      }
+    },
+    "fit_seconds": 217.81,
+    "execution_seconds": 226.71,
+    "model_sha256": "30422b31fcf77819fedb869b0ac0ae79048bc951e9fa842bf6ebf84f4bc451d4",
+    "warnings": [],
+    "B_evaluated": false,
+    "environment": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "platform": "macOS-15.3-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.3.2",
+        "pandas": "2.3.2",
+        "scipy": "1.16.1",
+        "scikit-learn": "1.7.1",
+        "matplotlib": "3.10.5",
+        "joblib": "1.5.2",
+        "threadpoolctl": "3.6.0",
+        "interpret-core": "0.7.8",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "limitations": [
+      "Fixed historical hyperparameters; no new feature or regularization search.",
+      "EBM internal bags share preprocessing fitted within the selected A training patients.",
+      "The final threshold transfers from cross-fitted A models to the full-A refit."
+    ]
+  },
+  "lightgbm": {
+    "signature": "a381438990db15cfeeb7579f267cf241bd125045dd72d44a8463cba16c9a1c83",
+    "model": "lightgbm",
+    "fold": -1,
+    "stage": "final",
+    "parameters": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    },
+    "fitted_parameters": {
+      "boosting_type": "gbdt",
+      "objective": "binary",
+      "num_leaves": 15,
+      "max_depth": -1,
+      "learning_rate": 0.03,
+      "n_estimators": 197,
+      "min_child_samples": 200,
+      "reg_lambda": 10.0,
+      "max_bin": 63,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "n_jobs": 3,
+      "random_state": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    },
+    "threshold": 0.06726431549194375,
+    "training_patients": 20131,
+    "training_event_patients": 1585,
+    "training_hours": 670920,
+    "features": 312,
+    "training": {
+      "auroc": 0.8695326761927897,
+      "auprc_average_precision": 0.156446841144523,
+      "brier_score": 0.01304493864139062,
+      "positive_hour_prevalence": 0.014174566267215168
+    },
+    "evaluation": null,
+    "details": {
+      "training_patients": 20131,
+      "training_event_patients": 1585,
+      "training_hours": 670920,
+      "features": 312,
+      "fit_hospitals": [
+        "A"
+      ],
+      "inner_split_seed": 2026,
+      "outer_fold": -1,
+      "refit_on_all_selected_A_training_patients": true,
+      "inner_model": {
+        "inner_selected_trees": 197
+      },
+      "inner_fit_patients": 16104,
+      "inner_calibration_patients": 4027,
+      "inner_preprocessor_fit_on": "Inner fitting A patients only",
+      "inner_selected_trees": 197,
+      "threshold_fit_on": "All-A OOF predictions; frozen before final fitting",
+      "refit_model": {
+        "fitted_trees": 197
+      }
+    },
+    "fit_seconds": 88.18,
+    "execution_seconds": 112.21,
+    "model_sha256": "849355f51f4cd6f8ececeb74a5d1c12546eb712a419f469062742ddd3a8e5986",
+    "warnings": [],
+    "B_evaluated": false,
+    "environment": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "platform": "macOS-15.3-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.3.2",
+        "pandas": "2.3.2",
+        "scipy": "1.16.1",
+        "scikit-learn": "1.7.1",
+        "matplotlib": "3.10.5",
+        "joblib": "1.5.2",
+        "threadpoolctl": "3.6.0",
+        "interpret-core": "0.7.8",
+        "lightgbm": "4.6.0"
+      }
+    },
+    "limitations": [
+      "Fixed historical hyperparameters; no new feature or regularization search.",
+      "EBM internal bags share preprocessing fitted within the selected A training patients.",
+      "The final threshold transfers from cross-fitted A models to the full-A refit."
+    ]
+  }
+}

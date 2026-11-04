@@ -1,0 +1,106 @@
+{
+  "verified_at_utc": "2026-11-03T16:37:53.409596+00:00",
+  "passed": true,
+  "original_inputs_and_splits_unchanged": true,
+  "patient_disjoint_cv_complete": true,
+  "original_raw_labels_and_eligibility_verified": true,
+  "AUROC_AP_and_pooled_official_utility_recomputed": true,
+  "models_and_thresholds_match_pre_B_freeze": true,
+  "official_scorer_commit": "467c49b514542be7a4a0bafe40fa2c3b064dda2e",
+  "prediction_directories": [
+    {
+      "stage": "cv",
+      "model": "lr",
+      "fold": 0,
+      "patients": 6711,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "lr",
+      "fold": 1,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "lr",
+      "fold": 2,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "B",
+      "model": "lr",
+      "patients": 19743,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "ebm",
+      "fold": 0,
+      "patients": 6711,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "ebm",
+      "fold": 1,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "ebm",
+      "fold": 2,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "B",
+      "model": "ebm",
+      "patients": 19743,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "lightgbm",
+      "fold": 0,
+      "patients": 6711,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "lightgbm",
+      "fold": 1,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "cv",
+      "model": "lightgbm",
+      "fold": 2,
+      "patients": 6710,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    },
+    {
+      "stage": "B",
+      "model": "lightgbm",
+      "patients": 19743,
+      "official_patient_probes": 4,
+      "prediction_probes": 32
+    }
+  ],
+  "verifier_sha256": "c94559de968c85a1274d7de17550f9d2fc54a22a98e59bdba02b7f1339e6586f"
+}

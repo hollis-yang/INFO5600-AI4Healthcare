@@ -1,0 +1,7 @@
+{
+  "processed_data/friend_563_comparison/test_features.npy": "0afe839a1aaa475ccc0764b8dbc0bc8d97c36a7c27d0749af99ffde0389406fa",
+  "processed_data/friend_563_comparison/test_labels.npy": "cbf2b4c689aec2f0b062ebdb18ce5f06748e2659723a9291da815b0a2204b7d9",
+  "processed_data/friend_563_comparison/test_patients.csv": "c75c2be22e9bb16fcdadb3f6ecb908d21fd8d12507458620f92066aec46ba212",
+  "processed_data/challenge_improvement/test_extra.npy": "3934a9109f83db168eba2ecddaf421f887b1e88d3443056fcd5e23a474e93a91",
+  "processed_data/challenge_improvement/train_delta.npy": "866c28865f4e2e1e6f4fa890646e50c99c4100267d91b01b1bd18fda76f2c233"
+}

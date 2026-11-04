@@ -1,0 +1,20 @@
+{
+  "primary_feature_view": "baseline_789",
+  "primary_candidates": [
+    "lr_789",
+    "ebm150_789",
+    "lgb_789"
+  ],
+  "supplementary_candidates": [
+    "xgb_789"
+  ],
+  "ablation_candidates": [
+    "lgb_789",
+    "lgb_736",
+    "lgb_734"
+  ],
+  "selected_ebm": "ebm150_789",
+  "selection_data": "Training patient CV only; no test-driven feature or model choice",
+  "criterion": "Fixed LR/LGB/XGB settings; EBM150/300 selected by mean-fold AUROC, then lower budget on ties",
+  "ensemble_enabled": false
+}

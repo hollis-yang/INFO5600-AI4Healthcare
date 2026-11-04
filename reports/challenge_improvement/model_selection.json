@@ -1,0 +1,8 @@
+{
+  "auc_leader": "lgb_bce_lag_observed_leaf63",
+  "utility_leader": "lgb_bce_all",
+  "binary_lgb_leader": "lgb_bce_lag_observed_leaf63",
+  "binary_xgb_leader": "xgb_lag_observed_depth5",
+  "selection_data": "Training patients only; no validation/test candidate selection",
+  "candidate_count": 13
+}

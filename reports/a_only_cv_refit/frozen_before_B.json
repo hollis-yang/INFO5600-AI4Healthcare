@@ -1,0 +1,10 @@
+{
+  "model_sha256": {
+    "lr": "2e8fd18a223e701bc24e019dc21466a6efe695673a8ab29d0ced7843508176df",
+    "ebm": "30422b31fcf77819fedb869b0ac0ae79048bc951e9fa842bf6ebf84f4bc451d4",
+    "lightgbm": "849355f51f4cd6f8ececeb74a5d1c12546eb712a419f469062742ddd3a8e5986"
+  },
+  "thresholds_sha256": "eb642a2dd53a3d3e603ef66ffb57f18f7efdb0bc47ed6c98bae3c6cf2ae2b2ee",
+  "selection_sha256": "36e6e8b3df840a1d6fc70a47cb64fbd22b8792fd4c6334fd2f278dde7d3dc1cd",
+  "B_used_for_selection": false
+}

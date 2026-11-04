@@ -1,0 +1,47 @@
+{
+  "config_sha256": "04b0e1e0ede2ff75533451628dd036e484834a35bc3d606066df09e778549f93",
+  "source_sha256": {
+    "reports/challenge_improvement/metrics.csv": "3bbdb7da9f74406d527753bb5b9b7ce5621b611b085192bb8f039b402f87e931",
+    "outputs/challenge_improvement/model_selection.json": "2805cee85107a329826830b8e2d6b296d6568a1cbd0fc7d09f06d6c4bfd113b8",
+    "outputs/challenge_improvement/frozen_before_test.json": "e1fc4654b6c1fcad164768b564be212016f4ebade3fae3d1eb34ed2fe79d86d4",
+    "outputs/challenge_improvement/final_selection.json": "3e077d8a9ed09359cdf44346f21c9716c4c39ac4dd6a1821f41e941d9658a92b",
+    "reports/challenge_improvement/independent_verification.json": "490b527bd424502c4141e16596c05a514645c6b42ad1b71d3bfa9b19da6e8175"
+  },
+  "source_evaluation_sha256": {
+    "outputs/challenge_improvement/evaluation/validation/lgb_bce_base/metrics.json": "5b975282da366ed95022dae00e287d37e33c28a1571a5fabd9a8a6a1e7fbd87d",
+    "outputs/challenge_improvement/evaluation/validation/xgb_bce_base/metrics.json": "98728f77cafa3c2b297f37351ad1cf58f5ac00f7efb82cd1cbd98838728657bd",
+    "outputs/challenge_improvement/evaluation/validation/lgb_bce_lag_observed_leaf63/metrics.json": "61c0217c57e362ea7568247ddafa44c61ce544e9d9acf8462d7b8dfe688cfac2",
+    "outputs/challenge_improvement/evaluation/validation/lgb_bce_all/metrics.json": "aefef8012aab62da45a2fb8648f965a9427e7e115c7da326374073a8482a70e8",
+    "outputs/challenge_improvement/evaluation/validation/xgb_lag_observed_depth5/metrics.json": "10a0484250f01776f10acf2bc2dd7069b898ac6a9b4a7c973fab4173dd5bdca6",
+    "outputs/challenge_improvement/evaluation/test/lgb_bce_base/metrics.json": "7098ec08aedbcbff9bb2a53331f789da7e3c7c39fe8b4a964515120ea324f5ed",
+    "outputs/challenge_improvement/evaluation/test/xgb_bce_base/metrics.json": "16a31752394874332f93cd1ddd167334b4a23fd74c1ff6c1a9766fbb6e603372",
+    "outputs/challenge_improvement/evaluation/test/lgb_bce_lag_observed_leaf63/metrics.json": "d8a53ca69b8dc49043dc43ffd14b6b1dc6c9a49d8b9a87368768bcbe92c5a2ef",
+    "outputs/challenge_improvement/evaluation/test/lgb_bce_all/metrics.json": "b23005fd286e681135458128572f4518fc4bd1492ff16408c37ea5839d88a0ab",
+    "outputs/challenge_improvement/evaluation/test/xgb_lag_observed_depth5/metrics.json": "e37a1c1375bb60207826bc94946e1ce281faed023b311e5bed333115262b554f"
+  },
+  "source_model_metadata_sha256": {
+    "outputs/challenge_improvement/final/lgb_bce_base/results.json": "a6f7a2ad6c024deda8e48daefa112e125d1c1442ce24d68fef7c5ee6f7f055c6",
+    "outputs/challenge_improvement/final/xgb_bce_base/results.json": "f6f719fe2fa244094290e8587027006ff78e41bf5355495d2c0a29208c0a77a1",
+    "outputs/challenge_improvement/final/lgb_bce_lag_observed_leaf63/results.json": "acee00dacad44dc183c81e07cef09dfdc78dddf6f2202f9ad78f8606065e11f6",
+    "outputs/challenge_improvement/final/lgb_bce_all/results.json": "f57f6e23c22c22608cf569f1f1a8b14981f7043960aab47d958fa8740f381f08",
+    "outputs/challenge_improvement/final/xgb_lag_observed_depth5/results.json": "1d627ebdba50f7a89cd079f41d59937bbcf449eacfc11cf7054d8564279df8e0"
+  },
+  "source_model_metrics_csv": "reports/challenge_improvement/metrics.csv",
+  "source_rows": 12,
+  "exported_rows": 10,
+  "single_models": 5,
+  "rows_per_split": {
+    "validation": 5,
+    "test": 5
+  },
+  "primary_single_model": "lgb_bce_lag_observed_leaf63",
+  "utility_alternative": "lgb_bce_all",
+  "selection_origin": "Previously frozen training-CV model_selection.json",
+  "new_training_performed": false,
+  "new_threshold_selection_performed": false,
+  "score_combination_performed": false,
+  "ensemble_enabled": false,
+  "historical_test_exposure": true,
+  "checks_passed": true,
+  "loss_audit_run": false
+}

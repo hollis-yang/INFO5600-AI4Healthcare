@@ -1,0 +1,142 @@
+{
+  "clock_ablation": {
+    "lgb_736": {
+      "reference": {
+        "auroc": 0.8500757393785081,
+        "auprc": 0.15079428026535088,
+        "utility_score": 0.41319776749781084
+      },
+      "candidate": {
+        "auroc": 0.8497944050494213,
+        "auprc": 0.15146889930178464,
+        "utility_score": 0.4091723643825681
+      },
+      "difference": {
+        "auroc": {
+          "point": -0.0002813343290868353,
+          "lower": -0.002692161301366308,
+          "upper": 0.0019342882901316645
+        },
+        "auprc": {
+          "point": 0.0006746190364337601,
+          "lower": -0.0074779595847127645,
+          "upper": 0.008124851475695798
+        },
+        "utility_score": {
+          "point": -0.004025403115242743,
+          "lower": -0.016870969107820943,
+          "upper": 0.007734768983229718
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    },
+    "lgb_734": {
+      "reference": {
+        "auroc": 0.8500757393785081,
+        "auprc": 0.15079428026535088,
+        "utility_score": 0.41319776749781084
+      },
+      "candidate": {
+        "auroc": 0.8502758545307026,
+        "auprc": 0.15531741740621038,
+        "utility_score": 0.41873037494361254
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.00020011515219453546,
+          "lower": -0.003235348098908991,
+          "upper": 0.003558719131154136
+        },
+        "auprc": {
+          "point": 0.004523137140859501,
+          "lower": -0.002370924615188101,
+          "upper": 0.011484616957226308
+        },
+        "utility_score": {
+          "point": 0.005532607445801696,
+          "lower": -0.008225094855534331,
+          "upper": 0.017398306556255166
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    }
+  },
+  "primary_vs_lr": {
+    "ebm150_789": {
+      "reference": {
+        "auroc": 0.8205394829360753,
+        "auprc": 0.12520671668847147,
+        "utility_score": 0.3786134427766525
+      },
+      "candidate": {
+        "auroc": 0.8416023211926138,
+        "auprc": 0.13467131982147376,
+        "utility_score": 0.40701946805593636
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.02106283825653854,
+          "lower": 0.01066054839990907,
+          "upper": 0.03010566358061091
+        },
+        "auprc": {
+          "point": 0.009464603133002292,
+          "lower": -0.005176879002218061,
+          "upper": 0.023879151196226092
+        },
+        "utility_score": {
+          "point": 0.028406025279283875,
+          "lower": 0.004310279123908006,
+          "upper": 0.05097239125502311
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    },
+    "lgb_789": {
+      "reference": {
+        "auroc": 0.8205394829360753,
+        "auprc": 0.12520671668847147,
+        "utility_score": 0.3786134427766525
+      },
+      "candidate": {
+        "auroc": 0.8500757393785081,
+        "auprc": 0.15079428026535088,
+        "utility_score": 0.41319776749781084
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.02953625644243285,
+          "lower": 0.01910321551862733,
+          "upper": 0.039310356150039125
+        },
+        "auprc": {
+          "point": 0.025587563576879413,
+          "lower": 0.00965235691925592,
+          "upper": 0.04487938327926634
+        },
+        "utility_score": {
+          "point": 0.034584324721158355,
+          "lower": 0.011849616573090804,
+          "upper": 0.058044769561877645
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    }
+  }
+}

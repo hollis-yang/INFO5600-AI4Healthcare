@@ -1,0 +1,44 @@
+{
+  "prefix_causality_checks": 5,
+  "previous_prediction_checks": [
+    {
+      "model": "lr",
+      "subset": "B_validation",
+      "rows": 96822,
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "model": "ebm",
+      "subset": "B_validation",
+      "rows": 96822,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "model": "lightgbm",
+      "subset": "B_validation",
+      "rows": 96822,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "model": "lr",
+      "subset": "B_test",
+      "rows": 95988,
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "model": "ebm",
+      "subset": "B_test",
+      "rows": 95988,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "model": "lightgbm",
+      "subset": "B_test",
+      "rows": 95988,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "input_fingerprints_unchanged": true,
+  "model_training_performed": false,
+  "A_test_evaluated": false
+}

@@ -1,0 +1,7 @@
+{
+  "JOBLIB_MULTIPROCESSING": "0",
+  "VECLIB_MAXIMUM_THREADS": "4",
+  "reason": "One binary class task; sequential joblib backend avoids process data copies",
+  "estimator_parameters_changed": false,
+  "historical_cv_retrained_for_runtime_change": false
+}

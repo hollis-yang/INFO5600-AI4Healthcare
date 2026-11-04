@@ -1,0 +1,7 @@
+{
+  "path": "processed_data/validation_rows.csv.gz",
+  "sha256": "46cb585c4e8bc11897a2fdb1dc93e9034886c693577253993c1ef105ec4bed0c",
+  "exact_original_bytes_restored": true,
+  "method": "New A_rows source-offset copy, original gzip filename/timestamp",
+  "gzip_mtime": 1793684332
+}

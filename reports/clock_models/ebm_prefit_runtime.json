@@ -1,0 +1,17 @@
+{
+  "identical_pinned_implementation": true,
+  "files": {
+    "glassbox/_ebm/_ebm.py": {
+      "local": "e71eccefff53b37c0b711ba669fa307265661625d55114359404a20392943f09",
+      "runtime": "e71eccefff53b37c0b711ba669fa307265661625d55114359404a20392943f09"
+    },
+    "glassbox/_ebm/_boost.py": {
+      "local": "9fe6ecbdf41f27bf2720fef83711d03198eb28c93945ab9177f19241946a0bf2",
+      "runtime": "9fe6ecbdf41f27bf2720fef83711d03198eb28c93945ab9177f19241946a0bf2"
+    },
+    "utils/_native.py": {
+      "local": "41d6dd01e550683c08f3e1cae5023284f36598116d5ed36918d6b6ceb1711a5e",
+      "runtime": "41d6dd01e550683c08f3e1cae5023284f36598116d5ed36918d6b6ceb1711a5e"
+    }
+  }
+}

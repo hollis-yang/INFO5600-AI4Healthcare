@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-11-03T15:58:28.012892+00:00",
+  "training": "Frozen A-only, 14,091 patients; original A 70/15/15 split preserved",
+  "evaluation": "All 19,743 included B patients, irrespective of later B split",
+  "features": 312,
+  "models_refit": false,
+  "threshold_fit_on": "Original A_validation only; restored frozen history6h_full thresholds",
+  "thresholds": {
+    "lr": 0.05608881219514777,
+    "ebm": 0.06149262568924752,
+    "lightgbm": 0.07077426809664598
+  },
+  "ranking_scope": "Eligible pre-onset future-six-hour task",
+  "utility_scope": "Full original trajectories of the same included patients; hourly decisions; no suppression",
+  "labels_shifted_again": false,
+  "A_test_evaluated": false,
+  "interpretation": "Exploratory cross-hospital transfer: B has been examined in earlier experiments",
+  "input_fingerprints": {
+    "processed_data/raw_records.npy": "53391ae161f195746532b4ab760a15bb349203a3df9bac875ac6b4536c3330cb",
+    "outputs/patient_summary.csv": "5cdcace60518a45192b06f1f464596b701aa3c107eaff0dac6aa584ff6b0079f",
+    "processed_data/splits/patient_splits.csv": "b5c6868bdb31b40ce264fe86eb36f8e54b053d7fb05aab6db1c412fef5f872f1",
+    "outputs/ab_expansion/references/common_lr_model.joblib": "e436c9b6df06786be12f5c89c79fbeb2db1d0e292dbcf17bae002e1de947126b",
+    "outputs/ab_expansion/references/common_ebm_model.joblib": "404229ec6f97b55bfa6f9b65c4697d2041268298dbf06e44a693337bc7d3c461",
+    "outputs/ab_expansion/references/common_lightgbm_model.joblib": "b10c7366a6bdf26f671b4afbb57c527b835f5a7eb021492efeccd782c19b87ab",
+    "outputs/ab_expansion/references/common_lr_results.json": "e007562473eb2b2420d6ac3bf91391c00eb683100efe9db323c5467b86eb3cf3",
+    "outputs/ab_expansion/references/common_ebm_results.json": "84cffd8d2e6845d7a3c4184250ea1d0ed160de204adc3ccd72e29d52b8a6948d",
+    "outputs/ab_expansion/references/common_lightgbm_results.json": "2a6ae41c9a252c588ed4e9eb4d7a8130a3d7bf67ab7742db48628c684f9651cb"
+  },
+  "script_sha256": "c6abe6851cd78fa946fb50373507096b3d2636bbefb8dd1a0b76f25199d42d4a"
+}

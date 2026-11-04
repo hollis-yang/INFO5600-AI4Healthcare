@@ -1,0 +1,16 @@
+{
+  "input_fingerprints_unchanged": true,
+  "original_split_files_unchanged": true,
+  "A_original_test_included_in_this_new_development": true,
+  "outer_cv_patient_disjoint": true,
+  "B_used_for_selection": false,
+  "final_model_training_patients": 20131,
+  "final_model_training_hours": 670920,
+  "A_OOF_patients": 20131,
+  "B_patients": 19743,
+  "source_fingerprints": {
+    "scripts/run_a_cv_refit.py": "ca5e6f9f935fe50859629be35e8e1cdb6832734ad7800f442a20d1acccbc70b1",
+    "scripts/fit_a_cv_refit.py": "41516d197d4d9e87e896c504e4090b303b132a65724640a65627b51624c3bf96",
+    "src/sepsis_warning/a_cv_refit.py": "97eeda4d9234ff36014e81bb59a0ad2d201b23eb587b5782f0ac85e52bc32580"
+  }
+}

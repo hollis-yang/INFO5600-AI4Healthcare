@@ -1,0 +1,25 @@
+{
+  "models": [
+    "lgb_789",
+    "lgb_736",
+    "lgb_734",
+    "lr_789",
+    "ebm150_789",
+    "xgb_789"
+  ],
+  "primary_candidates": [
+    "lr_789",
+    "ebm150_789",
+    "lgb_789"
+  ],
+  "ablation_candidates": [
+    "lgb_789",
+    "lgb_736",
+    "lgb_734"
+  ],
+  "supplementary_candidates": [
+    "xgb_789"
+  ],
+  "ensemble_enabled": false,
+  "selection_data": "Training CV only"
+}

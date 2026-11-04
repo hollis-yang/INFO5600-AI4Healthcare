@@ -1,0 +1,107 @@
+{
+  "reference": "lgb_bce_base",
+  "comparisons": {
+    "lgb_bce_lag_observed_leaf63": {
+      "reference": {
+        "auroc": 0.8476845370935159,
+        "auprc": 0.1455506741290224,
+        "utility_score": 0.4037795094509849
+      },
+      "candidate": {
+        "auroc": 0.8500757393785081,
+        "auprc": 0.15079428026535088,
+        "utility_score": 0.41319776749781084
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.002391202284992233,
+          "lower": -0.0008114379489087386,
+          "upper": 0.005753550290193045
+        },
+        "auprc": {
+          "point": 0.005243606136328488,
+          "lower": -0.004703836295417382,
+          "upper": 0.015716968860748404
+        },
+        "utility_score": {
+          "point": 0.009418258046825945,
+          "lower": -0.0035050496512730994,
+          "upper": 0.024776237273418496
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    },
+    "lgb_bce_all": {
+      "reference": {
+        "auroc": 0.8476845370935159,
+        "auprc": 0.1455506741290224,
+        "utility_score": 0.4037795094509849
+      },
+      "candidate": {
+        "auroc": 0.8488398028194576,
+        "auprc": 0.150003928675607,
+        "utility_score": 0.4138938765401523
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.001155265725941712,
+          "lower": -0.0015605731380738035,
+          "upper": 0.0036840724649257073
+        },
+        "auprc": {
+          "point": 0.004453254546584601,
+          "lower": -0.00445823149801241,
+          "upper": 0.013255655119786745
+        },
+        "utility_score": {
+          "point": 0.010114367089167409,
+          "lower": -0.002036819353060033,
+          "upper": 0.02180837990616896
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    },
+    "blend_binary_half": {
+      "reference": {
+        "auroc": 0.8476845370935159,
+        "auprc": 0.1455506741290224,
+        "utility_score": 0.4037795094509849
+      },
+      "candidate": {
+        "auroc": 0.8513940027203675,
+        "auprc": 0.15071806019487,
+        "utility_score": 0.41401593886269755
+      },
+      "difference": {
+        "auroc": {
+          "point": 0.0037094656268515935,
+          "lower": 0.0008976710772790026,
+          "upper": 0.006770729974189887
+        },
+        "auprc": {
+          "point": 0.005167386065847601,
+          "lower": -0.0028743660311788986,
+          "upper": 0.014139623818235626
+        },
+        "utility_score": {
+          "point": 0.010236429411712655,
+          "lower": -0.0035712046550436987,
+          "upper": 0.024733869618080398
+        }
+      },
+      "requested_resamples": 500,
+      "valid_resamples": 500,
+      "seed": 2026,
+      "thresholds_fixed": true,
+      "uncertainty": "Patient-paired percentile interval, conditional on fitted models, selected candidates and frozen thresholds; excludes training and selection variation."
+    }
+  }
+}

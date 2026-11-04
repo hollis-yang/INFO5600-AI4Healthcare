@@ -1,0 +1,44 @@
+[
+  {
+    "model": "lr",
+    "evaluation": "A_patient_3CV_OOF",
+    "patients": 20131,
+    "event_patients": 1585,
+    "eligible_hours": 670920,
+    "full_hours": 788042,
+    "auroc": 0.7903318306804994,
+    "auprc": 0.06192669058039663,
+    "utility_score": 0.19837160690532227,
+    "utility_threshold_policy": "Independent inner A calibration in each outer fold",
+    "final_OOF_threshold": 0.05671479865792561,
+    "OOF_threshold_calibration_utility": 0.20927753890873857
+  },
+  {
+    "model": "ebm",
+    "evaluation": "A_patient_3CV_OOF",
+    "patients": 20131,
+    "event_patients": 1585,
+    "eligible_hours": 670920,
+    "full_hours": 788042,
+    "auroc": 0.8087412755889336,
+    "auprc": 0.06747270262158822,
+    "utility_score": 0.23602908471277595,
+    "utility_threshold_policy": "Independent inner A calibration in each outer fold",
+    "final_OOF_threshold": 0.0624674387757052,
+    "OOF_threshold_calibration_utility": 0.2379807340924705
+  },
+  {
+    "model": "lightgbm",
+    "evaluation": "A_patient_3CV_OOF",
+    "patients": 20131,
+    "event_patients": 1585,
+    "eligible_hours": 670920,
+    "full_hours": 788042,
+    "auroc": 0.8210660978217026,
+    "auprc": 0.07525140733701297,
+    "utility_score": 0.283636716735195,
+    "utility_threshold_policy": "Independent inner A calibration in each outer fold",
+    "final_OOF_threshold": 0.06726431549194375,
+    "OOF_threshold_calibration_utility": 0.2946900769926307
+  }
+]

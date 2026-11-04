@@ -1,0 +1,64 @@
+{
+  "model_sha256": {
+    "lgb_bce_base": "1a5f32605bded4482cad09e3c2e3b9ac5358f1fe66474c73faca2643c680a83b",
+    "xgb_bce_base": "190acf456d716e1256258b5938c378cc6a3f7908b8fccccbe2c8cee3d7c515df",
+    "lgb_bce_lag_observed_leaf63": "2b3e9bf4d7b21f2c8552aeb0d86b598d01e89284f4a9ae03b02b0b4a8990fbf5",
+    "lgb_bce_all": "0758daa0d45b0fdfa7a0772815a800170a087a3acc5a22eb9d826c331184dd16",
+    "xgb_lag_observed_depth5": "a1a94758ec98016b6d44db38d9889d058c8c48477e4d5f0b0177756e76b0b6c6"
+  },
+  "threshold_sha256": {
+    "lgb_bce_base": "e768c256cc6650fa9636408e8c3e86780752810480e9c1e29ebc9ca1debec335",
+    "xgb_bce_base": "fe5470f33b354efd5d257d3184acb8083653c776660039910e1c54d6a4b36789",
+    "lgb_bce_lag_observed_leaf63": "01fbe48a67b4bec826c9a31193d863f9d61dc1275a335fab6df164a25d100345",
+    "lgb_bce_all": "9a8a1d98e1c06b7d72a1228d538b670855f9ad1d04134396e85026edc9564802",
+    "xgb_lag_observed_depth5": "ee1848f81164799eba8f429794b42c1f68b1daf29f661e30e89072d45dc5380f",
+    "blend_binary_half": "7bdb54de271ebba539ef67790fff33cdd3d92b21f785f3739fdd1ce3e035e20b"
+  },
+  "rank_reference_sha256": {
+    "lgb_bce_lag_observed_leaf63": "3e68943aaec7b4e2ccaa179b01ee73a79d30e34dc9caa8c3c83d1d862e584460",
+    "xgb_lag_observed_depth5": "d332af5c916445c3b884cfa3d2db888d33411cc4341a822a8ddcfd694e45e5ea"
+  },
+  "rounds_sha256": "321707096d0e14b9345799aa29d117e844cd94c056f3afe66de1d0b1dacf1c7a",
+  "selection_sha256": "3e077d8a9ed09359cdf44346f21c9716c4c39ac4dd6a1821f41e941d9658a92b",
+  "model_selection_sha256": "2805cee85107a329826830b8e2d6b296d6568a1cbd0fc7d09f06d6c4bfd113b8",
+  "ensemble_definitions_sha256": "c44d566a77c9c52f825c14cb7fe725b47887adda8df44023e7626c52f225968c",
+  "input_sha256": {
+    "processed_data/friend_563_comparison/train_features.npy": "483aed26b147d43c3f2db74cdbaaa7060398576d0c8361e2ea9b90330960e5af",
+    "processed_data/friend_563_comparison/train_labels.npy": "9d8f5826b99d714d158d44eb22418d3042d19da04977eb32c30015421a7b29af",
+    "processed_data/friend_563_comparison/train_patients.csv": "2b5dbe841ca1b4286f31e881cd393d70ac864d1082364734e8ea34890beb0dd4",
+    "processed_data/challenge_improvement/train_extra.npy": "5f4a5e83becccf9c88897623383d9d089c3ca79ec1fe0977ec58da78dca8f31f",
+    "processed_data/friend_563_comparison/validation_features.npy": "f7cf9b1a17bed151e53563185d89f1a7d86598813f69317d910704d9dd81c307",
+    "processed_data/friend_563_comparison/validation_labels.npy": "ce7646848998435d5b3ccf55b0fbabfa89c7bcbe2dd7478000970e645820c818",
+    "processed_data/friend_563_comparison/validation_patients.csv": "fdf08df463fac5ebccbe826f38fcdad2f8365719628bd79a7fc71b12baa82934",
+    "processed_data/challenge_improvement/validation_extra.npy": "aae2ec65973458f85a14be55e4d312e013a590d2478d67c33ee68fb6075dede2",
+    "processed_data/challenge_improvement/train_delta.npy": "866c28865f4e2e1e6f4fa890646e50c99c4100267d91b01b1bd18fda76f2c233"
+  },
+  "source_sha256": {
+    "src/sepsis_warning/challenge_improvement.py": "f38f91a9f3280e1187066a520a29b9e429d8400d1572acb1e4d9e7c45bba4a47",
+    "src/sepsis_warning/challenge_features.py": "9dac96749eb6b5d13315e9da003a290675c16d550ef865f797edf1bd8b87f7ed",
+    "src/sepsis_warning/challenge_utility.py": "554375088a2ff6a3242201d93a667ee10e499994b25d2bc62cefac8b2fea081c",
+    "src/sepsis_warning/challenge_evaluation.py": "e03669057b48595cdb4a93b26f8e2d0ece5d7880b68a7c91b1d6c93dd9deba9a",
+    "scripts/fit_challenge_improvement.py": "9bfe489884afdd895194d05e30ce12024987d35b5cdfd44996f19307f9406425",
+    "scripts/run_challenge_improvement.py": "43e2c52511df64ddaea1376cf95dfc81cc5f866b7309cb51eab75a224702d07d"
+  },
+  "final_candidate_ids": [
+    "lgb_bce_base",
+    "xgb_bce_base",
+    "lgb_bce_lag_observed_leaf63",
+    "lgb_bce_all",
+    "xgb_lag_observed_depth5"
+  ],
+  "ensembles": [
+    {
+      "id": "blend_binary_half",
+      "method": "probability_mean",
+      "components": [
+        "lgb_bce_lag_observed_leaf63",
+        "xgb_lag_observed_depth5"
+      ],
+      "weight_first": 0.5
+    }
+  ],
+  "test_used_for_selection": false,
+  "historical_test_exposure": true
+}

@@ -1,0 +1,98 @@
+{
+  "models": {
+    "lgb_789": {
+      "historical_candidate": "lgb_bce_lag_observed_leaf63",
+      "cv": {
+        "0": {
+          "directory": "outputs/challenge_improvement/cv/fold0/lgb_bce_lag_observed_leaf63",
+          "files_sha256": {
+            "model.txt": "55ab3a23e3db083ed7b4effcf310b9525988f30c7419e408ae271443437dfea6",
+            "results.json": "16af206973a5edf1f1ff8b3017f3f62649492e075373698f7725b9bc5c4c1080",
+            "cal_score.npy": "90263e2349e4f60c8c37613cad34928215e107e971aa2b8a99fe1a24647da2d6",
+            "cal_patients.csv": "79d3173b2096428dd53812cf9021e1f8a4725ee5bc2efb2bf04ed8d362babe69",
+            "held_score.npy": "20d2fe0d385e3c5c57aa5d6b55bccf16fd0041a144ade78eba4fdf126f7665f4",
+            "held_patients.csv": "762bbd968910da18fc0b561f0b5fb29958e23a04f1de0ab0f034cd2cd60fcd38"
+          }
+        },
+        "1": {
+          "directory": "outputs/challenge_improvement/cv/fold1/lgb_bce_lag_observed_leaf63",
+          "files_sha256": {
+            "model.txt": "36e36ee1ebcdd083ec43c10a7e39d014940456da9c8448b036dd522cb2a6ead0",
+            "results.json": "0e033cb7fa5c08abfffb3d18ea94b3399db969991e9d3bbe5d16fbbc52442339",
+            "cal_score.npy": "a731c6fbf34b8fc8768477cde0929a199ef8d0a98c0d209acb73a831641bf11c",
+            "cal_patients.csv": "29cda023b6dfe7e446200984660f9e42e58e8a6dfdf0d0f94cd022136d27b7d7",
+            "held_score.npy": "bf23603b44b5ebf8c8c101410c276021897c107472ef8f618ba9a1c8670b3dda",
+            "held_patients.csv": "0ea0a10876fed68d03d22ac4105491f25a8622b67a0a20a857f01bea70500cb3"
+          }
+        },
+        "2": {
+          "directory": "outputs/challenge_improvement/cv/fold2/lgb_bce_lag_observed_leaf63",
+          "files_sha256": {
+            "model.txt": "213727444a7e7a3a21a2b066d160163329ecbd1b84b70ffcd891d979b239788c",
+            "results.json": "cff4e9ffdc53fe3f8371104ff894d3eed7b138bc9e003f289edbe8f6b2f9d66d",
+            "cal_score.npy": "8d2afc363241d728ec49802189bd3e6cf42d6ee1e8ca79cda657ce30011fcbe6",
+            "cal_patients.csv": "37d9da3186546b801fff2045039977ddefb8c576619bfd7044fdfc0ce6fbead1",
+            "held_score.npy": "d9abe4d231712800b25f181ebe3df6f17a8a151f8c46cbb863058e7bae473d16",
+            "held_patients.csv": "20b29002b34f9a02c7dd4f2f9f0ca939beaa47299f858135756f22e2df3ea056"
+          }
+        }
+      },
+      "final": {
+        "directory": "outputs/challenge_improvement/final/lgb_bce_lag_observed_leaf63",
+        "files_sha256": {
+          "model.txt": "2b3e9bf4d7b21f2c8552aeb0d86b598d01e89284f4a9ae03b02b0b4a8990fbf5",
+          "results.json": "acee00dacad44dc183c81e07cef09dfdc78dddf6f2202f9ad78f8606065e11f6",
+          "validation_score.npy": "94fff4f5ab381240608a69e1fb86ffe379c1c2a03be2512be9f8855fbbbbed35",
+          "threshold.json": "01fbe48a67b4bec826c9a31193d863f9d61dc1275a335fab6df164a25d100345"
+        }
+      }
+    },
+    "xgb_789": {
+      "historical_candidate": "xgb_lag_observed_depth5",
+      "cv": {
+        "0": {
+          "directory": "outputs/challenge_improvement/cv/fold0/xgb_lag_observed_depth5",
+          "files_sha256": {
+            "model.ubj": "1f3e1a43449fd3fd5c1c7e251ac83a613f2e49fc46aa9e9a7d0e3044b02a4f50",
+            "results.json": "1985b40f1ee2bd160295a29b0a5951b53e6d25c161323b189942465b48c01ee0",
+            "cal_score.npy": "cfe25c4c05c1837675a96ef49b77e6d7042ba3743ec39e4f6c2e8b1abeb36af0",
+            "cal_patients.csv": "79d3173b2096428dd53812cf9021e1f8a4725ee5bc2efb2bf04ed8d362babe69",
+            "held_score.npy": "538c9c27dfde8df1654235dba064ed7bb034bf31af3ee6c24a08111fc4a5df5c",
+            "held_patients.csv": "762bbd968910da18fc0b561f0b5fb29958e23a04f1de0ab0f034cd2cd60fcd38"
+          }
+        },
+        "1": {
+          "directory": "outputs/challenge_improvement/cv/fold1/xgb_lag_observed_depth5",
+          "files_sha256": {
+            "model.ubj": "c7e3eeba5325a1fa806ed874d9a952d77d40747bd0aebef8a14119d696b4a102",
+            "results.json": "47e9589e675a1a0f69a503c4faed07eef55004a1ef76a7335e04b835e54c9dde",
+            "cal_score.npy": "a01012a2fec8608927e18ad40c00860fa5d13a35c645432f1f3b6f4798147f34",
+            "cal_patients.csv": "29cda023b6dfe7e446200984660f9e42e58e8a6dfdf0d0f94cd022136d27b7d7",
+            "held_score.npy": "1f20d279ad228df4e5121de3dbbc102eb04a22f443935cd0243f8424d421aa4c",
+            "held_patients.csv": "0ea0a10876fed68d03d22ac4105491f25a8622b67a0a20a857f01bea70500cb3"
+          }
+        },
+        "2": {
+          "directory": "outputs/challenge_improvement/cv/fold2/xgb_lag_observed_depth5",
+          "files_sha256": {
+            "model.ubj": "8372af7bffe04524f35ee2e2cf556998a0c077bad63c630dc16ae63c45f6f227",
+            "results.json": "ff77dabce8f4fb61123e105df6ef344faf4d0c3efad7b32264b9bc1b64b7bcf3",
+            "cal_score.npy": "a5ac160c5673583a29c42a507826de878332094436142a96d4c481e50f69ebbd",
+            "cal_patients.csv": "37d9da3186546b801fff2045039977ddefb8c576619bfd7044fdfc0ce6fbead1",
+            "held_score.npy": "b6484c3a8df480ffdb4f2875482f5b4e5cfd68af31cbb60d9533b42d0003de63",
+            "held_patients.csv": "20b29002b34f9a02c7dd4f2f9f0ca939beaa47299f858135756f22e2df3ea056"
+          }
+        }
+      },
+      "final": {
+        "directory": "outputs/challenge_improvement/final/xgb_lag_observed_depth5",
+        "files_sha256": {
+          "model.ubj": "a1a94758ec98016b6d44db38d9889d058c8c48477e4d5f0b0177756e76b0b6c6",
+          "results.json": "1d627ebdba50f7a89cd079f41d59937bbcf449eacfc11cf7054d8564279df8e0",
+          "validation_score.npy": "ed78e11c4344ec4f7b321a248d99ee737b9e5bd378dd8a05392cc2f87bd1434e",
+          "threshold.json": "ee1848f81164799eba8f429794b42c1f68b1daf29f661e30e89072d45dc5380f"
+        }
+      }
+    }
+  }
+}

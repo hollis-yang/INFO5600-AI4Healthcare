@@ -1,0 +1,352 @@
+{
+  "passed": true,
+  "mode": "final",
+  "verified_at_utc": "2026-11-03T22:51:38.036244+00:00",
+  "ensemble_enabled": false,
+  "patient_roles_reconstructed": true,
+  "feature_view_counts": {
+    "baseline_789": 789,
+    "raw_clocks_only_736": 736,
+    "explicit_clock_free_734": 734
+  },
+  "raw_feature_prefix_patient_ids": [
+    "A_p000001",
+    "A_p010097",
+    "A_p000009",
+    "A_p010264",
+    "B_p100001",
+    "B_p109931",
+    "B_p100013",
+    "B_p110458"
+  ],
+  "reused_artifact_checks": [
+    {
+      "alias": "lgb_789",
+      "fold": 0,
+      "historical_candidate": "lgb_bce_lag_observed_leaf63"
+    },
+    {
+      "alias": "lgb_789",
+      "fold": 1,
+      "historical_candidate": "lgb_bce_lag_observed_leaf63"
+    },
+    {
+      "alias": "lgb_789",
+      "fold": 2,
+      "historical_candidate": "lgb_bce_lag_observed_leaf63"
+    },
+    {
+      "alias": "lgb_789",
+      "fold": -1,
+      "historical_candidate": "lgb_bce_lag_observed_leaf63"
+    },
+    {
+      "alias": "xgb_789",
+      "fold": 0,
+      "historical_candidate": "xgb_lag_observed_depth5"
+    },
+    {
+      "alias": "xgb_789",
+      "fold": 1,
+      "historical_candidate": "xgb_lag_observed_depth5"
+    },
+    {
+      "alias": "xgb_789",
+      "fold": 2,
+      "historical_candidate": "xgb_lag_observed_depth5"
+    },
+    {
+      "alias": "xgb_789",
+      "fold": -1,
+      "historical_candidate": "xgb_lag_observed_depth5"
+    }
+  ],
+  "cv_checks": [
+    {
+      "candidate": "lgb_789",
+      "fold": 0,
+      "source_reused": true,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_789",
+      "fold": 1,
+      "source_reused": true,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_789",
+      "fold": 2,
+      "source_reused": true,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_736",
+      "fold": 0,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_736",
+      "fold": 1,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_736",
+      "fold": 2,
+      "source_reused": false,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_734",
+      "fold": 0,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_734",
+      "fold": 1,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lgb_734",
+      "fold": 2,
+      "source_reused": false,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "xgb_789",
+      "fold": 0,
+      "source_reused": true,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "xgb_789",
+      "fold": 1,
+      "source_reused": true,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "xgb_789",
+      "fold": 2,
+      "source_reused": true,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "lr_789",
+      "fold": 0,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": {
+        "fit_rows": 611466,
+        "columns": 789,
+        "all_missing_columns": 0
+      }
+    },
+    {
+      "candidate": "lr_789",
+      "fold": 1,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": {
+        "fit_rows": 611089,
+        "columns": 789,
+        "all_missing_columns": 0
+      }
+    },
+    {
+      "candidate": "lr_789",
+      "fold": 2,
+      "source_reused": false,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": {
+        "fit_rows": 617334,
+        "columns": 789,
+        "all_missing_columns": 0
+      }
+    },
+    {
+      "candidate": "ebm150_789",
+      "fold": 0,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "ebm150_789",
+      "fold": 1,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "ebm150_789",
+      "fold": 2,
+      "source_reused": false,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "ebm300_789",
+      "fold": 0,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "ebm300_789",
+      "fold": 1,
+      "source_reused": false,
+      "official_patients": 9304,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    },
+    {
+      "candidate": "ebm300_789",
+      "fold": 2,
+      "source_reused": false,
+      "official_patients": 9303,
+      "native_prediction_replays": 24,
+      "lr_fit_only_statistics": null
+    }
+  ],
+  "cv_summary_candidates": [
+    "lgb_789",
+    "lgb_736",
+    "lgb_734",
+    "xgb_789",
+    "lr_789",
+    "ebm150_789",
+    "ebm300_789"
+  ],
+  "model_selection": {
+    "primary_feature_view": "baseline_789",
+    "primary_candidates": [
+      "lr_789",
+      "ebm150_789",
+      "lgb_789"
+    ],
+    "supplementary_candidates": [
+      "xgb_789"
+    ],
+    "ablation_candidates": [
+      "lgb_789",
+      "lgb_736",
+      "lgb_734"
+    ],
+    "selected_ebm": "ebm150_789",
+    "selection_data": "Training patient CV only; no test-driven feature or model choice",
+    "criterion": "Fixed LR/LGB/XGB settings; EBM150/300 selected by mean-fold AUROC, then lower budget on ties",
+    "ensemble_enabled": false
+  },
+  "final_checks": [
+    {
+      "split": "validation",
+      "candidate": "ebm150_789",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "validation",
+      "candidate": "lgb_734",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "validation",
+      "candidate": "lgb_736",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "validation",
+      "candidate": "lgb_789",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "validation",
+      "candidate": "lr_789",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "validation",
+      "candidate": "xgb_789",
+      "official_patients": 5981,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "ebm150_789",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "lgb_734",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "lgb_736",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "lgb_789",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "lr_789",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    },
+    {
+      "split": "test",
+      "candidate": "xgb_789",
+      "official_patients": 5982,
+      "native_prediction_replays": 24
+    }
+  ],
+  "test_data_read": true,
+  "verifier_sha256": "484058f4ed3386a93215b1557a9d24b40801d6c3e873592a8d5a9ff2a6a87b44",
+  "reference_verifier_sha256": "62be45ae6ff1b08dda6d11b2fd321f7ca84e4e6ac7e27f7f80bbde64c61434c1"
+}

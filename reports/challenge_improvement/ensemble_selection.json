@@ -1,0 +1,4 @@
+{
+  "auc_ensemble": "blend_binary_half",
+  "utility_ensemble": "blend_binary_half"
+}

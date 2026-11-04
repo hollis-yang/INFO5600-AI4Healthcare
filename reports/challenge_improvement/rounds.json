@@ -1,0 +1,15 @@
+{
+  "lgb_bce_base": 310,
+  "xgb_bce_base": 233,
+  "lgb_delta_base": 90,
+  "lgb_utility_class_base": 180,
+  "lgb_bce_lag": 343,
+  "lgb_bce_lag_observed": 259,
+  "lgb_bce_all": 336,
+  "lgb_bce_lag_observed_leaf31": 112,
+  "lgb_bce_lag_observed_leaf63": 152,
+  "lgb_bce_all_leaf31": 170,
+  "lgb_bce_all_leaf63": 202,
+  "xgb_lag_observed_depth3": 278,
+  "xgb_lag_observed_depth5": 178
+}

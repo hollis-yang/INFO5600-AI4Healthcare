@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "workflow": "single_model_review",
+  "ensemble_enabled": false,
+  "source_model_metrics_csv": "reports/challenge_improvement/metrics.csv",
+  "source_model_selection_json": "outputs/challenge_improvement/model_selection.json",
+  "source_freeze_json": "outputs/challenge_improvement/frozen_before_test.json",
+  "source_final_selection_json": "outputs/challenge_improvement/final_selection.json",
+  "source_independent_verification_json": "reports/challenge_improvement/independent_verification.json",
+  "source_expected_rows": 12,
+  "proposal_model_slide": "https://docs.google.com/presentation/d/1qQN6P4p-iK33ZLMlUx7Z8wyTcubnhfJMR9BgzA7NdmU/edit#slide=id.h45f296164c6b7e81_7_84",
+  "primary_single_model": "lgb_bce_lag_observed_leaf63",
+  "utility_alternative": "lgb_bce_all",
+  "supplementary_optimized_xgboost": "xgb_lag_observed_depth5",
+  "review_candidates": [
+    {
+      "id": "lgb_bce_base",
+      "role": "baseline",
+      "display_name": "LightGBM 基线",
+      "feature_count": 563
+    },
+    {
+      "id": "xgb_bce_base",
+      "role": "supplementary_baseline",
+      "display_name": "XGBoost 基线",
+      "feature_count": 563
+    },
+    {
+      "id": "lgb_bce_lag_observed_leaf63",
+      "role": "primary_single_model",
+      "display_name": "LightGBM 主模型（63叶）",
+      "feature_count": 789
+    },
+    {
+      "id": "lgb_bce_all",
+      "role": "utility_alternative",
+      "display_name": "LightGBM US 备选",
+      "feature_count": 791
+    },
+    {
+      "id": "xgb_lag_observed_depth5",
+      "role": "supplementary_optimized",
+      "display_name": "XGBoost 优化对照（深度5）",
+      "feature_count": 789
+    }
+  ],
+  "expected_splits": {
+    "validation": {"patients": 5981, "hours": 233738, "positive_hours": 3630},
+    "test": {"patients": 5982, "hours": 230710, "positive_hours": 3630}
+  },
+  "selection_policy": "Use the previously frozen training-CV single-model leaders; do not select again using validation or test metrics.",
+  "current_benchmark": {
+    "status": "completed_frozen_results_reused_without_training",
+    "training_hospitals": ["A", "B"],
+    "patient_splits": "Each hospital 70/15/15, fixed original patient lists",
+    "label_scope": "Original full-record SepsisLabel, including available post-onset hours",
+    "utility_alarm_rule": "Hourly decisions at the frozen validation threshold, no cooldown",
+    "interpretation": "Historically exposed exploratory patient holdout within two known hospitals"
+  },
+  "planned_project_comparison": {
+    "status": "planning_only_no_new_fits",
+    "next_three_model_training_state": "not_run",
+    "primary_project_models": ["lr", "ebm", "lightgbm"],
+    "extra_project_models": ["xgboost"],
+    "ensemble_enabled": false,
+    "shared_feature_profile": "789-column causal information for any new current-benchmark comparison",
+    "comparison_requirement": "Choose and record one common patient list, hourly eligibility mask, feature information, outcome definition, and evaluation protocol before fitting LR or EBM. Do not merge old 312-feature pre-onset results into the new full-record table.",
+    "maximum_configurations_per_model": 12,
+    "lr": {
+      "role": "simple_interpretable_baseline",
+      "regularization": "L2",
+      "preprocessing": "Fit missing-value imputation and standardization on fitting patients only; reuse those parameters for inner calibration and held patients"
+    },
+    "ebm": {
+      "role": "proposal_interpretable_additive_model",
+      "interactions": 0,
+      "missing_values": "native_NaN",
+      "patient_isolation": "Fit binning and any early-stopping/calibration components without held patients; do not split a patient's hours across fitting and calibration"
+    },
+    "lightgbm": {
+      "role": "nonlinear_performance_reference",
+      "missing_values": "native_NaN"
+    },
+    "new_789_fullrecord_training_status": {
+      "lr": "not_run",
+      "ebm": "not_run",
+      "lightgbm": "completed_under_current_benchmark"
+    }
+  },
+  "proposal_target_protocol": {
+    "primary_project_models": ["lr", "ebm", "lightgbm"],
+    "population": "Adult ICU hours before first sepsis onset, predicting onset within the next six hours",
+    "development": "Hospital A patient-level 70/15/15 with training-only patient CV",
+    "transfer_evaluation": "Hospital B reserved for transfer evaluation in the original proposal",
+    "primary_metric": "Pre-onset AUPRC under a false-alert budget",
+    "clinical_alarm_rule": "At most one false episode per 100 eligible patient-hours; six-hour repeated-alert suppression",
+    "official_utility": "Separate full-trajectory supplementary experiment"
+  },
+  "related_reports": {
+    "prior_a_only_transfer": "reports/a_only_cv_refit/report.md",
+    "historical_competition_experiment": "reports/challenge_improvement/report.md",
+    "historical_objective_diagnostics": "reports/challenge_improvement/objective_diagnostics.md"
+  }
+}

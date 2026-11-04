@@ -4,6 +4,63 @@ AI for Healthcare course project.
 
 Team: Dennis Wang, Haoyang Song, Wenzhuo Zhang.
 
+## Clock ablation and matched model comparison
+
+The current experiment keeps the existing A+B patient splits and LightGBM settings,
+comparing 789 features with 736 features (derived clocks removed) and 734 features
+(all explicit clocks removed). The main LR, additive EBM and LightGBM comparison
+uses the same prespecified 789 features; XGBoost is supplementary. Ensembling is disabled.
+
+```bash
+python3.12 -m venv .venv-models
+.venv-models/bin/python -m pip install -r requirements-friend563.txt
+.venv-models/bin/python -B -u scripts/run_clock_models.py --stage all
+.venv-models/bin/python -B scripts/verify_clock_models.py --final
+```
+
+The model experiments use the pinned `requirements-models.txt` environment;
+`requirements-friend563.txt` adds XGBoost. These are separate from the native
+preprocessing/feature-engineering environment described below. The commands above
+replay the study once its frozen 563-feature and challenge-improvement caches and
+historical tree models have been prepared with the earlier workflows. Generated
+matrices and fitted models remain local; this repository publishes their metrics,
+patient-role manifests, source hashes and verification records.
+
+See [the experiment report](reports/clock_models/report.md),
+[clock-ablation metrics](reports/clock_models/clock_ablation_metrics.csv), and
+[matched model metrics](reports/clock_models/model_comparison_metrics.csv).
+The [independent verification record](reports/clock_models/independent_verification.json)
+checks saved-model predictions, exact utility thresholds, patient roles and fit-only preprocessing.
+Training CV determines tree rounds and the EBM budget; validation determines the
+official utility threshold before test prediction. LR imputation and scaling use only
+fitting patients. The existing 789-feature tree models are explicitly reused with
+their original hashes. This is an exploratory full-record benchmark on known hospitals;
+the original A-only pre-onset/transfer endpoint remains a separate study.
+
+## Current single-model review
+
+The current entry point reviews frozen **single models**, with model ensembling disabled:
+
+```bash
+.venv-models/bin/python -B scripts/run_single_model_review.py
+.venv-models/bin/python -B scripts/analyze_us_losses.py
+.venv-models/bin/python -B scripts/analyze_alarm_policies.py
+```
+
+See [single-model results and proposal alignment](reports/single_model_review/report.md),
+[US loss analysis](reports/us_loss_analysis/), and [the current configuration](configs/single_model_review.json).
+The loss analysis separates missed useful hours, non-septic false alarms, premature alarms and patient-level warning timing.
+Alarm-policy sensitivity experiments use training CV only; they do not produce new test results.
+
+The proposal's main comparison is **L2 logistic regression, additive EBM and LightGBM**;
+XGBoost is an additional tree reference. The matched comparison above adds LR and EBM
+under the 789-feature, full-record A+B protocol. Their earlier pre-onset results are reported separately.
+The original proposal's A-only six-hour warning/transfer study and the recent full-record
+official-utility benchmark are distinct analysis tracks.
+
+Historical ensemble artifacts and `scripts/run_challenge_improvement.py` remain frozen for
+exact reproduction and audit. The current review exports only single-model results and does not retrain models.
+
 ## Data
 
 The complete public PhysioNet Challenge 2019 dataset is included in `data/`:
@@ -25,9 +82,9 @@ The local pipeline audits the raw data, constructs a conservative incident-onset
 Use Python 3.11 or newer:
 
 ```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
+python3.11 -m venv .venv-models
+source .venv-models/bin/activate
+python -m pip install -r requirements-models.txt
 python -m unittest discover -s tests -v
 python scripts/prepare_data.py
 python scripts/train_lr.py
@@ -185,6 +242,27 @@ The consolidated [complete metrics report](reports/ab_regularization/all_metrics
 The unmodified official [PhysioNet/CinC 2019 scorer](https://github.com/physionetchallenges/evaluation-2019) is pinned under `third_party/physionet2019/` with its original BSD 2-Clause license, Git blob IDs and SHA-256. Utility is normalized after summing patient contributions: 0 means inaction and 1 means the cohort oracle; negative scores are possible. This full-trajectory supplement and its selected cohort differ from the custom pre-onset task and from the official hidden Challenge test.
 
 After the regularization run, use the same macOS environment wrapper for `run_utility_comparison.py` and `verify_utility_comparison.py`. `run_utility_comparison.py --prepare-only` can prepare full trajectories while CV is running. The supplement adds about 0.3 GB under `processed_data/ab_regularization/utility/`; results and patient-level contributions remain under `outputs/ab_regularization/utility/`, and small snapshots under `reports/ab_regularization/utility/`. Unit fixtures and real patient subsets are checked against the upstream directory-based evaluator.
+
+## Full-A patient CV, full-A refit and B transfer evaluation
+
+This separate protocol uses the frozen common 312 features and model settings from `reports/history_study/model_settings.json`; it performs no new feature or hyperparameter search. Three event-stratified patient folds (seed 2026) cover all eligible A patients. Each outer training partition has a patient-level 80/20 internal fit/calibration split. Inner preprocessing is fitted on inner fitting patients only; the calibration patients select the existing alarm-budget threshold and, for LightGBM, stopping iterations. The model and preprocessing are then refitted on the entire outer training partition before scoring its held-out patients. EBM retains its three internal early-stopping bags, which share binning and preprocessing within the current fitting partition.
+
+The primary A AUROC/AUPRC pool patient-disjoint OOF predictions. The primary A US sums complete-trajectory utility from each fold at its internally calibrated threshold. A separate threshold is selected from all eligible A OOF predictions, frozen, and transferred to models refitted on all A patients for B evaluation. The US computed on the same OOF predictions at that final threshold is explicitly a calibration result. Official US uses original complete trajectories and hourly decisions without alarm suppression; AUROC/AUPRC retain the pre-onset six-hour task.
+
+Run training and independent verification with the established macOS runtime environment:
+
+```sh
+python - <<'PY'
+import subprocess, sys
+sys.path.insert(0, 'src')
+from sepsis_warning.ab_regularization import runtime_environment
+for script in ['run_a_cv_refit.py', 'verify_a_cv_refit.py']:
+    subprocess.run([sys.executable, '-u', 'scripts/' + script],
+                   env=runtime_environment(), check=True)
+PY
+```
+
+New processing is isolated under `processed_data/a_only_cv_refit/`; models, complete-trajectory predictions and calibration records are under `outputs/a_only_cv_refit/`. The [report](reports/a_only_cv_refit/report.md) and [metrics table](reports/a_only_cv_refit/metrics.csv) include pooled A OOF and full-A-refit B results; individual fold results and means/standard deviations are saved separately. The independent verifier reconstructs raw labels and eligibility, replays saved predictions, checks official utility, and verifies the frozen model/threshold hashes. The original A test is used by this protocol, and B is a previously examined hospital rather than a new blinded external test.
 
 ## 563-feature full-record XGBoost and LightGBM comparison
 

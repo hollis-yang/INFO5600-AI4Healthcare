@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "audit_source_sha256": "222c426796e13ef24e9655ffca67ed0e46860893612aaf8a209ef76b9a483dea",
+  "all_input_hashes_match": true,
+  "sum_regret_checks": 24,
+  "independent_primary_integer_formula_match": true,
+  "official_primary_patient_checks": 33893,
+  "current_iculos_cross_table_totals_match": true,
+  "new_fits": 0,
+  "new_threshold_search": false,
+  "test_used_for_policy_selection": false
+}

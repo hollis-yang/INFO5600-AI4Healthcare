@@ -1,0 +1,435 @@
+{
+  "passed": true,
+  "mode": "final",
+  "verified_at_utc": "2026-11-03T20:06:55.112229+00:00",
+  "train_patients": 27911,
+  "train_hours": 1081518,
+  "official_real_patient_marginal_checks": 600,
+  "training_feature_prefix_patient_ids": [
+    "A_p000001",
+    "A_p010097",
+    "A_p000009",
+    "A_p010264",
+    "B_p100001",
+    "B_p109931",
+    "B_p100013",
+    "B_p110458"
+  ],
+  "roles_sha256": "6986354fdea2da70b04903eab9c588cc28d9572a55279fb44bae6484c1f6fa0a",
+  "cv_checks": [
+    {
+      "candidate": "lgb_bce_all",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 389
+    },
+    {
+      "candidate": "lgb_bce_all_leaf31",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 170
+    },
+    {
+      "candidate": "lgb_bce_all_leaf63",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 239
+    },
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 310
+    },
+    {
+      "candidate": "lgb_bce_lag",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 381
+    },
+    {
+      "candidate": "lgb_bce_lag_observed",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 259
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf31",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 111
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf63",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 157
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 90
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 180
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 233
+    },
+    {
+      "candidate": "xgb_lag_observed_depth3",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 270
+    },
+    {
+      "candidate": "xgb_lag_observed_depth5",
+      "fold": 0,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 168
+    },
+    {
+      "candidate": "lgb_bce_all",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 240
+    },
+    {
+      "candidate": "lgb_bce_all_leaf31",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 125
+    },
+    {
+      "candidate": "lgb_bce_all_leaf63",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 90
+    },
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 164
+    },
+    {
+      "candidate": "lgb_bce_lag",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 222
+    },
+    {
+      "candidate": "lgb_bce_lag_observed",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 257
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf31",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 112
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf63",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 115
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 40
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 40
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 211
+    },
+    {
+      "candidate": "xgb_lag_observed_depth3",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 278
+    },
+    {
+      "candidate": "xgb_lag_observed_depth5",
+      "fold": 1,
+      "prediction_replays": 24,
+      "official_utility_patients": 9304,
+      "selected_rounds": 178
+    },
+    {
+      "candidate": "lgb_bce_all",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 336
+    },
+    {
+      "candidate": "lgb_bce_all_leaf31",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 309
+    },
+    {
+      "candidate": "lgb_bce_all_leaf63",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 202
+    },
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 320
+    },
+    {
+      "candidate": "lgb_bce_lag",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 343
+    },
+    {
+      "candidate": "lgb_bce_lag_observed",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 413
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf31",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 206
+    },
+    {
+      "candidate": "lgb_bce_lag_observed_leaf63",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 152
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 220
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 270
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 366
+    },
+    {
+      "candidate": "xgb_lag_observed_depth3",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 564
+    },
+    {
+      "candidate": "xgb_lag_observed_depth5",
+      "fold": 2,
+      "prediction_replays": 24,
+      "official_utility_patients": 9303,
+      "selected_rounds": 257
+    }
+  ],
+  "final_checks": [
+    {
+      "split": "validation",
+      "id": "blend_binary_half",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "validation",
+      "id": "lgb_bce_all",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "validation",
+      "id": "lgb_bce_base",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "validation",
+      "id": "lgb_bce_lag_observed_leaf63",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "validation",
+      "id": "xgb_bce_base",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "validation",
+      "id": "xgb_lag_observed_depth5",
+      "official_utility_patients": 5981
+    },
+    {
+      "split": "test",
+      "id": "blend_binary_half",
+      "official_utility_patients": 5982
+    },
+    {
+      "split": "test",
+      "id": "lgb_bce_all",
+      "official_utility_patients": 5982
+    },
+    {
+      "split": "test",
+      "id": "lgb_bce_base",
+      "official_utility_patients": 5982
+    },
+    {
+      "split": "test",
+      "id": "lgb_bce_lag_observed_leaf63",
+      "official_utility_patients": 5982
+    },
+    {
+      "split": "test",
+      "id": "xgb_bce_base",
+      "official_utility_patients": 5982
+    },
+    {
+      "split": "test",
+      "id": "xgb_lag_observed_depth5",
+      "official_utility_patients": 5982
+    }
+  ],
+  "cv_summary_candidates": [
+    "lgb_bce_base",
+    "xgb_bce_base",
+    "lgb_delta_base",
+    "lgb_utility_class_base",
+    "lgb_bce_lag",
+    "lgb_bce_lag_observed",
+    "lgb_bce_all",
+    "lgb_bce_lag_observed_leaf31",
+    "lgb_bce_lag_observed_leaf63",
+    "lgb_bce_all_leaf31",
+    "lgb_bce_all_leaf63",
+    "xgb_lag_observed_depth3",
+    "xgb_lag_observed_depth5"
+  ],
+  "ensemble_cv_checks": [
+    {
+      "ensemble": "blend_binary_half",
+      "fold": 0,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_binary_half",
+      "fold": 1,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_binary_half",
+      "fold": 2,
+      "official_utility_patients": 9303
+    },
+    {
+      "ensemble": "blend_rank_w25",
+      "fold": 0,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w25",
+      "fold": 1,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w25",
+      "fold": 2,
+      "official_utility_patients": 9303
+    },
+    {
+      "ensemble": "blend_rank_w50",
+      "fold": 0,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w50",
+      "fold": 1,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w50",
+      "fold": 2,
+      "official_utility_patients": 9303
+    },
+    {
+      "ensemble": "blend_rank_w75",
+      "fold": 0,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w75",
+      "fold": 1,
+      "official_utility_patients": 9304
+    },
+    {
+      "ensemble": "blend_rank_w75",
+      "fold": 2,
+      "official_utility_patients": 9303
+    }
+  ],
+  "test_data_read": true,
+  "interpretation": "Independent implementation and artifact consistency checks; existing test remains an historically exposed exploratory benchmark."
+}

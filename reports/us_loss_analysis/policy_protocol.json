@@ -1,0 +1,19 @@
+{
+  "model": "lgb_bce_lag_observed_leaf63",
+  "policies": [
+    "raw",
+    "mean2",
+    "mean3",
+    "ema50",
+    "ema80",
+    "min2",
+    "max2",
+    "max3"
+  ],
+  "data": "Original training patients only, same fit/calibration/outer-held roles",
+  "thresholds": "Each policy independently maximizes inner-calibration US; held labels never set thresholds",
+  "min2_start": "First hour unchanged; from hour two both current and prior score must exceed threshold",
+  "calibration_selection": "Base model iteration counts were also selected on inner calibration; outer fold remains separate",
+  "test_policy": "No validation or test policy replay; development sensitivity analysis, not a new test result",
+  "source_sha256": "d02a71d4a69f47bfc05a1888d8a8e243662a04029132753410060c4f454eb5b9"
+}

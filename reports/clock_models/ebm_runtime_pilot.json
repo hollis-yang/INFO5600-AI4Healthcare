@@ -1,0 +1,62 @@
+{
+  "synthetic_only": true,
+  "real_training_data_read": false,
+  "shape": [
+    20000,
+    789
+  ],
+  "positive_rows": 339,
+  "missing_fraction": 0.2,
+  "all_missing_last_feature": true,
+  "interpret_core_version": "0.7.8",
+  "one_outer_bag": true,
+  "native_random_hour_validation": false,
+  "fixed_settings": {
+    "max_bins": 16,
+    "min_samples_leaf": 400,
+    "reg_lambda": 50.0,
+    "max_leaves": 2,
+    "learning_rate": 0.03,
+    "greedy_ratio": 0.0,
+    "cyclic_progress": true,
+    "validation_size": 0,
+    "outer_bags": 1,
+    "inner_bags": 0,
+    "early_stopping_rounds": 0,
+    "n_jobs": 4,
+    "random_state": 42
+  },
+  "pilot_only_smoothing_rounds": 2,
+  "production_smoothing_rounds": 25,
+  "measurements": [
+    {
+      "max_rounds": 10,
+      "executed_steps": 7890,
+      "fit_seconds": 5.565275208093226
+    },
+    {
+      "max_rounds": 30,
+      "executed_steps": 23670,
+      "fit_seconds": 6.6345547079108655
+    }
+  ],
+  "estimated_fixed_setup_seconds_at20k": 5.030635458184406,
+  "estimated_per_cycle_seconds_at20k": 0.05346397499088198,
+  "rough_linear_estimates": {
+    "1m150seconds": 652.5115853408352,
+    "1m300seconds": 1053.49139777245,
+    "600k150seconds": 391.5069512045011,
+    "600k300seconds": 632.09483866347
+  },
+  "limitations": [
+    "Approximate synthetic estimate; real sparsity, duplicate columns, CPU contention and larger-than-cache data may change runtime.",
+    "One outer bag does not obtain four parallel boosting bags merely from n_jobs=4.",
+    "Binning/setup and per-cycle work are separated; multiplying total ten-cycle time by both N and cycles greatly overestimates repeated setup."
+  ],
+  "native_predict_and_joblib_reload": "exact on37 synthetic rows",
+  "cyclic_progress_note": "Private interpret-core0.7.8 _boost.py forces progress=1 if greedy_steps<=0, so production greedy_ratio0 agrees with pilot explicitTrue.",
+  "source_sha256": {
+    "scripts/fit_interpretable_clock.py": "b939e08d1ad95061ca1fba2c396a7783b3dc85cfac9681e9f018e00853338919",
+    "src/sepsis_warning/clock_interpretable.py": "21db0af46d93bb6f64bb60850c1bf19e49a72b818d504502949602bd43b037f9"
+  }
+}

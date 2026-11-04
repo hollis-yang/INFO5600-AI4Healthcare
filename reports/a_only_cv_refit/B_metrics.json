@@ -1,0 +1,41 @@
+[
+  {
+    "model": "lr",
+    "evaluation": "B_after_full_A_refit",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.7504212057154286,
+    "auprc": 0.036136477881473256,
+    "utility_score": 0.14937977547583067,
+    "utility_threshold_policy": "Frozen pooled A OOF threshold",
+    "final_OOF_threshold": 0.05671479865792561
+  },
+  {
+    "model": "ebm",
+    "evaluation": "B_after_full_A_refit",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.7942677888785387,
+    "auprc": 0.0495410040622098,
+    "utility_score": 0.16228160217440019,
+    "utility_threshold_policy": "Frozen pooled A OOF threshold",
+    "final_OOF_threshold": 0.0624674387757052
+  },
+  {
+    "model": "lightgbm",
+    "evaluation": "B_after_full_A_refit",
+    "patients": 19743,
+    "event_patients": 905,
+    "eligible_hours": 641470,
+    "full_hours": 757924,
+    "auroc": 0.808423180092337,
+    "auprc": 0.049960911347718906,
+    "utility_score": 0.2401168884680165,
+    "utility_threshold_policy": "Frozen pooled A OOF threshold",
+    "final_OOF_threshold": 0.06726431549194375
+  }
+]

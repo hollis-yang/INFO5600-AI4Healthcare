@@ -1,0 +1,66 @@
+{
+  "model_sha256": {
+    "lgb_789": "2b3e9bf4d7b21f2c8552aeb0d86b598d01e89284f4a9ae03b02b0b4a8990fbf5",
+    "lgb_736": "a979ee958350b0934f5f5c0e361c9b8638682c1aa1725450218d0933ffb4a18c",
+    "lgb_734": "ac7ebe3558d5cdfb449c1e70b36708593ece353b2726d1b0c36f036976675159",
+    "lr_789": "b0bc4c99c225e2d20daee05234ddecd048c001992148365964161c13c320d0ed",
+    "ebm150_789": "0e1366744b3aa4d7ac6fa540d99aea771c37a802023f3cf6a1df99193af3ffd4",
+    "xgb_789": "a1a94758ec98016b6d44db38d9889d058c8c48477e4d5f0b0177756e76b0b6c6"
+  },
+  "model_paths": {
+    "lgb_789": "outputs/challenge_improvement/final/lgb_bce_lag_observed_leaf63/model.txt",
+    "lgb_736": "outputs/clock_models/final/lgb_736/model.txt",
+    "lgb_734": "outputs/clock_models/final/lgb_734/model.txt",
+    "lr_789": "outputs/clock_models/final/lr_789/model.joblib",
+    "ebm150_789": "outputs/clock_models/final/ebm150_789/model.joblib",
+    "xgb_789": "outputs/challenge_improvement/final/xgb_lag_observed_depth5/model.ubj"
+  },
+  "threshold_sha256": {
+    "lgb_789": "65183af6ab77ce47b8e02ad8c8018a1e44aac21f3533a9929a3a3fd54440f14b",
+    "lgb_736": "f5faeed6bf3ee4ce4a37a3ec1f9a96d2973d856cbb61a82f0b0e054666e32fab",
+    "lgb_734": "0d51a8a439c24ffc13fdef7328c9ee99e4c41068b9fa5d5b1857b1e57d74449a",
+    "lr_789": "f588922cb41ae5bdeedc22fc63ff80338cbd5327f3ec82bf194ff2b0d5473ba6",
+    "ebm150_789": "ad21cf4bd89faef93c5d6ce6767c7a5baecfa3d76319cfefba2b5f2ebe27cd9c",
+    "xgb_789": "9540451d418dcd512433d6aa90cf53d435cf42935a8ba177bfdd9e6cde72c3c0"
+  },
+  "source_sha256": {
+    "src/sepsis_warning/clock_models.py": "11ea2eb7762975ee097162896913c15b120e05a3a19ad6719f34f2f3a4445241",
+    "src/sepsis_warning/clock_interpretable.py": "21db0af46d93bb6f64bb60850c1bf19e49a72b818d504502949602bd43b037f9",
+    "scripts/fit_clock_models.py": "5b7709c82046e9bdc81dfdc2389e5d7c63df5c429d8c0412eb75504b054ef502",
+    "scripts/fit_interpretable_clock.py": "b939e08d1ad95061ca1fba2c396a7783b3dc85cfac9681e9f018e00853338919",
+    "scripts/run_clock_models.py": "cfc6d9064bb3ac2cdcf5f490838992621bb7c307a6ad6cc4fc18db9db73912f1",
+    "scripts/fit_challenge_improvement.py": "9bfe489884afdd895194d05e30ce12024987d35b5cdfd44996f19307f9406425"
+  },
+  "input_sha256": {
+    "processed_data/friend_563_comparison/train_features.npy": "483aed26b147d43c3f2db74cdbaaa7060398576d0c8361e2ea9b90330960e5af",
+    "processed_data/friend_563_comparison/train_labels.npy": "9d8f5826b99d714d158d44eb22418d3042d19da04977eb32c30015421a7b29af",
+    "processed_data/friend_563_comparison/train_patients.csv": "2b5dbe841ca1b4286f31e881cd393d70ac864d1082364734e8ea34890beb0dd4",
+    "processed_data/challenge_improvement/train_extra.npy": "5f4a5e83becccf9c88897623383d9d089c3ca79ec1fe0977ec58da78dca8f31f",
+    "processed_data/friend_563_comparison/validation_features.npy": "f7cf9b1a17bed151e53563185d89f1a7d86598813f69317d910704d9dd81c307",
+    "processed_data/friend_563_comparison/validation_labels.npy": "ce7646848998435d5b3ccf55b0fbabfa89c7bcbe2dd7478000970e645820c818",
+    "processed_data/friend_563_comparison/validation_patients.csv": "fdf08df463fac5ebccbe826f38fcdad2f8365719628bd79a7fc71b12baa82934",
+    "processed_data/challenge_improvement/validation_extra.npy": "aae2ec65973458f85a14be55e4d312e013a590d2478d67c33ee68fb6075dede2",
+    "processed_data/challenge_improvement/cv_patient_roles.csv": "6986354fdea2da70b04903eab9c588cc28d9572a55279fb44bae6484c1f6fa0a",
+    "processed_data/friend_563_comparison/patient_splits.csv": "3cc863239231a06837d3716242c27d0fabfc6fa12bf8fa1c315ecd1d6b1c1169",
+    "processed_data/challenge_improvement/train_delta.npy": "866c28865f4e2e1e6f4fa890646e50c99c4100267d91b01b1bd18fda76f2c233",
+    "configs/us_next_experiments.json": "ea1e19a967ca359f3a5d643850466af61179dffcd80b9be758bd89f0c7359968"
+  },
+  "rounds_sha256": "b7703317eb4798921351d9fffe14b444bdc5971c69178bed1659a17452287f0b",
+  "selection_sha256": "554db0dd789a17bce172c8e8a00f34e97a91e71c74f7569d26e6c33ebffc747f",
+  "model_selection_sha256": "9ab1faa32730a443ce985fcd45d4cdec2a74e3116c58de1bc268353083321ac8",
+  "protocol_sha256": "ea398905b6fe44ba1678ebd010c606ecb95615e48608eccf5507b1f7dac3609d",
+  "reuse_manifest_sha256": "3d8040f4133d7d6d0aa23e5394160bc8bce5aca10caada7af2aeb1f308954495",
+  "final_candidate_ids": [
+    "lgb_789",
+    "lgb_736",
+    "lgb_734",
+    "lr_789",
+    "ebm150_789",
+    "xgb_789"
+  ],
+  "test_used_for_selection": false,
+  "historical_test_exposure": true,
+  "ensemble_enabled": false,
+  "scheduling_events_sha256": "c9418981992c8362a630ca7a6cf70711bf9e01a51ac8b44b5b57ddb17cec92fd",
+  "lr_execution_environment_sha256": "6c11ae7f4e5a2d70266a731e7190cbf868c83a06b51940c490b9ed9d05b898f3"
+}

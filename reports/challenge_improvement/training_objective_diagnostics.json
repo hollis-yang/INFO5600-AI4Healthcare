@@ -1,0 +1,699 @@
+{
+  "scope": "Initial four 563-feature candidates, training patients and their three outer development folds only. No validation/test reads. No refits. No changes to fitted model or decision thresholds.",
+  "oracle_warning": "Post-hoc per-held-fold optimum uses held labels ONLY to quantify the upper bound from threshold retuning; optimistic, not a deployable score or a model-selection rule. Actual held US retains inner-calibration thresholds.",
+  "interpretation_limits": [
+    "Candidates differ in target and early-stopping criterion; objective-only causality cannot be isolated.",
+    "Inner calibration is reused for early stopping and threshold optimization; calibration versus held gaps include selection optimism and sampling variation.",
+    "OOF metrics used for candidate development are not a nested unbiased estimate after cross-candidate selection.",
+    "Weighted utility-label AUROC is diagnostic and is not the reported original-SepsisLabel AUROC."
+  ],
+  "candidates": {
+    "lgb_bce_base": {
+      "mean_fold_auroc": 0.8551038263268175,
+      "mean_fold_auprc": 0.1291708022562614,
+      "pooled_original_label_ranking_DIAGNOSTIC": {
+        "auroc": 0.8549029221653218,
+        "auprc": 0.12627395891844428
+      },
+      "pooled_held_us": 0.4267044284437626,
+      "pooled_fold_oracle_us_DIAGNOSTIC_ONLY": 0.42938635852653495,
+      "threshold_transfer_gap_DIAGNOSTIC_ONLY": 0.0026819300827723544,
+      "selected_rounds": [
+        310,
+        164,
+        320
+      ],
+      "phases": {
+        "nonseptic": {
+          "hours": 964839,
+          "alarms": 89616,
+          "normalized_utility_contribution": -0.15238426323913673,
+          "alarm_fraction": 0.09288181758821938
+        },
+        "before_onset_minus12": {
+          "hours": 89902,
+          "alarms": 51138,
+          "normalized_utility_contribution": -0.08695574957064557,
+          "alarm_fraction": 0.5688193811038686
+        },
+        "onset_minus12_to_minus6": {
+          "hours": 9825,
+          "alarms": 5609,
+          "normalized_utility_contribution": 0.0818692457532171,
+          "alarm_fraction": 0.5708905852417303
+        },
+        "onset_minus6_to_before_onset": {
+          "hours": 10452,
+          "alarms": 6642,
+          "normalized_utility_contribution": 0.2911825998567874,
+          "alarm_fraction": 0.6354764638346728
+        },
+        "onset_through_plus3": {
+          "hours": 6500,
+          "alarms": 4728,
+          "normalized_utility_contribution": 0.2929925956435404,
+          "alarm_fraction": 0.7273846153846154
+        },
+        "after_onset_plus3": {
+          "hours": 0,
+          "alarms": 0,
+          "normalized_utility_contribution": 0.0,
+          "alarm_fraction": null
+        }
+      },
+      "hospitals": {
+        "A": {
+          "hours": 551330,
+          "patients": 14091,
+          "positives": 10748,
+          "tp": 7357,
+          "fp": 95850,
+          "negative_hours": 540582,
+          "utility_score": 0.43351351834845975,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.4387890732149459,
+          "hour_recall": 0.6844994417566059,
+          "hour_fpr": 0.17730890040733877,
+          "normalized_utility_contribution_to_pooled": 0.2747088041747043
+        },
+        "B": {
+          "hours": 530188,
+          "patients": 13820,
+          "positives": 6204,
+          "tp": 4013,
+          "fp": 50513,
+          "negative_hours": 523984,
+          "utility_score": 0.41492570414726104,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.4131210447322409,
+          "hour_recall": 0.6468407479045777,
+          "hour_fpr": 0.09640179852819933,
+          "normalized_utility_contribution_to_pooled": 0.15199562426905833
+        }
+      },
+      "vs_lgb_bce_base": {
+        "auroc_mean_fold": 0.0,
+        "auprc_mean_fold": 0.0,
+        "pooled_held_us": 0.0,
+        "fold_oracle_us_DIAGNOSTIC_ONLY": 0.0,
+        "utility_contribution_delta_by_phase": {
+          "nonseptic": 0.0,
+          "before_onset_minus12": 0.0,
+          "onset_minus12_to_minus6": 0.0,
+          "onset_minus6_to_before_onset": 0.0,
+          "onset_through_plus3": 0.0,
+          "after_onset_plus3": 0.0
+        }
+      },
+      "mean_fold_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8522641326596104,
+      "oracle_used_for_selection": false
+    },
+    "xgb_bce_base": {
+      "mean_fold_auroc": 0.8552819139918286,
+      "mean_fold_auprc": 0.13156472024240676,
+      "pooled_original_label_ranking_DIAGNOSTIC": {
+        "auroc": 0.8550588521484104,
+        "auprc": 0.13020085909990275
+      },
+      "pooled_held_us": 0.4277157966532082,
+      "pooled_fold_oracle_us_DIAGNOSTIC_ONLY": 0.429985281975805,
+      "threshold_transfer_gap_DIAGNOSTIC_ONLY": 0.002269485322596796,
+      "selected_rounds": [
+        233,
+        211,
+        366
+      ],
+      "phases": {
+        "nonseptic": {
+          "hours": 964839,
+          "alarms": 88495,
+          "normalized_utility_contribution": -0.15047809961778483,
+          "alarm_fraction": 0.09171996571448708
+        },
+        "before_onset_minus12": {
+          "hours": 89902,
+          "alarms": 51062,
+          "normalized_utility_contribution": -0.08682651813868951,
+          "alarm_fraction": 0.5679740161509199
+        },
+        "onset_minus12_to_minus6": {
+          "hours": 9825,
+          "alarms": 5607,
+          "normalized_utility_contribution": 0.08178989311955985,
+          "alarm_fraction": 0.5706870229007633
+        },
+        "onset_minus6_to_before_onset": {
+          "hours": 10452,
+          "alarms": 6600,
+          "normalized_utility_contribution": 0.2895237519436672,
+          "alarm_fraction": 0.6314580941446614
+        },
+        "onset_through_plus3": {
+          "hours": 6500,
+          "alarms": 4739,
+          "normalized_utility_contribution": 0.2937067693464555,
+          "alarm_fraction": 0.7290769230769231
+        },
+        "after_onset_plus3": {
+          "hours": 0,
+          "alarms": 0,
+          "normalized_utility_contribution": 0.0,
+          "alarm_fraction": null
+        }
+      },
+      "hospitals": {
+        "A": {
+          "hours": 551330,
+          "patients": 14091,
+          "positives": 10748,
+          "tp": 7321,
+          "fp": 94998,
+          "negative_hours": 540582,
+          "utility_score": 0.434139643883648,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.438122100442462,
+          "hour_recall": 0.6811499813918869,
+          "hour_fpr": 0.17573282129260687,
+          "normalized_utility_contribution_to_pooled": 0.2751055673429904
+        },
+        "B": {
+          "hours": 530188,
+          "patients": 13820,
+          "positives": 6204,
+          "tp": 4018,
+          "fp": 50166,
+          "negative_hours": 523984,
+          "utility_score": 0.4166034855353892,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.4159097825021791,
+          "hour_recall": 0.6476466795615732,
+          "hour_fpr": 0.095739564566857,
+          "normalized_utility_contribution_to_pooled": 0.15261022931021778
+        }
+      },
+      "vs_lgb_bce_base": {
+        "auroc_mean_fold": 0.0001780876650111507,
+        "auprc_mean_fold": 0.0023939179861453552,
+        "pooled_held_us": 0.0010113682094455845,
+        "fold_oracle_us_DIAGNOSTIC_ONLY": 0.000598923449270039,
+        "utility_contribution_delta_by_phase": {
+          "nonseptic": 0.0019061636213519029,
+          "before_onset_minus12": 0.00012923143195606168,
+          "onset_minus12_to_minus6": -7.935263365724254e-05,
+          "onset_minus6_to_before_onset": -0.0016588479131202094,
+          "onset_through_plus3": 0.0007141737029150996,
+          "after_onset_plus3": 0.0
+        }
+      },
+      "mean_fold_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8525137885136975,
+      "oracle_used_for_selection": false
+    },
+    "lgb_delta_base": {
+      "mean_fold_auroc": 0.8432658294545788,
+      "mean_fold_auprc": 0.11977278692170797,
+      "pooled_original_label_ranking_DIAGNOSTIC": {
+        "auroc": 0.8415313557840072,
+        "auprc": 0.11693450485253104
+      },
+      "pooled_held_us": 0.40490550423875316,
+      "pooled_fold_oracle_us_DIAGNOSTIC_ONLY": 0.4145608304064177,
+      "threshold_transfer_gap_DIAGNOSTIC_ONLY": 0.009655326167664558,
+      "selected_rounds": [
+        90,
+        40,
+        220
+      ],
+      "phases": {
+        "nonseptic": {
+          "hours": 964839,
+          "alarms": 57091,
+          "normalized_utility_contribution": -0.09707831160267759,
+          "alarm_fraction": 0.059171530172391455
+        },
+        "before_onset_minus12": {
+          "hours": 89902,
+          "alarms": 45765,
+          "normalized_utility_contribution": -0.07781942741406771,
+          "alarm_fraction": 0.5090543035750039
+        },
+        "onset_minus12_to_minus6": {
+          "hours": 9825,
+          "alarms": 4862,
+          "normalized_utility_contribution": 0.07024975296769403,
+          "alarm_fraction": 0.49486005089058527
+        },
+        "onset_minus6_to_before_onset": {
+          "hours": 10452,
+          "alarms": 5720,
+          "normalized_utility_contribution": 0.2509545932894123,
+          "alarm_fraction": 0.5472636815920398
+        },
+        "onset_through_plus3": {
+          "hours": 6500,
+          "alarms": 4172,
+          "normalized_utility_contribution": 0.25859889699839217,
+          "alarm_fraction": 0.6418461538461538
+        },
+        "after_onset_plus3": {
+          "hours": 0,
+          "alarms": 0,
+          "normalized_utility_contribution": 0.0,
+          "alarm_fraction": null
+        }
+      },
+      "hospitals": {
+        "A": {
+          "hours": 551330,
+          "patients": 14091,
+          "positives": 10748,
+          "tp": 6226,
+          "fp": 63602,
+          "negative_hours": 540582,
+          "utility_score": 0.4144140061300671,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.42727074860761605,
+          "hour_recall": 0.5792705619650167,
+          "hour_fpr": 0.11765467588635951,
+          "normalized_utility_contribution_to_pooled": 0.26260582712839825
+        },
+        "B": {
+          "hours": 530188,
+          "patients": 13820,
+          "positives": 6204,
+          "tp": 3666,
+          "fp": 44116,
+          "negative_hours": 523984,
+          "utility_score": 0.3884571941388541,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.392574540840799,
+          "hour_recall": 0.5909090909090909,
+          "hour_fpr": 0.08419341048581636,
+          "normalized_utility_contribution_to_pooled": 0.14229967711035496
+        }
+      },
+      "vs_lgb_bce_base": {
+        "auroc_mean_fold": -0.011837996872238632,
+        "auprc_mean_fold": -0.009398015334553436,
+        "pooled_held_us": -0.02179892420500945,
+        "fold_oracle_us_DIAGNOSTIC_ONLY": -0.014825528120117226,
+        "utility_contribution_delta_by_phase": {
+          "nonseptic": 0.05530595163645914,
+          "before_onset_minus12": 0.009136322156577864,
+          "onset_minus12_to_minus6": -0.011619492785523058,
+          "onset_minus6_to_before_onset": -0.04022800656737513,
+          "onset_through_plus3": -0.03439369864514824,
+          "after_onset_plus3": 0.0
+        }
+      },
+      "mean_fold_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8429727895443184,
+      "oracle_used_for_selection": false
+    },
+    "lgb_utility_class_base": {
+      "mean_fold_auroc": 0.8509038799212697,
+      "mean_fold_auprc": 0.12112365982749923,
+      "pooled_original_label_ranking_DIAGNOSTIC": {
+        "auroc": 0.8474593271996588,
+        "auprc": 0.11677065806259854
+      },
+      "pooled_held_us": 0.41189854954721766,
+      "pooled_fold_oracle_us_DIAGNOSTIC_ONLY": 0.41962900754416826,
+      "threshold_transfer_gap_DIAGNOSTIC_ONLY": 0.007730457996950592,
+      "selected_rounds": [
+        180,
+        40,
+        270
+      ],
+      "phases": {
+        "nonseptic": {
+          "hours": 964839,
+          "alarms": 78906,
+          "normalized_utility_contribution": -0.1341728338148023,
+          "alarm_fraction": 0.08178152002562085
+        },
+        "before_onset_minus12": {
+          "hours": 89902,
+          "alarms": 50103,
+          "normalized_utility_contribution": -0.08519582151703342,
+          "alarm_fraction": 0.5573068452314742
+        },
+        "onset_minus12_to_minus6": {
+          "hours": 9825,
+          "alarms": 5409,
+          "normalized_utility_contribution": 0.0785534392753971,
+          "alarm_fraction": 0.5505343511450381
+        },
+        "onset_minus6_to_before_onset": {
+          "hours": 10452,
+          "alarms": 6264,
+          "normalized_utility_contribution": 0.27453744027297305,
+          "alarm_fraction": 0.5993111366245695
+        },
+        "onset_through_plus3": {
+          "hours": 6500,
+          "alarms": 4489,
+          "normalized_utility_contribution": 0.2781763253306832,
+          "alarm_fraction": 0.6906153846153846
+        },
+        "after_onset_plus3": {
+          "hours": 0,
+          "alarms": 0,
+          "normalized_utility_contribution": 0.0,
+          "alarm_fraction": null
+        }
+      },
+      "hospitals": {
+        "A": {
+          "hours": 551330,
+          "patients": 14091,
+          "positives": 10748,
+          "tp": 7000,
+          "fp": 89512,
+          "negative_hours": 540582,
+          "utility_score": 0.4197906355472337,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.43175261481949695,
+          "hour_recall": 0.6512839598064756,
+          "hour_fpr": 0.1655844996688754,
+          "normalized_utility_contribution_to_pooled": 0.26601288913492405
+        },
+        "B": {
+          "hours": 530188,
+          "patients": 13820,
+          "positives": 6204,
+          "tp": 3753,
+          "fp": 44906,
+          "negative_hours": 523984,
+          "utility_score": 0.39824640125433886,
+          "held_oracle_us_DIAGNOSTIC_ONLY": 0.39865694966655835,
+          "hour_recall": 0.6049323017408124,
+          "hour_fpr": 0.08570109010962167,
+          "normalized_utility_contribution_to_pooled": 0.14588566041229362
+        }
+      },
+      "vs_lgb_bce_base": {
+        "auroc_mean_fold": -0.004199946405547772,
+        "auprc_mean_fold": -0.008047142428762172,
+        "pooled_held_us": -0.014805878896544944,
+        "fold_oracle_us_DIAGNOSTIC_ONLY": -0.009757350982366686,
+        "utility_contribution_delta_by_phase": {
+          "nonseptic": 0.01821142942433443,
+          "before_onset_minus12": 0.0017599280536121503,
+          "onset_minus12_to_minus6": -0.0033158064778199964,
+          "onset_minus6_to_before_onset": -0.01664515958381435,
+          "onset_through_plus3": -0.014816270312857205,
+          "after_onset_plus3": 0.0
+        }
+      },
+      "mean_fold_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8501060170127767,
+      "oracle_used_for_selection": false
+    }
+  },
+  "fold_records": [
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 0,
+      "selected_rounds": 310,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8650556429924873,
+      "calibration_auprc": 0.12098148866274863,
+      "calibration_us": 0.45468199058455794,
+      "held_auroc": 0.8549617438416103,
+      "held_auprc": 0.11674257650245727,
+      "held_us": 0.4216790672352781,
+      "calibration_threshold": 0.02031808097855875,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.4219648852191271,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02045412755708159,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.0002858179838490238,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8517939732413146,
+      "held_alarm_hours": 54171,
+      "held_hours": 360577,
+      "calibration_minus_held_us": 0.033002923349279845,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 1,
+      "selected_rounds": 164,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8430421242708518,
+      "calibration_auprc": 0.14692219933585612,
+      "calibration_us": 0.40444469513226916,
+      "held_auroc": 0.8540420167355124,
+      "held_auprc": 0.1290180161081661,
+      "held_us": 0.42453648579690423,
+      "calibration_threshold": 0.02552186400894796,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.42881782616091174,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02313257567020722,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.004281340364007513,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8514083148123803,
+      "held_alarm_hours": 46697,
+      "held_hours": 363121,
+      "calibration_minus_held_us": -0.020091790664635067,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_bce_base",
+      "fold": 2,
+      "selected_rounds": 320,
+      "calibration_patients": 2792,
+      "held_patients": 9303,
+      "calibration_auroc": 0.8629993738813899,
+      "calibration_auprc": 0.13154735808839418,
+      "calibration_us": 0.4490883432119673,
+      "held_auroc": 0.8563077184033298,
+      "held_auprc": 0.14175181415816082,
+      "held_us": 0.4338883320024692,
+      "calibration_threshold": 0.019629382637083668,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.437365568562157,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02321854603046688,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.0034772365596878463,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8535901099251367,
+      "held_alarm_hours": 56865,
+      "held_hours": 357820,
+      "calibration_minus_held_us": 0.015200011209498099,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 0,
+      "selected_rounds": 233,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8629428798070746,
+      "calibration_auprc": 0.12496342614356677,
+      "calibration_us": 0.45552823679646254,
+      "held_auroc": 0.8538524761094721,
+      "held_auprc": 0.11866009171047141,
+      "held_us": 0.4179821477179929,
+      "calibration_threshold": 0.020633960142731667,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.42016094274566734,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02196851372718811,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.0021787950276744295,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8510730624847245,
+      "held_alarm_hours": 54055,
+      "held_hours": 360577,
+      "calibration_minus_held_us": 0.037546089078469624,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 1,
+      "selected_rounds": 211,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8436803484474987,
+      "calibration_auprc": 0.13752903593755283,
+      "calibration_us": 0.4044183729106737,
+      "held_auroc": 0.8550080272515317,
+      "held_auprc": 0.13033262678996646,
+      "held_us": 0.42649656971140215,
+      "calibration_threshold": 0.023978210985660553,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.42800873164370357,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02426650933921337,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.0015121619323014146,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8523869325850252,
+      "held_alarm_hours": 49287,
+      "held_hours": 363121,
+      "calibration_minus_held_us": -0.022078196800728478,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "xgb_bce_base",
+      "fold": 2,
+      "selected_rounds": 366,
+      "calibration_patients": 2792,
+      "held_patients": 9303,
+      "calibration_auroc": 0.8612194611587372,
+      "calibration_auprc": 0.12701455162905356,
+      "calibration_us": 0.448971681249412,
+      "held_auroc": 0.8569852386144823,
+      "held_auprc": 0.14570144222678244,
+      "held_us": 0.4386539583297938,
+      "calibration_threshold": 0.021049626171588898,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.44177044575454333,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.02285049296915531,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.0031164874247495145,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8540813704713427,
+      "held_alarm_hours": 53161,
+      "held_hours": 357820,
+      "calibration_minus_held_us": 0.010317722919618189,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 0,
+      "selected_rounds": 90,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8513668764634572,
+      "calibration_auprc": 0.11636380554816128,
+      "calibration_us": 0.44357596203327804,
+      "held_auroc": 0.8464089547231677,
+      "held_auprc": 0.11368680503587854,
+      "held_us": 0.3964828509209691,
+      "calibration_threshold": 0.002035025758084797,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.41202477089193357,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": -0.006649472682198215,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.01554191997096449,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8461885456002524,
+      "held_alarm_hours": 38665,
+      "held_hours": 360577,
+      "calibration_minus_held_us": 0.04709311111230896,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 1,
+      "selected_rounds": 40,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8273942618230613,
+      "calibration_auprc": 0.1397124694755836,
+      "calibration_us": 0.40648466730592064,
+      "held_auroc": 0.8368649235561584,
+      "held_auprc": 0.11704728426579096,
+      "held_us": 0.4061183874808641,
+      "calibration_threshold": -0.00941355746041648,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.41020695129557183,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": -0.010681333630256334,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.004088563814707735,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8365754896399114,
+      "held_alarm_hours": 45175,
+      "held_hours": 363121,
+      "calibration_minus_held_us": 0.000366279825056548,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_delta_base",
+      "fold": 2,
+      "selected_rounds": 220,
+      "calibration_patients": 2792,
+      "held_patients": 9303,
+      "calibration_auroc": 0.8510589203118771,
+      "calibration_auprc": 0.12778885942954687,
+      "calibration_us": 0.42299181484617554,
+      "held_auroc": 0.8465236100844105,
+      "held_auprc": 0.12858427146345439,
+      "held_us": 0.41210520056405986,
+      "calibration_threshold": 0.014403199250149488,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.4214422036845116,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.00014538968606627129,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.009337003120451715,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8461543333927913,
+      "held_alarm_hours": 33770,
+      "held_hours": 357820,
+      "calibration_minus_held_us": 0.01088661428211568,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 0,
+      "selected_rounds": 180,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8637191121579054,
+      "calibration_auprc": 0.12504385052059325,
+      "calibration_us": 0.4479463281681819,
+      "held_auroc": 0.8555086266252905,
+      "held_auprc": 0.11397120125231953,
+      "held_us": 0.4130126576535705,
+      "calibration_threshold": 0.4759439406253394,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.422971486253516,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.39351701546285056,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.009958828599945513,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8546382352200673,
+      "held_alarm_hours": 38474,
+      "held_hours": 360577,
+      "calibration_minus_held_us": 0.03493367051461144,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 1,
+      "selected_rounds": 40,
+      "calibration_patients": 2792,
+      "held_patients": 9304,
+      "calibration_auroc": 0.8334119305051366,
+      "calibration_auprc": 0.12809846714323386,
+      "calibration_us": 0.40242164438678624,
+      "held_auroc": 0.8400992442515466,
+      "held_auprc": 0.11248595109588092,
+      "held_us": 0.40319385383001644,
+      "calibration_threshold": 0.4248040256012998,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.4056789703464308,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.40659449480586546,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.002485116516414365,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8394603976819518,
+      "held_alarm_hours": 47702,
+      "held_hours": 363121,
+      "calibration_minus_held_us": -0.0007722094432301985,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    },
+    {
+      "candidate": "lgb_utility_class_base",
+      "fold": 2,
+      "selected_rounds": 270,
+      "calibration_patients": 2792,
+      "held_patients": 9303,
+      "calibration_auroc": 0.8596067854476058,
+      "calibration_auprc": 0.13253769134015914,
+      "calibration_us": 0.4354445385266723,
+      "held_auroc": 0.8571037688869719,
+      "held_auprc": 0.13691382713429723,
+      "held_us": 0.41948045328666816,
+      "calibration_threshold": 0.35808680789313213,
+      "held_oracle_us_DIAGNOSTIC_ONLY": 0.430224774461,
+      "held_oracle_threshold_DIAGNOSTIC_ONLY": 0.43377461616113994,
+      "held_threshold_selection_gap_DIAGNOSTIC_ONLY": 0.010744321174331828,
+      "held_utility_label_absdelta_weighted_auroc_DIAGNOSTIC": 0.8562194181363109,
+      "held_alarm_hours": 58995,
+      "held_hours": 357820,
+      "calibration_minus_held_us": 0.015964085240004144,
+      "oracle_used_for_selection": false,
+      "diagnostic_data_scope": "train_outer_fold_only"
+    }
+  ],
+  "diagnostic_only": true,
+  "used_for_selection": false,
+  "oracle_used_for_selection": false,
+  "training_target_audit": {
+    "event_patients": 1742,
+    "event_record_last_hour_relative_to_onset": {
+      "0": 4,
+      "1": 1,
+      "2": 454,
+      "3": 1283
+    },
+    "hours_after_onset_plus3": 0,
+    "all_event_raw_labels_replayed": true,
+    "original_label0_positive_delta_hours": 8287,
+    "original_label1_zero_delta_hours": 0,
+    "explanation": "The theoretical original-label1/delta0 example at onset+6 has no rows in this training cohort. Actual target changes add positive utility to some original-label0 hours before onset-6 and weight the remaining useful hours differently."
+  }
+}

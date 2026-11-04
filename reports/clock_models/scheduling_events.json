@@ -1,0 +1,28 @@
+[
+  {
+    "time_utc": "2026-11-03T21:47:21.046282+00:00",
+    "candidate": "lr_789",
+    "fold": -1,
+    "event": "Unfinished parallel prefit terminated before model serialization; rerun alone after other final fits",
+    "reason": "LR float64 solver and joblib process data copies caused memory pressure",
+    "model_parameters_changed": false,
+    "test_read": false
+  },
+  {
+    "time_utc": "2026-11-03T21:47:34.991307+00:00",
+    "candidate": "ebm300_789",
+    "fold": -1,
+    "event": "Speculative fit of fixed candidate in parallel with remaining CV; eligibility and budget selection remain training-CV-only",
+    "selection_rule_unchanged": true,
+    "not_selected_action": "Discard unfinished candidate; do not use validation results for selection or test it",
+    "test_read": false
+  },
+  {
+    "time_utc": "2026-11-03T21:49:37.587976+00:00",
+    "candidate": "ebm300_789",
+    "fold": -1,
+    "event": "Unfinished speculative prefit terminated before serialization; prioritize fixed EBM150 prefit after completed fold0 favored150",
+    "formal_selection_rule": "Unchanged mean AUROC over all three CV folds; no final budget selected yet",
+    "test_read": false
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "blend_binary_half",
+    "method": "probability_mean",
+    "components": [
+      "lgb_bce_lag_observed_leaf63",
+      "xgb_lag_observed_depth5"
+    ],
+    "weight_first": 0.5
+  },
+  {
+    "id": "blend_rank_w25",
+    "method": "percentile_rank",
+    "components": [
+      "lgb_bce_lag_observed_leaf63",
+      "lgb_bce_all"
+    ],
+    "weight_first": 0.25
+  },
+  {
+    "id": "blend_rank_w50",
+    "method": "percentile_rank",
+    "components": [
+      "lgb_bce_lag_observed_leaf63",
+      "lgb_bce_all"
+    ],
+    "weight_first": 0.5
+  },
+  {
+    "id": "blend_rank_w75",
+    "method": "percentile_rank",
+    "components": [
+      "lgb_bce_lag_observed_leaf63",
+      "lgb_bce_all"
+    ],
+    "weight_first": 0.75
+  }
+]
