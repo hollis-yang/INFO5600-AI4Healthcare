@@ -4,6 +4,11 @@ AI for Healthcare course project.
 
 Team: Dennis Wang, Haoyang Song, Wenzhuo Zhang.
 
+## Midcheckpoint presentation
+
+The [six-minute presentation draft](docs/midcheckpoint_draft_zh.md) focuses on
+the patient-level data pipeline, model comparison and LightGBM alarm diagnostics.
+
 ## Clock ablation and matched model comparison
 
 The current experiment keeps the existing A+B patient splits and LightGBM settings,
@@ -120,9 +125,9 @@ For the combined native and modeling test suite, use `.venv-models` with
 
 | Stage | Code | Explanation |
 | --- | --- | --- |
-| 01 · Preprocessing and patient split | [`sepsis_pipeline/preprocess.py`](sepsis_pipeline/preprocess.py) | [规则、分母、运行方式](docs/01_preprocessing.md) |
-| 02 · Feature engineering | [`sepsis_pipeline/features/`](sepsis_pipeline/features/), [`build_features.py`](sepsis_pipeline/build_features.py) | [563 / 410 维特征及防泄漏约束](docs/02_feature_engineering.md) |
-| Validation and provenance | [`tests/`](tests/), [`reports/`](reports/) | [来源和复现核验](docs/reproducibility.md) |
+| 01 · Preprocessing and patient split | [`sepsis_pipeline/preprocess.py`](sepsis_pipeline/preprocess.py) | [Patient and split verification](reports/preprocessing_validation.json) |
+| 02 · Feature engineering | [`sepsis_pipeline/features/`](sepsis_pipeline/features/), [`build_features.py`](sepsis_pipeline/build_features.py) | [Feature verification](reports/feature_validation.json) |
+| Validation and provenance | [`tests/`](tests/), [`reports/`](reports/) | [Latest independent verification](reports/clock_models/independent_verification.json) |
 
 ## Fixed cohort and evaluation contract
 
